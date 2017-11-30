@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.first-page {
+    background: url(../img/foam.png);
+    height: 100vh;
+}
+
+nav {
+    height: 100px;
+    padding: 0 80px;
+    background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));
+    font-size: 18px;
+    z-index: 2;
+}
+nav ul {
+    height: inherit;
+}
+nav a {
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #333333;
+}
+
+nav li {
+    display: flex;
+    align-items: flex-end;
+}
+
+#carouselMain {
+    z-index: -1;
+    top: -100px;
+}
+
+#carouselMain img {
+    max-height: 100vh;
+}
