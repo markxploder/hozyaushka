@@ -5,7 +5,7 @@ body {
 }
 
 .first-page {
-    background: url(../img/foam.png);
+    background: url(../img/foam.png) no-repeat;
     height: 100%;
 }
 
