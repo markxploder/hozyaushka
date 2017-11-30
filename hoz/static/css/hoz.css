@@ -4,9 +4,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.first-page {
+.main {
     background: url(../img/foam.png) no-repeat;
-    height: 100%;
+    overflow: hidden;
+    margin-bottom: -14%;
 }
 
 nav {
@@ -32,11 +33,12 @@ nav li {
 
 #carouselMain {
     z-index: -1;
-    top: -100px;
-    height: 100%;
+    top: -180px;
+
 }
 
 #carouselMain img {
+    height: 766px;
     pointer-events: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -65,4 +67,39 @@ nav li {
     height: 16px;
     width: 16px;
     margin-right: 10px;
+}
+
+/*end main page*/
+
+.advantages {
+    background: url(../img/advantages.png);
+    height: 678px;
+}
+
+.advantages img {
+    height: 100px;
+}
+
+.caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 4.22;
+    letter-spacing: 1.4px;
+    color: #ffffff;
+}
+
+.hoz-card {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    text-align: center;
 }
