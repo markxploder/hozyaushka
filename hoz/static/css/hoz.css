@@ -6,7 +6,7 @@ body {
 
 .first-page {
     background: url(../img/foam.png);
-    height: 100vh;
+    height: 100%;
 }
 
 nav {
@@ -33,8 +33,36 @@ nav li {
 #carouselMain {
     z-index: -1;
     top: -100px;
+    height: 100%;
 }
 
 #carouselMain img {
-    max-height: 100vh;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8px;
+}
+
+.logo img {
+    width: 250px;
+    height: 56px;
+}
+
+.phone {
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.phone img {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
 }
