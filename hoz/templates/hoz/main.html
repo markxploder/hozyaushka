@@ -2,58 +2,59 @@
 <!DOCTYPE html>
     <head>
         <title>Hozyaushka</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/hoz.css' %}">
     </head>
     <body>
-    <div class="main">
-        <nav>
-            <ul class="nav nav-pills nav-fill">
-                <a class="navbar-brand logo" href="#">
-                    <img src="{% static 'img/logo.png' %}" alt="My image"/>
-                </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Мягкая мебель</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Матрасы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ковры</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Цены</a>
-                </li>
-                <li class="nav-item">
-                    <div class="container">
-                        <div class="col">
-                            <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (068) 345-66-26</div>
-                            <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (073) 066-00-61</div>
+        <header>
+            <nav>
+                <ul class="nav nav-pills nav-fill">
+                    <a class="navbar-brand logo" href="/">
+                        <img src="{% static 'img/logo.png' %}" alt="My image"/>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Мягкая мебель</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Матрасы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ковры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="container">
+                            <div class="col">
+                                <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (068) 345-66-26</div>
+                                <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (073) 066-00-61</div>
+                            </div>
                         </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <section class="main">
+            <div id="carouselMain" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselMain" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'img/slide0.png' %}" alt="First slide">
                     </div>
-                </li>
-            </ul>
-        </nav>
-        <div id="carouselMain" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselMain" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="{% static 'img/slide0.png' %}" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'img/slide1.png' %}" alt="Second slide">
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/slide1.png' %}" alt="Second slide">
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        <div class="advantages">
+        </section>
+        <section class="advantages">
             <div class="caption"><h2>Наши преимущества</h2></div>
             <div class="container">
                 <div class="row">
@@ -109,9 +110,28 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="stages">
+            <div class="caption"><h2>Этапы работы</h2></div>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="card bg-dark text-white stage1">
+                        <img class="card-img" src="{% static 'img/stage1.png' %}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">1</h4>
+                            <p class="card-text">Обработка всей поверхности мягкой мебели при помощи профессионального
+                                оборудования со специальным химическим раствором, что максимально очистит вашу мебель
+                                и придаст ей новый идеальный вид, а так же избавит вашу мебель от неприятных запахов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/hoz.css' %}">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        </main>
     </body>
 </html>

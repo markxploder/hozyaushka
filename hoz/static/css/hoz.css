@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+html, body, main {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+section {
+    min-height: 100%;
+}
+
 .main {
     background: url(../img/foam.png) no-repeat;
-    overflow: hidden;
-    margin-bottom: -14%;
 }
 
 nav {
     height: 100px;
+    width: 100%;
     padding: 0 80px;
     background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));
     font-size: 18px;
-    z-index: 2;
+    position: absolute;
 }
 nav ul {
     height: inherit;
@@ -32,18 +39,22 @@ nav li {
 }
 
 #carouselMain {
+    height: inherit;
     z-index: -1;
-    top: -180px;
-
+    max-height: 678px;
+    overflow: hidden;
 }
 
 #carouselMain img {
-    height: 766px;
     pointer-events: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.hoz-carousel-indicators {
+
 }
 
 .logo {
@@ -69,11 +80,12 @@ nav li {
     margin-right: 10px;
 }
 
-/*end main page*/
+/*end main*/
 
+/*advantages*/
 .advantages {
-    background: url(../img/advantages.png);
-    height: 678px;
+    background: url(../img/advantages.png) 100% 100%;
+    background-size: cover;
 }
 
 .advantages img {
@@ -102,4 +114,38 @@ nav li {
     background: none;
     border: none;
     text-align: center;
+}
+
+/*end advantages*/
+
+/*stages*/
+
+.stages  h2 {
+    color: #333333;
+}
+
+.stages p {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #222222;
+}
+
+.stage1 {
+    border: none;
+}
+
+.stage1 div {
+    height: 70%;
+    left: -50%;
+    right: 50%;
+    top: 15%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #000000;
+}
+
+.stage1 img {
+    width: 772px;
+    height: 384px;
 }
