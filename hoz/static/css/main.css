@@ -1,87 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@@import url('../fonts/Geometria.otf');
-
-html, body, main {
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-section {
-    min-height: 100%;
-}
-
-.main {
-    background: url(../img/foam.png) no-repeat;
-}
-
-nav {
-    height: 100px;
-    width: 100%;
-    padding: 0 80px;
-    background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));
-    font-size: 18px;
-    position: absolute;
-}
-nav ul {
-    height: inherit;
-}
-nav a {
-    letter-spacing: 0.7px;
-    text-align: center;
-    color: #333333;
-}
-
-nav li {
+.caption-light, .caption-dark {
     display: flex;
-    align-items: flex-end;
-}
-
-#carouselMain {
-    height: inherit;
-    z-index: -1;
-    max-height: 678px;
-    overflow: hidden;
-}
-
-#carouselMain img {
-    pointer-events: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.hoz-carousel-indicators {
-
-}
-
-.logo {
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 8px;
-}
-
-.logo img {
-    width: 250px;
-    height: 56px;
-}
-
-.phone {
-    height: 35px;
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.phone img {
-    height: 16px;
-    width: 16px;
-    margin-right: 10px;
+.caption-light h2, .caption-dark h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 4.22;
+    letter-spacing: 1.4px;
 }
 
-/*end main*/
+.caption-light {
+    color: #ffffff;
+}
+
+.caption-dark {
+    color: #333333;
+}
 
 /*advantages*/
 .advantages {
@@ -91,20 +27,6 @@ nav li {
 
 .advantages img {
     height: 100px;
-}
-
-.caption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.caption h2 {
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 4.22;
-    letter-spacing: 1.4px;
-    color: #ffffff;
 }
 
 .hoz-card {
@@ -120,10 +42,6 @@ nav li {
 /*end advantages*/
 
 /*stages*/
-
-.stages  h2 {
-    color: #333333;
-}
 
 .stages p {
     font-size: 24px;
@@ -229,4 +147,12 @@ nav li {
 
 .vermin .hoz-card-text {
     padding-left: 28%;
+}
+
+/* end vermin */
+
+/* portfolio */
+
+.portfolio div {
+    padding: 0;
 }
