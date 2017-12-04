@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@@import url('../fonts/Geometria.otf');
 
 html, body, main {
     height: 100%;
@@ -132,20 +133,100 @@ nav li {
     color: #222222;
 }
 
-.stage1 {
+.stage-container {
+    margin-bottom: 5%;
+}
+
+.stage-left, .stage-left p {
+    text-align: left;
+}
+
+.stage-right, .stage-right p {
+    text-align: right;
+}
+
+.stage-left, .stage-right {
     border: none;
 }
 
-.stage1 div {
-    height: 70%;
-    left: -50%;
-    right: 50%;
-    top: 15%;
+.stage-left div, .stage-right  div {
+    height: 80%;
+    top: 10%;
     background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid #000000;
+    border: 2px solid rgba(71, 70, 70, 0.8);
+    padding: 10%;
 }
 
-.stage1 img {
+.stage-left div {
+    left: -50%;
+    right: 50%;
+}
+
+.stage-right div {
+    left: 50%;
+    right: -50%;
+}
+
+.stage-left img, .stage-right img {
     width: 772px;
     height: 384px;
+}
+
+.hoz-card-title {
+    font-size: 240px;
+    line-height: 0.63;
+    letter-spacing: 9.6px;
+    color: rgb(227, 225, 225);
+    position: relative;
+    z-index: -2;
+}
+
+.stage-left .hoz-card-title {
+    left: -9%;
+}
+
+.stage-right .hoz-card-title {
+    right: -9%;
+}
+
+.stages .hoz-card-text {
+    position: relative;
+    top: -60%;
+}
+
+/* stages end */
+
+/* vermin */
+
+.vermin {
+    background-color: #30363f;
+}
+
+.vermin img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.vermin .hoz-card-title {
+    font-size: 24px;
+    line-height: 6.33;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #ffffff;
+    z-index: auto;
+}
+
+.vermin .hoz-card {
+    font-family: 'Geometria';
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 20%;
+}
+
+.vermin .hoz-card-text {
+    padding-left: 28%;
 }
