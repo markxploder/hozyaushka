@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('../fonts/Geometria.otf');
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    min-height: 100%;
+}
+
+.main {
+    background: url(../img/foam.png) no-repeat;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    padding: 0 80px;
+    background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));
+    font-size: 18px;
+    position: absolute;
+}
+nav ul {
+    height: inherit;
+}
+nav a {
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #333333;
+}
+
+nav li {
+    display: flex;
+    align-items: flex-end;
+}
+
+#carouselMain {
+    height: inherit;
+    z-index: -1;
+    max-height: 678px;
+    overflow: hidden;
+}
+
+#carouselMain img {
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hoz-carousel-indicators {
+
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8px;
+}
+
+.logo img {
+    width: 250px;
+    height: 56px;
+}
+
+.phone {
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.phone img {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+}
