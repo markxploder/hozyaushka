@@ -1,13 +1,13 @@
 from django.db import models
+from django import forms
 from django.utils import timezone
 
 
-class Post(models.Model):
-    author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
+class ReviewPost(models.Model):
+
+    author = models.CharField(max_length=200)
     text = models.TextField()
-    created_date = models.DateTimeField(
-            default=timezone.now)
+    rating = models.IntegerField(default=0)
     published_date = models.DateTimeField(
             blank=True, null=True)
 
@@ -16,4 +16,4 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.text

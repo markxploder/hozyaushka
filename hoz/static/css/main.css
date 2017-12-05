@@ -156,3 +156,31 @@
 .portfolio div {
     padding: 0;
 }
+
+/* end portfolio */
+
+/* reviews */
+
+.reviews {
+    background-image: -webkit-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
+    background-image: -o-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
+    background-image: linear-gradient(to top, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
+
+    padding-top: 5%;
+}
+
+.reviews .hoz-container {
+    background-color: #ffffff;
+}
+
+
+
+/* end reviews */
+
+.hoz-modal {
+    background: url(../img/cloud.png);
+    background-size:100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size:cover;
+}
