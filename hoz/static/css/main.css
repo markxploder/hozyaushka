@@ -173,14 +173,120 @@
     background-color: #ffffff;
 }
 
-
-
 /* end reviews */
 
-.hoz-modal {
+.hoz-modal-dialog{
+    max-width: 50%;
+}
+
+.hoz-modal-content {
     background: url(../img/cloud.png);
     background-size:100% 100%;
     -o-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
-    background-size:cover;
+}
+
+.hoz-modal-content, .hoz-modal-header, .hoz-modal-body, .hoz-modal-footer {
+    border: none;
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+    color: #0a1425;
+}
+
+.hoz-modal-header h5 {
+    align-self: center;
+    font-size: 24px;
+}
+
+/**/
+
+.hoz-rating input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.id_rating_0 label{
+    background:url(../img/rating/happy.png);
+}
+.id_rating_1 label{
+    background:url(../img/rating/confused.png);
+}
+.id_rating_2 label{
+    background:url(../img/rating/sad.png);
+}
+
+.hoz-rating input:active +.hoz-rating label{opacity: .9;}
+.hoz-rating input:checked +.hoz-rating label{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+            cursor: text;
+}
+
+.hoz-rating label{
+    cursor:pointer;
+    text-indent: -9999px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.hoz-rating label:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/**/
+
+
+.hoz-modal-body input, .hoz-modal-body textarea {
+    background: none;
+    border-radius: 10px;
+    border: solid 4px #202f4a;
+    width: 50%;
+    padding: 5px;
+}
+
+.hoz-modal-body textarea {
+    height: 140px;
+}
+
+.hoz-btn {
+    width: 33.3%;
+    border-radius: 10px;
+    background-color: #202f4a;
+}
+
+.hoz-form-container div {
+    margin: 3% 0;
+}
+
+.hoz-close {
+    margin: 0px 30px -45px auto !important;
+    opacity: 1;
+}
+
+.hoz-close span {
+    width: 32px;
+    height: 32px;
+    color: #202f4a;
+    font-size: 3.5rem;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.hoz-modal-footer button {
+    position: relative;
+    top: -100%;
 }
