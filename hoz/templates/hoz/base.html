@@ -9,16 +9,16 @@
             <nav>
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <a class="navbar-brand logo" href="/">
+                        <a class="navbar-brand logo" href="{% url '' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link" href="{% url 'main' %}">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/furniture/">Мягкая мебель</a>
+                        <a class="nav-link" href="{% url 'furniture' %}">Мягкая мебель</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/mattress/">Матрасы</a>
@@ -47,16 +47,16 @@
             <nav>
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <a class="navbar-brand logo" href="/">
+                        <a class="navbar-brand logo" href="{% url '' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link" href="{% url 'main' %}">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Мягкая мебель</a>
+                        <a class="nav-link" href="{% url 'furniture' %}">Мягкая мебель</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Матрасы</a>
