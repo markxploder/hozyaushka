@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('../fonts/Geometria.otf');
 
-html, body, main {
+html, body {
     height: 100%;
 }
 
@@ -17,13 +17,23 @@ section {
     background: url(../img/foam.png) no-repeat;
 }
 
-nav {
+header {
     height: 100px;
+    position: absolute;
+    width: 100%;
+    background: rgba(195, 221, 254, 0.6);
+}
+
+header nav {
+    width: 100%;
+}
+
+nav {
+    height: 95%;
     width: 100%;
     padding: 0 80px;
-    background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));
+    /*background-image: linear-gradient(to top, rgba(33, 147, 176, 0.2), rgba(109, 213, 237, 0.2));*/
     font-size: 18px;
-    position: absolute;
 }
 nav ul {
     height: inherit;
@@ -79,4 +89,16 @@ nav li {
     height: 16px;
     width: 16px;
     margin-right: 10px;
+}
+
+footer {
+    background: url(../img/foam2.png) no-repeat;
+    background-position-y: 104%;
+    height: 100px;
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
 }
