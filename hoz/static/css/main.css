@@ -339,3 +339,38 @@
 .reviews .hoz-card p {
     font-size: 16px;
 }
+
+/* end reviews */
+
+/* request */
+
+.request {
+    background: url(../img/foam2.png) no-repeat;
+}
+
+.hoz-caption-bigger {
+    margin-bottom: 2%;
+}
+
+.hoz-form {
+    width: 60%;
+    border: solid 4px #202f4a;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+    color: #0a1425;
+    padding-top: 3rem;
+}
+
+.hoz-form input, .hoz-form textarea {
+    background: none;
+    border: solid 4px #202f4a;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5px;
+}
+
+.hoz-form textarea {
+    height: 140px;
+}
