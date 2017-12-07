@@ -7,7 +7,7 @@
 .caption-light h2, .caption-dark h2 {
     font-size: 36px;
     font-weight: 500;
-    line-height: 4.22;
+    line-height: 3.5;
     letter-spacing: 1.4px;
 }
 
@@ -162,15 +162,25 @@
 /* reviews */
 
 .reviews {
-    background-image: -webkit-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
+    /*background-image: -webkit-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
     background-image: -o-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
-    background-image: linear-gradient(to top, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
-
-    padding-top: 5%;
+    background-image: linear-gradient(to top, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100&1+0,0.6+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,9ce4eb+100&0.5+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(41,137,216,0.5) 0%, rgba(156,228,235,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(41,137,216,0.5) 0%,rgba(156,228,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(41,137,216,0.5) 0%,rgba(156,228,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#802989d8', endColorstr='#9ce4eb',GradientType=0 ); /* IE6-9 */
+    padding-top: 4%;
+    background: url(../img/advantages.png) 100% 100%;
+    background-size: cover;
 }
 
-.reviews .hoz-container {
+.reviews-container {
     background-color: #ffffff;
+    border-radius: 10px;
 }
 
 /* end reviews */
@@ -263,9 +273,24 @@
 }
 
 .hoz-btn {
-    width: 33.3%;
+    width: 20%;
     border-radius: 10px;
     background-color: #202f4a;
+    margin-bottom: 5%;
+}
+
+.hoz-btn:hover {
+    background-color: #007F98;
+    border-color: #202F4A;
+}
+
+.hoz-btn:active {
+    border: none;
+    box-shadow: none;
+}
+
+.row .hoz-btn {
+    margin-top: 20px;
 }
 
 .hoz-form-container div {
@@ -289,4 +314,28 @@
 .hoz-modal-footer button {
     position: relative;
     top: -100%;
+}
+
+.reviews .hoz-card img {
+    height: 80px;
+    width: 80px;
+}
+
+.reviews-row {
+    min-height: 360px;
+}
+
+.reviews .hoz-card h4, .reviews .hoz-card p {
+    font-family: 'Geometria';
+    font-weight: 500;
+    text-align: center;
+    color: #333333;
+}
+
+.reviews .hoz-card h4 {
+    font-size: 24px;
+}
+
+.reviews .hoz-card p {
+    font-size: 16px;
 }

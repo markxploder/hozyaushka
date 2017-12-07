@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class ReviewPost(models.Model):
 
-    author = models.CharField(max_length=200)
-    text = models.TextField()
+    author = models.CharField(max_length=40)
+    text = models.TextField(max_length=180)
     rating = models.IntegerField(default=0)
     published_date = models.DateTimeField(
             blank=True, null=True)

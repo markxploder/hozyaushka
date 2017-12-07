@@ -9,3 +9,8 @@ class ReviewPostForm(forms.ModelForm):
     class Meta:
         model = ReviewPost
         fields = ['author', 'text', 'rating']
+        widgets = {
+            'author': forms.TextInput(attrs={'placeholder': 'Имя'}),
+            'text': forms.Textarea(
+                attrs={'placeholder': 'Комментарий'}),
+        }

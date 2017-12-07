@@ -5,7 +5,7 @@ from .models import ReviewPost
 from .forms import ReviewPostForm
 
 def main(request):
-    posts = ReviewPost.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = ReviewPost.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     if request.method == "POST":
         form = ReviewPostForm(request.POST)
         if form.is_valid():
@@ -15,7 +15,7 @@ def main(request):
             return redirect('main')
     else:
         form = ReviewPostForm()
-    return render(request, 'hoz/main.html', {'posts': posts, 'form': form})
+    return render(request, 'hoz/main.html', {'posts': posts[:3], 'form': form})
 
 def furniture(request):
     return render(request, 'hoz/furniture.html', {})
