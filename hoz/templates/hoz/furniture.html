@@ -1,5 +1,74 @@
 {% extends 'hoz/base.html' %}
 {% load staticfiles %}
 {% block content %}
-    <p>fkjghdjfkghjd</p>
+<section class="furniture">
+    <h1>Химчистка мягкой мебели на дому!</h1>
+    <p>Профессиональное немецкое оборудование</p>
+    <div class="row row-furniture">
+      <div class="col">
+        <div class="furniture-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded" src="{% static 'img/furniture.png' %}" alt="Furniture">
+      </div>
+    </div>
+    <div class="furniture-second-screen">
+      <h2>СТОИМОСТЬ УСЛУГ</h2>
+      <table class="table furniture-table">
+        <tbody>
+          <tr>
+            <td>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</td>
+            <td>1250 грн</td>
+          </tr>
+          <tr>
+            <td>Кожаный диван угловой небольшой</td>
+            <td>1000 грн</td>
+          </tr>
+          <tr>
+            <td>Кожаное кресло</td>
+            <td>250 грн</td>
+          </tr>
+          <tr>
+            <td>Кресло нераскладное</td>
+            <td>150 грн</td>
+          </tr>
+          <tr>
+            <td>Кресло раскладное</td>
+            <td>250 грн</td>
+          </tr>
+          <tr>
+            <td>Кресло двухместное  </td>
+            <td>350 грн</td>
+          </tr>
+          <tr>
+            <td>Стул компьютерный</td>
+            <td>50 грн</td>
+          </tr>
+          <tr>
+            <td>Кресло в кинотеатре</td>
+            <td>50 грн</td>
+          </tr>
+          <tr>
+            <td>Диван стандартный, угловой, пятиместный</td>
+            <td>850 грн</td>
+          </tr>
+          <tr>
+            <td>Диван угловой, большой</td>
+            <td>1000 грн</td>
+          </tr>
+          <tr>
+            <td>Еврокнижка, выдвижной</td>
+            <td>500 грн</td>
+          </tr>
+          <tr>
+            <td>Еврокнижка, нераскладной</td>
+            <td>400 грн</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+<link rel="stylesheet" href="{% static 'css/furniture.css' %}"
 {% endblock %}
