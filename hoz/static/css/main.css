@@ -22,6 +22,9 @@
 /*advantages*/
 .advantages {
     background: url(../img/advantages.png) 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -117,7 +120,11 @@
 /* vermin */
 
 .vermin {
-    background-color: #30363f;
+    background: url(../img/vermins.png) 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .vermin img {
@@ -135,6 +142,15 @@
     z-index: auto;
 }
 
+.vermin .container {
+    padding-bottom: 5%;
+}
+
+.vermin .row {
+    background: rgba(47, 53, 62, 0.75);
+    border-radius: 10px;
+}
+
 .vermin .hoz-card {
     font-family: 'Geometria';
     font-size: 16px;
@@ -142,16 +158,19 @@
     letter-spacing: 0.6px;
     text-align: left;
     color: #ffffff;
-    margin-bottom: 20%;
 }
 
 .vermin .hoz-card-text {
     padding-left: 28%;
+    padding-bottom: 10%;
 }
 
 /* end vermin */
 
 /* portfolio */
+
+.portfolio {
+}
 
 .portfolio .container-fluid {
     padding: 0 5% 5%;
@@ -163,18 +182,18 @@
 
 .portfolio .row {
     padding: 0.5%;
-    border: 4px solid #202f4a;
-    border-radius: 10px;
     margin: 0.5% 0;
 }
 
 .portfolio .col-3 {
     padding: 0.5%;
+
 }
 
-.portfolio .col-2 {
+.hoz-portfolio {
     border: 4px solid #202f4a;
     border-radius: 10px;
+    height: 100%;
 }
 
 .portfolio img {
@@ -188,6 +207,7 @@
     color: #202f4a;
     font-size: 3.5rem;
     margin: 0;
+    line-height: 5.6;
 }
 
 /* end portfolio */
@@ -202,21 +222,18 @@
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100&1+0,0.6+100 */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,9ce4eb+100&0.5+0,1+100 */
-    background: -moz-linear-gradient(top, rgba(41,137,216,0.5) 0%, rgba(156,228,235,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(41,137,216,0.5) 0%,rgba(156,228,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(41,137,216,0.5) 0%,rgba(156,228,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#802989d8', endColorstr='#9ce4eb',GradientType=0 ); /* IE6-9 */
-    padding-top: 4%;
+    padding: 4% 0;
     background: url(../img/advantages.png) 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .reviews-container {
-    background-color: #ffffff;
+    background-color: rgba(191, 207, 246, 0.75);
     border-radius: 10px;
 }
-
-/* end reviews */
 
 .hoz-modal-dialog{
     max-width: 50%;
@@ -244,7 +261,7 @@
 
 /**/
 
-.hoz-rating input{
+[id^=id_rating] {
     margin:0;padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
@@ -261,8 +278,8 @@
     background:url(../img/rating/sad.png);
 }
 
-.hoz-rating input:active +.hoz-rating label{opacity: .9;}
-.hoz-rating input:checked +.hoz-rating label{
+[id^=id_rating]:active + label, [id^=id_rating]:active + label:hover{opacity: .9;}
+[id^=id_rating]:checked + label, [id^=id_rating]:checked + label:hover{
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
@@ -293,7 +310,7 @@
 /**/
 
 
-.hoz-modal-body input, .hoz-modal-body textarea {
+.hoz-modal-body input:not([id^=id_rating]), .hoz-modal-body textarea {
     background: none;
     border-radius: 10px;
     border: solid 4px #202f4a;
