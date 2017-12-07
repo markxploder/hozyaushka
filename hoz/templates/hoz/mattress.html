@@ -1,0 +1,41 @@
+{% extends 'hoz/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="mattress">
+  <h1>Химчистка матрасов на дому!</h1>
+  <div class="row row-mattress">
+    <div class="col">
+      <div class="mattress-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+    </div>
+    <div class="col">
+      <img class="rounded" src="{% static 'img/mattress.png' %}" alt="Mattress">
+    </div>
+  </div>
+  <div class="mattress-second-screen">
+    <h2>СТОИМОСТЬ УСЛУГ</h2>
+    <table class="table mattress-table">
+      <tbody>
+        <tr>
+          <td>Матрас детский</td>
+          <td>200 грн</td>
+        </tr>
+        <tr>
+          <td>Матрас одноместный</td>
+          <td>200 грн сторона</td>
+        </tr>
+        <tr>
+          <td>Матрас полуторный</td>
+          <td>250 грнсторона</td>
+        </tr>
+        <tr>
+          <td>Матрас двухместный</td>
+          <td>350 грн сторона</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<link rel="stylesheet" href="{% static 'css/mattress.css' %}"
+{% endblock %}

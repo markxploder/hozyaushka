@@ -1,25 +1,25 @@
-.furniture {
+.mattress {
   padding-top: 100px;
   text-align: center;
   font: #333333;
 }
 
-.furniture h1 {
+.mattress h1 {
   padding-top: 4.2%;
   font-size: 36px;
 }
 
-.furniture p {
+.mattress p {
   padding-top: 1.5%;
   font-size: 24px;
 }
 
-.row-furniture {
+.row-mattress {
   margin-top: 2.6%;
   margin-bottom: 2.1%;
 }
 
-.furniture-block {
+.mattress-block {
   height: 100%;
   margin-left: 5.8%;
   border: solid 2px #131313;
@@ -28,21 +28,23 @@
   padding-right: 4.3%;
 }
 
-.furniture-second-screen {
-  height: 837px;
-  background: url(../img/foam-furniture.png) 100% 100%;
+.mattress-second-screen {
+  height: 637px;
+  background: url(../img/foam-furniture.png);
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.furniture-second-screen h2 {
+.mattress-second-screen h2 {
   margin-top: 7.5%;
   margin-bottom: 6%;
   font-size: 30px;
 }
 
-.furniture-table {
+.mattress-table {
   width: 75.3%;
   text-align: left;
   font-size: 24px;
@@ -53,7 +55,7 @@
   padding: 3.5% 9.7% 3% 6%;
 }
 
-.furniture-table td {
+.mattress-table td {
   border-top: none;
   padding: none;
 }
