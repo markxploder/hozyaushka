@@ -7,7 +7,7 @@
 .caption-light h2, .caption-dark h2 {
     font-size: 36px;
     font-weight: 500;
-    line-height: 3.5;
+    line-height: 4.20;
     letter-spacing: 1.4px;
 }
 
@@ -153,8 +153,41 @@
 
 /* portfolio */
 
+.portfolio .container-fluid {
+    padding: 0 5% 5%;
+}
+
 .portfolio div {
     padding: 0;
+}
+
+.portfolio .row {
+    padding: 0.5%;
+    border: 4px solid #202f4a;
+    border-radius: 10px;
+    margin: 0.5% 0;
+}
+
+.portfolio .col-3 {
+    padding: 0.5%;
+}
+
+.portfolio .col-2 {
+    border: 4px solid #202f4a;
+    border-radius: 10px;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio p {
+    text-align: center;
+    font-family: 'Roboto';
+    color: #202f4a;
+    font-size: 3.5rem;
+    margin: 0;
 }
 
 /* end portfolio */
