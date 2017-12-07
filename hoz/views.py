@@ -5,3 +5,6 @@ def main(request):
 
 def furniture(request):
     return render(request, 'hoz/furniture.html', {})
+
+def mattress(request):
+    return render(request, 'hoz/mattress.html', {})
