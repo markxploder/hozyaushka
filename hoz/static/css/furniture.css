@@ -28,31 +28,55 @@
   padding-right: 4.3%;
 }
 
-.furniture-second-screen {
+#furniture-second-screen {
   height: 100%;
-  background: url(../img/foam-furniture.png) 100% 100%;
+  background: url(../img/foam-furniture.png);
+  background-position: top;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.furniture-second-screen h2 {
-  margin-top: 82px;
-  margin-bottom: 59px;
+#furniture-second-screen h2 {
+  margin-top: 70px;
+  margin-bottom: 45px;
   font-size: 30px;
 }
 
 .furniture-table {
-  width: 75.3%;
+  width: 70%;
   text-align: left;
   font-size: 24px;
   line-height: 25px;
   border: solid 4px #202f4a;
   border-collapse: unset;
   border-radius: 10px;
-  padding: 2% 6% 2% 4%;
+  padding: 1% 5% 1% 4%;
+  margin-bottom: 30px;
 }
 
 .furniture-table td {
   border-top: none;
+  padding: 1%;
+}
+
+@media screen and (max-device-width: 500px) {
+  .furniture-block {
+    width: 85%;
+  }
+
+  .furniture p {
+    font-size: 17px;
+  }
+
+  #furniture-second-screen {
+    background: url(../img/foam-mob.png) 100% 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .furniture-table {
+    font-size: 15px;
+  }
 }
