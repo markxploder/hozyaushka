@@ -28,19 +28,19 @@
   padding-right: 4.3%;
 }
 
-.mattress-second-screen {
-  height: 637px;
+#mattress-second-screen {
+  height: 100%;
   background: url(../img/foam-furniture.png);
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.mattress-second-screen h2 {
-  margin-top: 7.5%;
-  margin-bottom: 6%;
+#mattress-second-screen h2 {
+  margin-top: 70px;
+  margin-bottom: 45px;
   font-size: 30px;
 }
 
@@ -51,11 +51,17 @@
   border: solid 4px #202f4a;
   border-collapse: unset;
   border-radius: 10px;
-  margin-bottom: 11.8%;
-  padding: 3.5% 9.7% 3% 6%;
+  padding: 1.5% 5.5% 1.5% 4.5%;
+  margin-bottom: 30px;
 }
 
 .mattress-table td {
   border-top: none;
-  padding: none;
+  padding: 1.3%;
+}
+
+@media screen and (max-device-width: 500px) {
+  .mattress-block {
+    width: 85%;
+  }
 }
