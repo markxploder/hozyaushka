@@ -16,7 +16,7 @@
 }
 
 .caption-dark {
-    color: #333333;
+    color: #202f4a;
 }
 
 /*advantages*/
@@ -215,6 +215,10 @@
 /* reviews */
 
 .reviews {
+    min-height: 850px;
+}
+
+.reviews {
     /*background-image: -webkit-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
     background-image: -o-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
     background-image: linear-gradient(to top, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));*/
@@ -223,7 +227,7 @@
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,9ce4eb+100&0.5+0,1+100 */
     padding: 4% 0;
-    background: url(../img/advantages.png) 100% 100%;
+    background: url(../img/reviews2.png) 100% 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -395,7 +399,11 @@
 /* request */
 
 .request {
-    background: url(../img/foam2.png) no-repeat;
+    position: relative;
+    top: -25%;
+    margin-bottom: -13%;
+    background: url(../img/ffoam2.png) no-repeat, rgba(254, 254, 254, 0);
+    /*background-position-y: 104%;*/
 }
 
 .hoz-caption-bigger {
@@ -423,4 +431,10 @@
 
 .hoz-form textarea {
     height: 140px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+
 }
