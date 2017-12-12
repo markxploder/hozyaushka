@@ -62,15 +62,18 @@
 }
 
 @media screen and (max-device-width: 500px) {
-  .furniture-block {
-    width: 85%;
+  .furniture-block  {
+    width: 90%;
   }
 
   .furniture p {
+    padding-top: 1%;
     font-size: 17px;
   }
 
   .furniture-table {
+    width: 95%;
+    line-height: 18px;
     font-size: 15px;
   }
 }
