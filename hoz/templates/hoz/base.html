@@ -2,16 +2,30 @@
 <!DOCTYPE html>
     <head>
         <title>Hozyaushka</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     </head>
     <body>
         <header>
-            <nav>
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item">
+            <nav id="header-menu">
+                <ul class="nav nav-pills nav-fill ">
+                    <div class="nav-phone-mobi">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (068) 345-66-26</div>
+                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (073) 066-00-61</div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="nav-logo">
                         <a class="navbar-brand logo" href="{% url 'main' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
+                        <div id="sandwichMenu" onclick="popOut(this)">
+                            <div class="sandwchLine1"></div>
+                            <div class="sandwchLine2"></div>
+                            <div class="sandwchLine3"></div>
+                        </div>
                     </li>
                     </li>
                     <li class="nav-item">
@@ -29,7 +43,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Цены</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-phone">
                         <div class="container">
                             <div class="col">
                                 <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt="">+38 (068) 345-66-26</div>
@@ -77,7 +91,11 @@
                     </li>
                 </ul>
             </nav>
+            <div class="row justify-content-center">
+                Created by Quarnuts
+            </div>
         </footer>
+        <script src="{% static 'js/main.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
