@@ -125,13 +125,9 @@ nav li {
 }
 
 footer {
-    background: url(../img/ffoam2.png) no-repeat, rgba(254, 254, 254, 0);
-    position: relative;
-    top: -25%;
-    margin-bottom: -13%;
-}
-
-footer nav {
+    background: url(../img/ffoam2.png) no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     height: 100px;
 }
 

@@ -234,6 +234,7 @@
     background-size: cover;
 }
 
+
 .reviews-container {
     background-color: rgba(191, 207, 246, 0.75);
     border-radius: 10px;
@@ -399,16 +400,16 @@
 /* request */
 
 .request {
-    min-height: 100%;
-    min-width: 100%;
+    min-height: calc(100% - 100px);
+    position: relative;
+    top: -25%;
+    margin-bottom: -13%;
+    background: url(../img/ffoam2.png) no-repeat;
 }
 
-.request .hoz-btn {
-    margin: 0 0 2% 0;
-}
 
 .hoz-caption-bigger {
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 
 .hoz-caption-bigger h2 {
@@ -424,6 +425,10 @@
     text-align: center;
     color: #0a1425;
     padding-top: 2rem;
+}
+
+.request .hoz-btn {
+    margin: 0 0 2% 0;
 }
 
 .hoz-form input, .hoz-form textarea {
