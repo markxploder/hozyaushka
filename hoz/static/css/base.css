@@ -17,11 +17,20 @@ section {
 }
 
 .main .carousel-caption {
-    bottom: 20%;
+    bottom: 10%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    /*background: rgba(191, 207, 246, 0.75);*/
+    background: linear-gradient(to bottom, rgba(211, 242, 250, 0.4), rgba(188, 223, 231, 0.9));
 }
 
+ /*rgba(110, 208, 180, 0.8)*/
+
 .main h1 {
-    font-size: 5rem;
+    width: 60%;
+    margin-left: 20%;
+    font-size: 3.5rem;
     color: #0c2e45;
 }
 
@@ -30,7 +39,7 @@ header {
     height: 100px;
     position: absolute;
     width: 100%;
-    background: rgba(191, 207, 246, 0.6);
+    background: linear-gradient(to bottom, rgba(211, 242, 250, 0.6), rgba(188, 223, 231, 0.6));
 }
 
 header nav {
@@ -88,7 +97,6 @@ nav li {
 #main-mobile {
     height: inherit;
     z-index: -1;
-    min-height: 100vh;
     overflow: hidden;
     display: none;
 }
@@ -117,14 +125,14 @@ nav li {
 }
 
 footer {
-    background: url(../img/ffoam2.png) no-repeat;
-    background-attachment: fixed;
-    background-position-y: 130%;
-    background-repeat: no-repeat;
-    height: 100px;
+    background: url(../img/ffoam2.png) no-repeat, rgba(254, 254, 254, 0);
+    position: relative;
+    top: -25%;
+    margin-bottom: -13%;
 }
 
 footer nav {
+    height: 100px;
 }
 
 footer img {
@@ -225,5 +233,15 @@ footer img {
     #main-mobile {
         display: block;
     }
+
+    #main-mobile img {
+        height: 100vh;
+        width: auto;
+        position: relative;
+        z-index: -1;
+        left: -100%;
+    }
+
+
 
 }
