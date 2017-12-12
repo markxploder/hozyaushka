@@ -29,3 +29,6 @@ def furniture(request):
 
 def mattress(request):
     return render(request, 'hoz/mattress.html', {})
+
+def carpet(request):
+    return render(request, 'hoz/carpet.html', {})

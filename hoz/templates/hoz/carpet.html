@@ -1,0 +1,53 @@
+{% extends 'hoz/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="carpet">
+    <h1>Химчистка мягкой ковров на дому!</h1>
+    <div class="row row-carpet">
+      <div class="col">
+        <div class="carpet-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded carpet-img" src="{% static 'img/carpet.png' %}" alt="carpet">
+      </div>
+    </div>
+    <div id="carpet-second-screen">
+      <h2>СТОИМОСТЬ УСЛУГ</h2>
+      <table class="table carpet-table">
+        <tbody>
+          <tr>
+            <td>Шелковый</td>
+            <td>80 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Шерстяной</td>
+            <td>40 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Ковер, синтетика, низкий ворс</td>
+            <td>40 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Ковер, синтетика, средний ворс</td>
+            <td>40 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Ковер шеги лохматый</td>
+            <td>45 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Ковролин средний ворс </td>
+            <td>45 грн кв метр</td>
+          </tr>
+          <tr>
+            <td>Ковролин высокий ворс </td>
+            <td>45 грн кв метр</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+<link rel="stylesheet" href="{% static 'css/carpet.css' %}">
+{% endblock %}
