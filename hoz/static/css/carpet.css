@@ -14,7 +14,7 @@
   font-size: 24px;
 }
 
-.carpet-img {
+.block-img {
   width: 612px;
   height: 344px;
 }
@@ -35,7 +35,7 @@
 
 #carpet-second-screen {
   height: 100%;
-  background: url(../img/foam2.png);
+  background: url(../img/foam!.png);
   background-position: top;
   background-repeat: no-repeat;
   display: flex;
@@ -45,7 +45,7 @@
 
 #carpet-second-screen h2 {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 75px;
   font-size: 30px;
 }
 
@@ -67,11 +67,15 @@
 }
 
 @media screen and (max-device-width: 500px) {
+  .carpet h1 {
+    padding: 4.2% 5% 2% 5%;
+  }
+
   .carpet-block  {
     width: 90%;
   }
 
-  .carpet-img {
+  .block-img {
     margin-top: 20px;
     width: 306px;
     height: 172px;
@@ -88,8 +92,8 @@
   }
 
   #carpet-second-screen h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 75px;
     font-size: 20px;
   }
 
