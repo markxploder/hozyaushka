@@ -404,7 +404,7 @@
     position: relative;
     top: -25%;
     margin-bottom: -13%;
-    background: url(../img/ffoam2.png) no-repeat;
+    background: url(../img/foam!.png) no-repeat;
 }
 
 
@@ -443,8 +443,51 @@
     height: 140px;
 }
 
+.advantages-mobile {
+    display: none;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+    .caption-light h2, .caption-dark h2 {
+        font-size: 26px;
+    }
 
+    .advantages-mobile {
+        display: block;
+    }
+
+    .advantages-desctop {
+        display: none;
+    }
+
+    .advantages .col {
+        max-width: 50%;
+    }
+
+    .hoz-card {
+        font-size: 14px;
+    }
+
+    .advantages img {
+        height: 70px;
+    }
+
+    .stage-left div, .stage-right div {
+        left: 0;
+        right: 0;
+    }
+
+    .stages .hoz-card-text {
+        top: -70%;
+    }
+
+    .stage-right p, .stage-left p {
+        font-size: 16px;
+    }
+
+    .stage-right p {
+        text-align: left;
+    }
 
 }
