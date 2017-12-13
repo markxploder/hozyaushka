@@ -1,25 +1,30 @@
-.furniture {
+.carpet {
   padding-top: 100px;
   text-align: center;
   font: #333333;
 }
 
-.furniture h1 {
+.carpet h1 {
   padding-top: 4.2%;
   font-size: 36px;
 }
 
-.furniture p {
+.carpet p {
   padding-top: 1.5%;
   font-size: 24px;
 }
 
-.row-furniture {
+.carpet-img {
+  width: 612px;
+  height: 344px;
+}
+
+.row-carpet {
   margin-top: 2.6%;
   margin-bottom: 2.1%;
 }
 
-.furniture-block {
+.carpet-block {
   height: 100%;
   margin-left: 5.8%;
   border: solid 2px #131313;
@@ -28,7 +33,7 @@
   padding-right: 4.3%;
 }
 
-#furniture-second-screen {
+#carpet-second-screen {
   height: 100%;
   background: url(../img/foam2.png);
   background-position: top;
@@ -38,13 +43,13 @@
   align-items: center;
 }
 
-#furniture-second-screen h2 {
+#carpet-second-screen h2 {
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 30px;
 }
 
-.furniture-table {
+.carpet-table {
   width: 70%;
   text-align: left;
   font-size: 24px;
@@ -56,22 +61,39 @@
   margin-bottom: 30px;
 }
 
-.furniture-table td {
+.carpet-table td {
   border-top: none;
   padding: 1%;
 }
 
 @media screen and (max-device-width: 500px) {
-  .furniture-block  {
+  .carpet-block  {
     width: 90%;
   }
 
-  .furniture p {
+  .carpet-img {
+    margin-top: 20px;
+    width: 306px;
+    height: 172px;
+  }
+
+  .row-carpet {
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  .carpet p {
     padding-top: 1%;
     font-size: 17px;
   }
 
-  .furniture-table {
+  #carpet-second-screen h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .carpet-table {
     width: 95%;
     line-height: 18px;
     font-size: 15px;
