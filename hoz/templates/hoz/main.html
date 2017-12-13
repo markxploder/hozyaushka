@@ -194,8 +194,10 @@
             <div class="col">
                 <div class="card hoz-card">
                     <div class="card-body">
-                        <img class="card-img-left" src="{% static 'img/vermin1.jpg' %}" alt="Card image cap">
+                        <img class="card-img-left card-img-desctop" src="{% static 'img/vermin1.jpg' %}" alt="Card image cap">
+                        <img class="card-img-top card-img-mobile" src="{% static 'img/vermin1.jpg' %}" alt="Card image cap">
                         <span class="card-title hoz-card-title">Пылевой клещ</span>
+                        <h3 class="card-title hoz-card-title">Пылевой клещ</h3>
                         <p class="card-text hoz-card-text">Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the industry's standard dummy
                              text ever since the 1500s, when an unknown printer took a galley of type
@@ -206,8 +208,10 @@
             <div class="col">
                 <div class="card hoz-card">
                     <div class="card-body">
-                        <img class="card-img-left" src="{% static 'img/vermin2.jpg' %}" alt="Card image cap">
+                        <img class="card-img-left card-img-desctop" src="{% static 'img/vermin2.jpg' %}" alt="Card image cap">
+                        <img class="card-img-top card-img-mobile" src="{% static 'img/vermin2.jpg' %}" alt="Card image cap">
                         <span class="card-title hoz-card-title">Пылевой клещ</span>
+                        <h3 class="card-title hoz-card-title">Пылевой клещ</h3>
                         <p class="card-text hoz-card-text">Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the industry's standard dummy
                              text ever since the 1500s, when an unknown printer took a galley of type
@@ -218,8 +222,10 @@
             <div class="col">
                 <div class="card hoz-card">
                     <div class="card-body">
-                        <img class="card-img-left" src="{% static 'img/vermin3.jpg' %}" alt="Card image cap">
+                        <img class="card-img-left card-img-desctop" src="{% static 'img/vermin3.jpg' %}" alt="Card image cap">
+                        <img class="card-img-top card-img-mobile" src="{% static 'img/vermin3.jpg' %}" alt="Card image cap">
                         <span class="card-title hoz-card-title">Пылевой клещ</span>
+                        <h3 class="card-title hoz-card-title">Пылевой клещ</h3>
                         <p class="card-text hoz-card-text">Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the industry's standard dummy
                              text ever since the 1500s, when an unknown printer took a galley of type
@@ -266,7 +272,7 @@
 <section class="reviews">
     <div class="container reviews-container">
         <div class="caption-dark"><h2>Отзывы</h2></div>
-        <div class="row reviews-row">
+        <div class="row reviews-row reviews-row-desctop">
             {% for post in posts %}
             <div class="col">
                 <div class="card hoz-card">
@@ -286,6 +292,42 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+        <div class="row reviews-row reviews-row-mobile">
+            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="1"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    {% for post in posts %}
+                        {% if post == posts|first %}
+                        <div class="carousel-item active">
+                        {% else  %}
+                            <div class="carousel-item">
+                        {% endif %}
+                        <div class="col">
+                            <div class="card hoz-card">
+                                <div class="col">
+                                    {% if post.rating == 1 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                                    {% elif post.rating == 2 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                                    {% else %}
+                                    <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{ post.author }}</h4>
+                                        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
         <div class="row justify-content-center">
             <a href="">Посмотреть все</a>

@@ -443,7 +443,7 @@
     height: 140px;
 }
 
-.advantages-mobile {
+.advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile {
     display: none;
 }
 
@@ -453,11 +453,11 @@
         font-size: 26px;
     }
 
-    .advantages-mobile {
+    .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile {
         display: block;
     }
 
-    .advantages-desctop {
+    .advantages-desctop, .card-img-desctop, .hoz-card-title:not(h3), .reviews-row-desctop {
         display: none;
     }
 
@@ -479,7 +479,7 @@
     }
 
     .stages .hoz-card-text {
-        top: -70%;
+        top: 0;
     }
 
     .stage-right p, .stage-left p {
@@ -488,6 +488,73 @@
 
     .stage-right p {
         text-align: left;
+    }
+
+    .card-img-mobile {
+        margin: 0 auto;
+    }
+
+    .vermin .hoz-card-title {
+        text-align: center;
+    }
+
+    .vermin .hoz-card-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .reviews {
+        min-height: 700px;
+    }
+
+    .reviews .card-body {
+        padding: 0;
+    }
+
+    .reviews-row-mobile .carousel {
+        height: 320px;
+    }
+
+    .reviews-row-mobile .carousel-inner {
+        height: 100%;
+    }
+
+    .reviews-row {
+        min-height: 320px;
+    }
+
+    .hoz-btn {
+        width: 50%;
+    }
+
+    #carousel-mobile .carousel-indicators {
+        bottom: 0;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .reviews .hoz-card img {
+        margin-bottom: 1.25rem;
+    }
+
+    .hoz-caption-bigger h2 {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .request {
+        background-position-y: 15%;
+        background-position-x: center;
+        margin-bottom: -38%;
+    }
+
+    .hoz-form {
+        width: 95%;
     }
 
 }
