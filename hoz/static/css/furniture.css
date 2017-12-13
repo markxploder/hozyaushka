@@ -30,7 +30,7 @@
 
 #furniture-second-screen {
   height: 100%;
-  background: url(../img/foam2.png);
+  background: url(../img/foam!.png);
   background-position: top;
   background-repeat: no-repeat;
   display: flex;
@@ -40,7 +40,7 @@
 
 #furniture-second-screen h2 {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   font-size: 30px;
 }
 
@@ -53,7 +53,7 @@
   border-collapse: unset;
   border-radius: 10px;
   padding: 1% 5% 1% 4%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .furniture-table td {
@@ -62,13 +62,34 @@
 }
 
 @media screen and (max-device-width: 500px) {
+  .furniture h1 {
+    padding: 4.2% 5% 2% 5%;
+  }
+
   .furniture-block  {
     width: 90%;
+  }
+
+  .block-img {
+    margin-top: 20px;
+    width: 306px;
+    height: 172px;
+  }
+
+  .row-furniture {
+    margin-top: 4%;
+    margin-bottom: 2%;
   }
 
   .furniture p {
     padding-top: 1%;
     font-size: 17px;
+  }
+
+  #furniture-second-screen h2 {
+    margin-top: 80px;
+    margin-bottom: 65px;
+    font-size: 20px;
   }
 
   .furniture-table {

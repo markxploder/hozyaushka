@@ -30,7 +30,7 @@
 
 #mattress-second-screen {
   height: 100%;
-  background: url(../img/foam2.png);
+  background: url(../img/foam!.png);
   background-position: top;
   background-repeat: no-repeat;
   display: flex;
@@ -61,7 +61,40 @@
 }
 
 @media screen and (max-device-width: 500px) {
-  .mattress-block {
-    width: 85%;
+  .mattress h1 {
+    padding: 4.2% 5% 2% 5%;
+  }
+
+  .mattress-block  {
+    width: 90%;
+  }
+
+  .block-img {
+    margin-top: 20px;
+    width: 306px;
+    height: 172px;
+  }
+
+  .row-mattress {
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  .mattress p {
+    padding-top: 1%;
+    font-size: 17px;
+  }
+
+  #mattress-second-screen h2 {
+    margin-top: 80px;
+    margin-bottom: 65px;
+    font-size: 20px;
+  }
+
+  .mattress-table {
+    width: 95%;
+    line-height: 18px;
+    font-size: 15px;
+    margin-bottom: 30px;
   }
 }
