@@ -152,7 +152,7 @@
 }
 
 .vermin .hoz-card {
-    font-family: 'Geometria';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.6px;
@@ -169,26 +169,10 @@
 
 /* portfolio */
 
-.portfolio {
-}
-
-.portfolio .container-fluid {
-    padding: 0 5% 5%;
-}
-
 .portfolio div {
     padding: 0;
 }
 
-.portfolio .row {
-    padding: 0.5%;
-    margin: 0.5% 0;
-}
-
-.portfolio .col-3 {
-    padding: 0.5%;
-
-}
 
 .hoz-portfolio {
     border: 4px solid #202f4a;
@@ -210,6 +194,19 @@
     line-height: 5.6;
 }
 
+.portfolio .card-title {
+    height: 74px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    color: #333333;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 2.25;
+    letter-spacing: 1.3px;
+    text-align: center;
+}
+
+
 /* end portfolio */
 
 /* reviews */
@@ -219,13 +216,6 @@
 }
 
 .reviews {
-    /*background-image: -webkit-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
-    background-image: -o-linear-gradient(bottom, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));
-    background-image: linear-gradient(to top, rgba(8, 91, 112, 0.5), rgba(151, 121, 236, 0.5));*/
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100&1+0,0.6+100 */
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce4eb+0,2989d8+100,00758f+100 */
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,9ce4eb+100&0.5+0,1+100 */
     padding: 4% 0;
     background: url(../img/reviews2.png) 100% 100%;
     background-attachment: fixed;
@@ -264,7 +254,7 @@
     font-size: 24px;
 }
 
-/**/
+/* smile */
 
 [id^=id_rating] {
     margin:0;padding:0;
@@ -312,7 +302,7 @@
             filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
-/**/
+/* end smile */
 
 
 .hoz-modal-body input:not([id^=id_rating]), .hoz-modal-body textarea {
@@ -381,7 +371,7 @@
 }
 
 .reviews .hoz-card h4, .reviews .hoz-card p {
-    font-family: 'Geometria';
+    font-family: 'Roboto';
     font-weight: 500;
     text-align: center;
     color: #333333;
@@ -446,6 +436,88 @@
 .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile {
     display: none;
 }
+
+#bubbles div {
+    position: absolute;
+}
+
+#bubble1 {
+    bottom: 10%;
+    left: 15%;
+}
+#bubble2 {
+    bottom: 20%;
+    left: 10%;
+}
+#bubble3 {
+    bottom: 30%;
+    left: 5%;
+}
+#bubble4 {
+    bottom: 60%;
+    left: 15%;
+}
+#bubble5 {
+    bottom: 30%;
+    left: 20%
+}
+#bubble6 {
+    bottom: 20%;
+    left: 85%;
+}
+#bubble7 {
+    bottom: 40%;
+    left: 80%;
+}
+#bubble8 {
+    bottom: 55%;
+    left: 85%;
+}
+
+
+#bubbles img {
+    height: 50px;
+}
+#bubble4 img {
+    height: 70px;
+}
+#bubble3 img {
+    height: 60px;
+}
+#bubble2 img {
+    height: 90px;
+}
+
+
+#bubble8 img {
+    height: 150px;
+}
+
+#bubble1 {
+    animation: move1 1s ease-in-out infinite;
+}
+#bubble3 {
+    animation: move2 2s ease-in-out infinite;
+}
+#bubble8 {
+    animation: move8 5s infinite;
+}
+@keyframes move1 {
+    0% { transform: translateY(0%); }
+    50% { transform: translateY(30%); }
+}
+@keyframes move2 {
+    0% { transform: translateY(50%) translateX(50%); }
+    50% { transform: translateY(0%) translateX(0%); }
+    100% { transform: translateY(50%) translateX(50%); }
+}
+@keyframes move8 {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.2); }
+}
+
+
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 

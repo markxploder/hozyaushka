@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('../fonts/Geometria.otf');
 
 html, body {
     height: 100%;
@@ -39,7 +38,7 @@ header {
     height: 100px;
     position: absolute;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(211, 242, 250, 0.6), rgba(188, 223, 231, 0.6));
+    background: linear-gradient(to top, rgba(211, 242, 250, 0.4), rgba(188, 223, 231, 0.9));
     z-index: 1;
 }
 
@@ -128,7 +127,7 @@ nav li {
 }
 
 footer {
-    background: url(../img/foam!.png) no-repeat;
+    background: rgb(0, 184, 171);
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100px;
@@ -139,6 +138,14 @@ footer img {
     width: 40px;
     margin: 5px;
 }
+
+.copyright {
+    background: rgb(0, 184, 171);
+}
+.copyright img {
+    width: auto;
+}
+
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 

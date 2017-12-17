@@ -239,32 +239,72 @@
 <section class="portfolio">
     <div class="caption-dark"><h2>Наши работы</h2></div>
     <div class="container-fluid">
-        <div class="row justify-content-start">
+        <div class="row">
             <div class="col-3">
-                <img src="{% static 'img/1.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/1.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
-                <img src="{% static 'img/3.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/2.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
-                <img src="{% static 'img/5.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/3.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
             </div>
-            <div class="col-3 hoz-portfolio align-self-center align-content-stretch">
-                <p>До</p>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/4.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row justify-content-end">
-            <div class="col-3 hoz-portfolio align-self-center align-content-stretch">
-                <p>После</p>
+        <div class="row">
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/1.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
-                <img src="{% static 'img/2.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/2.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
-                <img src="{% static 'img/4.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/3.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
-                <img src="{% static 'img/6.png' %}" alt="">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/4.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -330,7 +370,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <a href="">Посмотреть все</a>
+            <a href="{% url 'reviews' %}">Посмотреть все</a>
         </div>
     </div>
 
@@ -396,7 +436,32 @@
             </form>
         </div>
     </div>
+    <div id="bubbles">
+        <div id="bubble1">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble2">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble3">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble4">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble5">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble6">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble7">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble8">
+            <img src="{% static 'svg/bubbles.svg' %}" alt="">
+        </div>
+    </div>
 </section>
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
-</script>
 {% endblock %}

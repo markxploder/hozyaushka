@@ -1,0 +1,115 @@
+{% extends 'hoz/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="reviews">
+    <div class="container reviews-container">
+        <div class="caption-dark"><h2>Отзывы</h2></div>
+        <div class="row reviews-row reviews-row-desctop">
+            {% for post in posts %}
+            <div class="col">
+                <div class="card hoz-card">
+                    <div class="col">
+                        {% if post.rating == 1 %}
+                        <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                        {% elif post.rating == 2 %}
+                        <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                        {% else %}
+                        <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                        {% endif %}
+                        <div class="card-body">
+                            <h4 class="card-title">{{ post.author }}</h4>
+                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row reviews-row reviews-row-mobile">
+            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="1"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    {% for post in posts %}
+                        {% if post == posts|first %}
+                        <div class="carousel-item active">
+                        {% else  %}
+                            <div class="carousel-item">
+                        {% endif %}
+                        <div class="col">
+                            <div class="card hoz-card">
+                                <div class="col">
+                                    {% if post.rating == 1 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                                    {% elif post.rating == 2 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                                    {% else %}
+                                    <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{ post.author }}</h4>
+                                        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <a href="">Посмотреть все</a>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary hoz-btn" data-toggle="modal" data-target="#exampleModal">
+            Оставить отзыв
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <form method="POST" class="post-form">{% csrf_token %}
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog hoz-modal-dialog" role="document">
+                <div class="modal-content hoz-modal-content">
+                    <div class="modal-header hoz-modal-header">
+                        <button type="button" class="close hoz-close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body hoz-modal-body">
+                        <h5 class="modal-title hoz-modal-title" id="exampleModalLabel">Нам важно Ваше мнение!</h5>
+                        <div class="container hoz-form-container">
+                            <div class="row justify-content-center">
+                                {{ form.author }}
+                            </div>
+                            <div class="row justify-content-center">
+                                {{ form.text }}
+                            </div>
+                            <div class="row justify-content-center hoz-rating">
+                                {% for rate in form.rating %}
+                                <div class="col-2 {{ rate.id_for_label }}">
+                                    {{ rate.tag }}
+                                    <label for="{{ rate.id_for_label }}"></label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer hoz-modal-footer row justify-content-center">
+                        <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+</script>
+{% endblock %}

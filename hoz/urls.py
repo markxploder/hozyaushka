@@ -5,5 +5,6 @@ urlpatterns = [
     url(r'^$', views.main, name='main'),
     url(r'^furniture/', views.furniture, name='furniture'),
     url(r'^mattress/', views.mattress, name='mattress'),
-    url(r'^carpet/', views.carpet, name='carpet')
+    url(r'^carpet/', views.carpet, name='carpet'),
+    url(r'^reviews/', views.reviews, name='reviews'),
 ]

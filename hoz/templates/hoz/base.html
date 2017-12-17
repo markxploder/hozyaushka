@@ -55,6 +55,45 @@
             </nav>
         </header>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/callback.css' %}">
+        <div class="callback hidden-xs">
+            <a class="callback_link" data-toggle="modal" data-target="#hozCallBack">
+                <div class="callback_block">
+                    <div class="callback_a"></div>
+                    <div class="callback_b"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Modal -->
+        <form method="POST" class="post-form">{% csrf_token %}
+            <div class="modal fade" id="hozCallBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog hoz-modal-dialog-callback" role="document">
+                    <div class="modal-content hoz-modal-content-callback">
+                        <div class="modal-header hoz-modal-header-callback">
+                            <button type="button" class="close hoz-close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body hoz-modal-body-callback">
+                            <h5 class="modal-title hoz-modal-title-callback" id="exampleModalLabel">Оставьте номер телефона
+ и мы Вам перезвоним!</h5>
+                            <div class="container hoz-form-container-callback">
+                                <div class="row justify-content-center">
+                                    {{ callback_form.name }}
+                                </div>
+                                <div class="row justify-content-center">
+                                    {{ callback_form.phone }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer hoz-modal-footer-callback row justify-content-center">
+                            <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
         {% block content %}
         {% endblock %}
         <footer>
@@ -99,8 +138,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="row justify-content-center">
-                Created by Quarnuts
+            <div class="row justify-content-center align-items-center copyright">
+                Created by <img src="{% static 'svg/qn.svg' %}" alt="Quarnuts">
             </div>
         </footer>
         <script src="{% static 'js/main.js' %}"></script>
