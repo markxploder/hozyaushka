@@ -33,6 +33,7 @@
   background: url(../img/foam!.png);
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +41,7 @@
 
 #furniture-second-screen h2 {
   margin-top: 60px;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
   font-size: 30px;
 }
 
@@ -53,7 +54,7 @@
   border-collapse: unset;
   border-radius: 10px;
   padding: 1% 5% 1% 4%;
-  margin-bottom: 15px;
+  margin-bottom: 120px;
 }
 
 .furniture-table td {
