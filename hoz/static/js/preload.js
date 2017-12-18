@@ -41,7 +41,7 @@ tl.insert(
 jQuery(document).ready(function($) {
   $(window).load(function() {
     setTimeout(function() {
-      $('#preloader').fadeOut('slow', function() {});
+      $('#preloader').fadeOut("slow");
     }, 2000);
   });
 });
