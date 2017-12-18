@@ -37,6 +37,6 @@ tl.insert(
   "-=0.4"
 );
 
-$(window).load(function() {
+$(document).ready(function() {
     $(".preloader").fadeOut(3000);
 });
