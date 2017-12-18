@@ -1,0 +1,24 @@
+.price-table {
+  width: 70%;
+  text-align: left;
+  font-size: 24px;
+  line-height: 25px;
+  border: solid 4px #202f4a;
+  border-collapse: unset;
+  border-radius: 10px;
+  padding: 1% 5% 1% 4%;
+  margin-bottom: 15px;
+}
+
+.price-table td {
+  border-top: none;
+  padding: 1%;
+}
+
+@media screen and (max-device-width: 500px) {
+  .price-table {
+    width: 95%;
+    line-height: 18px;
+    font-size: 15px;
+  }
+}

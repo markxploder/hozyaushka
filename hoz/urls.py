@@ -6,5 +6,6 @@ urlpatterns = [
     url(r'^furniture/', views.furniture, name='furniture'),
     url(r'^mattress/', views.mattress, name='mattress'),
     url(r'^carpet/', views.carpet, name='carpet'),
+    url(r'^price/', views.price, name='price'),
     url(r'^reviews/', views.reviews, name='reviews'),
 ]

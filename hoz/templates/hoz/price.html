@@ -1,0 +1,152 @@
+{% extends 'hoz/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="price">
+  <h1>Цены</h1>
+  <table class="table price-table">
+    <tbody>
+      <h3>Мягкая мебель</h3>
+      <tr>
+        <td>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</td>
+        <td>1250 грн</td>
+      </tr>
+      <tr>
+        <td>Кожаный диван угловой небольшой</td>
+        <td>1000 грн</td>
+      </tr>
+      <tr>
+        <td>Кожаное кресло</td>
+        <td>250 грн</td>
+      </tr>
+      <tr>
+        <td>Кресло нераскладное</td>
+        <td>150 грн</td>
+      </tr>
+      <tr>
+        <td>Кресло раскладное</td>
+        <td>250 грн</td>
+      </tr>
+      <tr>
+        <td>Кресло двухместное  </td>
+        <td>350 грн</td>
+      </tr>
+      <tr>
+        <td>Стул компьютерный</td>
+        <td>50 грн</td>
+      </tr>
+      <tr>
+        <td>Кресло в кинотеатре</td>
+        <td>50 грн</td>
+      </tr>
+      <tr>
+        <td>Диван стандартный, угловой, пятиместный</td>
+        <td>850 грн</td>
+      </tr>
+      <tr>
+        <td>Диван угловой, большой</td>
+        <td>1000 грн</td>
+      </tr>
+      <tr>
+        <td>Еврокнижка, выдвижной</td>
+        <td>500 грн</td>
+      </tr>
+      <tr>
+        <td>Еврокнижка, нераскладной</td>
+        <td>400 грн</td>
+      </tr>
+      <h3>Матрасы</h3>
+        <tr>
+          <td>Матрас детский</td>
+          <td>200 грн</td>
+        </tr>
+        <tr>
+          <td>Матрас одноместный</td>
+          <td>200 грн сторона</td>
+        </tr>
+        <tr>
+          <td>Матрас полуторный</td>
+          <td>250 грн сторона</td>
+        </tr>
+        <tr>
+          <td>Матрас двухместный</td>
+          <td>350 грн сторона</td>
+        </tr>
+      <h3>Ковры</h3>
+        <tr>
+          <td>Шелковый</td>
+          <td>80 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Шерстяной</td>
+          <td>40 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Ковер, синтетика, низкий ворс</td>
+          <td>40 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Ковер, синтетика, средний ворс</td>
+          <td>40 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Ковер шеги лохматый</td>
+          <td>45 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Ковролин средний ворс </td>
+          <td>45 грн кв метр</td>
+        </tr>
+        <tr>
+          <td>Ковролин высокий ворс </td>
+          <td>45 грн кв метр</td>
+        </tr>
+    </tbody>
+  </table>
+</section>
+<section class="request">
+    <div class="caption-dark hoz-caption-bigger"><h2>Оставьте заявку на химчистку</h2></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <form method="POST" class="post-form hoz-form">{% csrf_token %}
+                <div class="form-group">
+                    {{ form_request.name }}
+                </div>
+                <div class="form-group">
+                    {{ form_request.phone }}
+                </div>
+                <div class="form-group">
+                    {{ form_request.text }}
+                </div>
+                <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <div id="bubbles">
+        <div id="bubble1">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble2">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble3">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble4">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble5">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble6">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble7">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble8">
+            <img src="{% static 'svg/bubbles.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+<link rel="stylesheet" href="{% static 'css/price.css' %}">
+{% endblock %}

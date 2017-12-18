@@ -79,6 +79,18 @@ def carpet(request):
         callback_form = CallbackPostForm()
     return render(request, 'hoz/carpet.html', {'callback_form': callback_form})
 
+def price(request):
+    if request.method == "POST":
+        callback_form = CallbackPostForm(request.POST)
+        if callback_form.is_valid():
+            callback_post = callback_form.save(commit=False)
+            callback_post.published_date = timezone.now()
+            callback_post.save()
+            return redirect('main')
+    else:
+        callback_form = CallbackPostForm()
+    return render(request, 'hoz/price.html', {'callback_form': callback_form})
+
 def reviews(request):
     if request.method == "POST":
         callback_form = CallbackPostForm(request.POST)
