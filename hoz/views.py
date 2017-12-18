@@ -87,9 +87,16 @@ def price(request):
             callback_post.published_date = timezone.now()
             callback_post.save()
             return redirect('main')
+        form_request = RequestPostForm(request.POST)
+        if form_request.is_valid():
+            post_request = form_request.save(commit=False)
+            post_request.published_date = timezone.now()
+            post_request.save()
+            return redirect('main')
     else:
         callback_form = CallbackPostForm()
-    return render(request, 'hoz/price.html', {'callback_form': callback_form})
+        form_request = RequestPostForm()
+    return render(request, 'hoz/price.html', {'callback_form': callback_form, 'form_request': form_request,})
 
 def reviews(request):
     if request.method == "POST":

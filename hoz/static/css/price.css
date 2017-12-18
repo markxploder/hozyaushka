@@ -15,6 +15,131 @@
   padding: 1%;
 }
 
+/* request */
+
+.request {
+    min-height: calc(100% - 100px);
+    position: relative;
+    top: -25%;
+    margin-bottom: -13%;
+    background: url(../img/foam!.png) no-repeat;
+}
+
+
+.hoz-caption-bigger {
+    margin-bottom: 2%;
+}
+
+.hoz-caption-bigger h2 {
+    line-height: 3.2;
+}
+
+.hoz-form {
+    width: 60%;
+    border: solid 4px #202f4a;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+    color: #0a1425;
+    padding-top: 2rem;
+}
+
+.request .hoz-btn {
+    margin: 0 0 2% 0;
+}
+
+.hoz-form input, .hoz-form textarea {
+    background: none;
+    border: solid 4px #202f4a;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5px;
+}
+
+.hoz-form textarea {
+    height: 140px;
+}
+
+#bubbles div {
+    position: absolute;
+}
+
+#bubble1 {
+    bottom: 10%;
+    left: 15%;
+}
+#bubble2 {
+    bottom: 20%;
+    left: 10%;
+}
+#bubble3 {
+    bottom: 30%;
+    left: 5%;
+}
+#bubble4 {
+    bottom: 60%;
+    left: 15%;
+}
+#bubble5 {
+    bottom: 30%;
+    left: 20%
+}
+#bubble6 {
+    bottom: 20%;
+    left: 85%;
+}
+#bubble7 {
+    bottom: 40%;
+    left: 80%;
+}
+#bubble8 {
+    bottom: 55%;
+    left: 85%;
+}
+
+
+#bubbles img {
+    height: 50px;
+}
+#bubble4 img {
+    height: 70px;
+}
+#bubble3 img {
+    height: 60px;
+}
+#bubble2 img {
+    height: 90px;
+}
+
+
+#bubble8 img {
+    height: 150px;
+}
+
+#bubble1 {
+    animation: move1 1s ease-in-out infinite;
+}
+#bubble3 {
+    animation: move2 2s ease-in-out infinite;
+}
+#bubble8 {
+    animation: move8 5s infinite;
+}
+@keyframes move1 {
+    0% { transform: translateY(0%); }
+    50% { transform: translateY(30%); }
+}
+@keyframes move2 {
+    0% { transform: translateY(50%) translateX(50%); }
+    50% { transform: translateY(0%) translateX(0%); }
+    100% { transform: translateY(50%) translateX(50%); }
+}
+@keyframes move8 {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.2); }
+}
+
 @media screen and (max-device-width: 500px) {
   .price-table {
     width: 95%;
