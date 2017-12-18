@@ -93,26 +93,25 @@
     height: 384px;
 }
 
-.hoz-card-title {
+.stages .hoz-card-title {
     font-size: 240px;
     line-height: 0.63;
     letter-spacing: 9.6px;
     color: rgb(227, 225, 225);
-    position: relative;
+    position: absolute;
     z-index: -2;
 }
 
 .stage-left .hoz-card-title {
-    left: -9%;
+    left: 0%;
 }
 
 .stage-right .hoz-card-title {
-    right: -9%;
+    right: 0%;
 }
 
 .stages .hoz-card-text {
-    position: relative;
-    top: -60%;
+
 }
 
 /* stages end */
@@ -385,6 +384,8 @@
     font-size: 16px;
 }
 
+
+
 /* end reviews */
 
 /* request */
@@ -399,7 +400,7 @@
 
 
 .hoz-caption-bigger {
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 }
 
 .hoz-caption-bigger h2 {
@@ -519,7 +520,7 @@
 
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 
     .caption-light h2, .caption-dark h2 {
         font-size: 26px;
@@ -531,6 +532,14 @@
 
     .advantages-desctop, .card-img-desctop, .hoz-card-title:not(h3), .reviews-row-desctop, .portfolio-desctop {
         display: none;
+    }
+
+    .vermin .row, .portfolio .row {
+        margin: 0;
+    }
+
+    .reviews {
+        padding: 15px;
     }
 
     .advantages .col {
@@ -546,8 +555,8 @@
     }
 
     .stage-left div, .stage-right div {
-        left: 0;
-        right: 0;
+        left: 5%;
+        right: 5%;
     }
 
     .stages .hoz-card-text {
@@ -564,6 +573,10 @@
 
     .card-img-mobile {
         margin: 0 auto;
+    }
+
+    .vermin .col {
+        min-width: 100%;
     }
 
     .vermin .hoz-card-title {
@@ -626,11 +639,25 @@
     .request {
         background-position-y: 15%;
         background-position-x: center;
-        margin-bottom: -38%;
+        margin-bottom: -60%;
     }
 
     .hoz-form {
         width: 95%;
+    }
+
+    .hoz-modal-dialog {
+        max-width: 100%;
+    }
+
+    .hoz-modal-body input:not([id^=id_rating]), .hoz-modal-body textarea {
+        width: 80%;
+    }
+    .hoz-rating label {
+        height: 50px;
+    }
+    .hoz-rating .col-2 {
+        max-width: 30%;
     }
 
 }
