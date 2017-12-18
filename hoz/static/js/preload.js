@@ -37,11 +37,6 @@ tl.insert(
   "-=0.4"
 );
 
-
-jQuery(document).ready(function($) {
-  $(window).load(function() {
-    setTimeout(function() {
-      $('#preloader').fadeOut("slow");
-    }, 2000);
-  });
+$(window).on( "load", function() {
+    $(".preloader").fadeOut(2000);
 });
