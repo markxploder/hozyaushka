@@ -130,7 +130,7 @@ footer {
     background: rgb(0, 184, 171);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100px;
+    overflow: hidden;
 }
 
 footer img {
@@ -141,9 +141,12 @@ footer img {
 
 .copyright {
     background: rgb(0, 184, 171);
+    font-size: 12px;
 }
 .copyright img {
     width: auto;
+    height: 20px;
+    margin-bottom: 8px;
 }
 
 
