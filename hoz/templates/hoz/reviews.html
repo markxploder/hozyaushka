@@ -5,7 +5,7 @@
     <div class="container reviews-container">
         <div class="caption-dark"><h2>Отзывы</h2></div>
         <div class="row reviews-row reviews-row-desctop">
-            {% for post in posts %}
+            {% for post in posts_reviews %}
             <div class="col">
                 <div class="card hoz-card">
                     <div class="col">
@@ -33,8 +33,8 @@
                     <li data-target="#carousel-mobile" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    {% for post in posts %}
-                        {% if post == posts|first %}
+                    {% for post in posts_reviews %}
+                        {% if post == posts_reviews|first %}
                         <div class="carousel-item active">
                         {% else  %}
                             <div class="carousel-item">
