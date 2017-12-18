@@ -175,8 +175,30 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
   .price-table {
-    width: 95%;
+    width: 90%;
     line-height: 18px;
     font-size: 15px;
+  }
+
+  .td-title {
+    line-height: 21px;
+    font-size: 22px;
+    padding: 1.5%;
+  }
+
+  .hoz-caption-bigger h2 {
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+  }
+
+  .request {
+      background-position-y: 15%;
+      background-position-x: center;
+      margin-bottom: -38%;
+  }
+
+  .hoz-form {
+      width: 95%;
   }
 }
