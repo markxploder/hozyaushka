@@ -1,20 +1,12 @@
 var $circles = $(".circle"),
     tl = new TimelineMax();
 
-function loaderOut() {
-  $(".preloader").fadeOut(3000);
-}
-
 function getRandomNumber() {
   return Math.floor(Math.random() * 10000);
 }
 
 
 TweenMax.set($circles, { scale: 0 });
-
-$(window).load(function() {
-  loaderOut()
-});
 
 tl.insert(
   TweenMax.staggerTo(
@@ -44,3 +36,7 @@ tl.insert(
   ),
   "-=0.4"
 );
+
+$(window).load(function() {
+    $(".preloader").fadeOut(3000);
+});
