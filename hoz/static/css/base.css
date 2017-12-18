@@ -127,10 +127,11 @@ nav li {
 }
 
 footer {
-    background: rgb(0, 184, 171);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, rgba(211, 242, 250, 0.4), rgba(188, 223, 231, 0.9));
     overflow: hidden;
+    position: relative;
+    bottom: 15%;
+    margin-bottom: -13%;
 }
 
 footer img {
@@ -140,7 +141,6 @@ footer img {
 }
 
 .copyright {
-    background: rgb(0, 184, 171);
     font-size: 12px;
 }
 .copyright img {

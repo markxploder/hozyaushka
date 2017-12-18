@@ -390,7 +390,7 @@
 /* request */
 
 .request {
-    min-height: calc(100% - 100px);
+    min-height: calc(100%);
     position: relative;
     top: -25%;
     margin-bottom: -13%;
@@ -433,7 +433,7 @@
     height: 140px;
 }
 
-.advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile {
+.advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile, .portfolio-mobile {
     display: none;
 }
 
@@ -525,11 +525,11 @@
         font-size: 26px;
     }
 
-    .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile {
+    .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile, .portfolio-mobile {
         display: block;
     }
 
-    .advantages-desctop, .card-img-desctop, .hoz-card-title:not(h3), .reviews-row-desctop {
+    .advantages-desctop, .card-img-desctop, .hoz-card-title:not(h3), .reviews-row-desctop, .portfolio-desctop {
         display: none;
     }
 
@@ -573,6 +573,10 @@
     .vermin .hoz-card-text {
         padding-left: 0;
         text-align: center;
+    }
+
+    .portfolio-mobile {
+        display: block;
     }
 
     .reviews {
