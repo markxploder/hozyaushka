@@ -12,7 +12,7 @@ function getRandomNumber() {
 
 TweenMax.set($circles, { scale: 0 });
 
-$( document ).ready(function() {
+$(window).load(function() {
   loaderOut()
 });
 
