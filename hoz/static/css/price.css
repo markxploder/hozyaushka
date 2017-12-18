@@ -1,8 +1,20 @@
+.price {
+    padding-top: 100px;
+    text-align: center;
+    font: #333333;
+}
+
+.price h1 {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-size: 36px;
+}
+
 .price-table {
   width: 70%;
   text-align: left;
   font-size: 24px;
-  line-height: 25px;
+  line-height: 20px;
   border: solid 4px #202f4a;
   border-collapse: unset;
   border-radius: 10px;
@@ -15,23 +27,31 @@
   padding: 1%;
 }
 
+.td-title {
+  line-height: 25px;
+  font-size: 32px;
+  padding: 2.5%;
+}
+
 /* request */
 
 .request {
     min-height: calc(100% - 100px);
     position: relative;
-    top: -25%;
-    margin-bottom: -13%;
     background: url(../img/foam!.png) no-repeat;
 }
-
 
 .hoz-caption-bigger {
     margin-bottom: 2%;
 }
 
 .hoz-caption-bigger h2 {
-    line-height: 3.2;
+  text-align: center;
+  line-height: 3.2;
+}
+
+.hoz-reqest-form{
+  margin-top: 5%;
 }
 
 .hoz-form {
@@ -69,49 +89,57 @@
     bottom: 10%;
     left: 15%;
 }
+
 #bubble2 {
     bottom: 20%;
     left: 10%;
 }
+
 #bubble3 {
     bottom: 30%;
     left: 5%;
 }
+
 #bubble4 {
     bottom: 60%;
     left: 15%;
 }
+
 #bubble5 {
     bottom: 30%;
     left: 20%
 }
+
 #bubble6 {
     bottom: 20%;
     left: 85%;
 }
+
 #bubble7 {
     bottom: 40%;
     left: 80%;
 }
+
 #bubble8 {
     bottom: 55%;
     left: 85%;
 }
 
-
 #bubbles img {
     height: 50px;
 }
+
 #bubble4 img {
     height: 70px;
 }
+
 #bubble3 img {
     height: 60px;
 }
+
 #bubble2 img {
     height: 90px;
 }
-
 
 #bubble8 img {
     height: 150px;
@@ -120,27 +148,32 @@
 #bubble1 {
     animation: move1 1s ease-in-out infinite;
 }
+
 #bubble3 {
     animation: move2 2s ease-in-out infinite;
 }
+
 #bubble8 {
     animation: move8 5s infinite;
 }
+
 @keyframes move1 {
     0% { transform: translateY(0%); }
     50% { transform: translateY(30%); }
 }
+
 @keyframes move2 {
     0% { transform: translateY(50%) translateX(50%); }
     50% { transform: translateY(0%) translateX(0%); }
     100% { transform: translateY(50%) translateX(50%); }
 }
+
 @keyframes move8 {
     0% { transform: rotate(0deg) scale(1); }
     50% { transform: rotate(5deg) scale(1.2); }
 }
 
-@media screen and (max-device-width: 500px) {
+@media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
   .price-table {
     width: 95%;
     line-height: 18px;

@@ -3,58 +3,63 @@
 {% block content %}
 <section class="price">
   <h1>Цены</h1>
-  <table class="table price-table">
-    <tbody>
-      <h3>Мягкая мебель</h3>
-      <tr>
-        <td>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</td>
-        <td>1250 грн</td>
-      </tr>
-      <tr>
-        <td>Кожаный диван угловой небольшой</td>
-        <td>1000 грн</td>
-      </tr>
-      <tr>
-        <td>Кожаное кресло</td>
-        <td>250 грн</td>
-      </tr>
-      <tr>
-        <td>Кресло нераскладное</td>
-        <td>150 грн</td>
-      </tr>
-      <tr>
-        <td>Кресло раскладное</td>
-        <td>250 грн</td>
-      </tr>
-      <tr>
-        <td>Кресло двухместное  </td>
-        <td>350 грн</td>
-      </tr>
-      <tr>
-        <td>Стул компьютерный</td>
-        <td>50 грн</td>
-      </tr>
-      <tr>
-        <td>Кресло в кинотеатре</td>
-        <td>50 грн</td>
-      </tr>
-      <tr>
-        <td>Диван стандартный, угловой, пятиместный</td>
-        <td>850 грн</td>
-      </tr>
-      <tr>
-        <td>Диван угловой, большой</td>
-        <td>1000 грн</td>
-      </tr>
-      <tr>
-        <td>Еврокнижка, выдвижной</td>
-        <td>500 грн</td>
-      </tr>
-      <tr>
-        <td>Еврокнижка, нераскладной</td>
-        <td>400 грн</td>
-      </tr>
-      <h3>Матрасы</h3>
+  <div class="row justify-content-center">
+    <table class="table price-table">
+      <tbody>
+        <tr>
+          <td class="td-title">Мягкая мебель</td>
+        </tr>
+        <tr>
+          <td>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</td>
+          <td>1250 грн</td>
+        </tr>
+        <tr>
+          <td>Кожаный диван угловой небольшой</td>
+          <td>1000 грн</td>
+        </tr>
+        <tr>
+          <td>Кожаное кресло</td>
+          <td>250 грн</td>
+        </tr>
+        <tr>
+          <td>Кресло нераскладное</td>
+          <td>150 грн</td>
+        </tr>
+        <tr>
+          <td>Кресло раскладное</td>
+          <td>250 грн</td>
+        </tr>
+        <tr>
+          <td>Кресло двухместное  </td>
+          <td>350 грн</td>
+        </tr>
+        <tr>
+          <td>Стул компьютерный</td>
+          <td>50 грн</td>
+        </tr>
+        <tr>
+          <td>Кресло в кинотеатре</td>
+          <td>50 грн</td>
+        </tr>
+        <tr>
+          <td>Диван стандартный, угловой, пятиместный</td>
+          <td>850 грн</td>
+        </tr>
+        <tr>
+          <td>Диван угловой, большой</td>
+          <td>1000 грн</td>
+        </tr>
+        <tr>
+          <td>Еврокнижка, выдвижной</td>
+          <td>500 грн</td>
+        </tr>
+        <tr>
+          <td>Еврокнижка, нераскладной</td>
+          <td>400 грн</td>
+        </tr>
+        <tr>
+          <td class="td-title">Матрасы</td>
+        </tr>
         <tr>
           <td>Матрас детский</td>
           <td>200 грн</td>
@@ -71,7 +76,9 @@
           <td>Матрас двухместный</td>
           <td>350 грн сторона</td>
         </tr>
-      <h3>Ковры</h3>
+        <tr>
+          <td class="td-title">Ковры</td>
+        </tr>
         <tr>
           <td>Шелковый</td>
           <td>80 грн кв метр</td>
@@ -100,12 +107,13 @@
           <td>Ковролин высокий ворс </td>
           <td>45 грн кв метр</td>
         </tr>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 </section>
 <section class="request">
     <div class="caption-dark hoz-caption-bigger"><h2>Оставьте заявку на химчистку</h2></div>
-    <div class="container">
+    <div class="container hoz-reqest-form">
         <div class="row justify-content-center">
             <form method="POST" class="post-form hoz-form">{% csrf_token %}
                 <div class="form-group">
