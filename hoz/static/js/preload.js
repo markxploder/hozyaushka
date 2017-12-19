@@ -38,6 +38,6 @@ tl.insert(
 );
 
 $(window).on( "load", function() {
-    $(".preloader").fadeOut(1000);
+    $(".preloader").fadeOut(1500);
     $("#wrapper").show();
 });
