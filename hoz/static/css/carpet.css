@@ -2,6 +2,7 @@
   padding-top: 100px;
   text-align: center;
   font: #333333;
+  margin-bottom: -10px;
 }
 
 .carpet h1 {
@@ -64,7 +65,7 @@
 }
 
 .second-table-col {
-  max-width: 23%;
+  max-width: 25%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
