@@ -393,8 +393,7 @@
 .request {
     min-height: calc(100%);
     position: relative;
-    top: -25%;
-    margin-bottom: -13%;
+    margin-top: -13%;
     background: url(../img/foam!.png) no-repeat;
 }
 
@@ -644,8 +643,7 @@
     .request {
         background-position-y: 15%;
         background-position-x: center;
-        margin-bottom: -55%;
-        top: -20%;
+        margin-top: -35%;
     }
 
     .hoz-form {
