@@ -431,7 +431,8 @@
 }
 
 .hoz-form textarea {
-    height: 140px;
+    height: 100px;
+    resize: none;
 }
 
 .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile, .portfolio-mobile {

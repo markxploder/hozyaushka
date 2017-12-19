@@ -2,20 +2,29 @@
 {% load staticfiles %}
 {% block content %}
 <section class="reviews">
+    <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h2>О нас</h2></div>
+    <div class="container reviews-container">
+        <div class="row">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+    </div>
     <div class="container reviews-container">
         <div class="caption-dark"><h2>Отзывы</h2></div>
         <div class="row reviews-row reviews-row-desctop">
             {% for post in posts_reviews %}
-            <div class="col">
+            <div class="col-4">
                 <div class="card hoz-card">
                     <div class="col">
-                        {% if post.rating == 1 %}
-                        <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
-                        {% elif post.rating == 2 %}
-                        <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
-                        {% else %}
-                        <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
-                        {% endif %}
+                        <div class="row justify-content-center">
+                            {% if post.rating == 1 %}
+                            <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                            {% elif post.rating == 2 %}
+                            <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                            {% else %}
+                            <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                            {% endif %}
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title">{{ post.author }}</h4>
                             <p class="card-text">{{ post.text|linebreaksbr }}</p>
@@ -23,52 +32,12 @@
                     </div>
                 </div>
             </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row reviews-row reviews-row-desctop">
+            {% endif %}
             {% endfor %}
         </div>
-
-    <!-- Button trigger modal -->
-    <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary hoz-btn" data-toggle="modal" data-target="#exampleModal">
-            Оставить отзыв
-        </button>
-    </div>
-
-    <!-- Modal -->
-    <form method="POST" class="post-form">{% csrf_token %}
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog hoz-modal-dialog" role="document">
-                <div class="modal-content hoz-modal-content">
-                    <div class="modal-header hoz-modal-header">
-                        <button type="button" class="close hoz-close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body hoz-modal-body">
-                        <h5 class="modal-title hoz-modal-title" id="exampleModalLabel">Нам важно Ваше мнение!</h5>
-                        <div class="container hoz-form-container">
-                            <div class="row justify-content-center">
-                                {{ form.author }}
-                            </div>
-                            <div class="row justify-content-center">
-                                {{ form.text }}
-                            </div>
-                            <div class="row justify-content-center hoz-rating">
-                                {% for rate in form.rating %}
-                                <div class="col-2 {{ rate.id_for_label }}">
-                                    {{ rate.tag }}
-                                    <label for="{{ rate.id_for_label }}"></label>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer hoz-modal-footer row justify-content-center">
-                        <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
 </section>
 <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
 </script>
