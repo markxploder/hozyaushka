@@ -233,4 +233,28 @@
     .hoz-modal-dialog-callback {
         max-width: 100%;
     }
+
+    .modal-header, .modal-footer {
+        padding: 2px;
+    }
+
+    .modal-title {
+        font-size: 14px;
+    }
+
+    .hoz-modal-body-callback {
+        font-size: 14px;
+    }
+
+    .hoz-modal-body-callback img {
+        height: 10px;
+    }
+
+    .hoz-modal-body-callback input:not([id^=id_rating]), .hoz-modal-body-callback textarea {
+        width: 90%;
+    }
+    .hoz-modal-footer-callback button {
+        top: -60%;
+    }
+
 }

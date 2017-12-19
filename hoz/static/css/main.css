@@ -548,6 +548,21 @@
         font-size: 26px;
     }
 
+    .modl-header, .modal-footer {
+        padding: 0;
+    }
+
+    .modal-title h5 {
+        font-size: 14px;
+    }
+
+    .hoz-modal-body-callback input:not([id^=id_rating]), .hoz-modal-body-callback textarea {
+        width: 90%;
+    }
+    .hoz-modal-footer-callback button {
+        top: -60%;
+    }
+
     .advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile, .portfolio-mobile {
         display: block;
     }
@@ -676,11 +691,16 @@
     .hoz-form {
         width: 95%;
     }
+    .hoz-form-container .hoz-rating {
+        margin-top: -10%;
+    }
 
     .hoz-modal-dialog {
         max-width: 100%;
     }
-
+    .hoz-modal-body textarea {
+        height: 25vh;
+    }
     .hoz-modal-body input:not([id^=id_rating]), .hoz-modal-body textarea {
         width: 80%;
     }

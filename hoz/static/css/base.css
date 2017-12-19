@@ -273,6 +273,10 @@ footer img {
         width: 100%;
     }
 
+    nav a {
+        letter-spacing: 0.7px;
+    }
+
     nav li {
         justify-content: center;
     }
@@ -282,6 +286,10 @@ footer img {
 
     .nav-phone-mobile img {
         height: 10px;
+    }
+
+    .phone img {
+        margin: 0;
     }
 
     .nav-phone {
