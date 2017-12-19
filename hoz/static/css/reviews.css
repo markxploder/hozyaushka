@@ -1,3 +1,16 @@
+.reviews {
+    min-height: 850px;
+}
+
+.reviews {
+    padding: 100px 0;
+}
+
+
+.reviews-container {
+
+}
+
 .hoz-modal-dialog{
     max-width: 50%;
 }
@@ -127,4 +140,62 @@
 .hoz-modal-footer button {
     position: relative;
     top: -100%;
+}
+
+.reviews .hoz-card img {
+    height: 80px;
+    width: 80px;
+}
+
+.reviews-row {
+    min-height: 360px;
+}
+
+.reviews .hoz-card h4, .reviews .hoz-card p {
+    font-family: 'Roboto';
+    font-weight: 500;
+    text-align: center;
+    color: #333333;
+}
+
+.reviews .hoz-card h4 {
+    font-size: 24px;
+}
+
+.reviews .hoz-card p {
+    font-size: 16px;
+}
+
+.hoz-card {
+    border: none;
+}
+
+.caption-light, .caption-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption-light h2, .caption-dark h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 4.20;
+    letter-spacing: 1.4px;
+}
+
+.caption-light {
+    color: #ffffff;
+}
+
+.caption-dark {
+    color: #202f4a;
+}
+.caption-dark img {
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.reviews-container p {
+    padding: 0 10%;
+    text-align: center;
 }
