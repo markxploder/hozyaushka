@@ -394,7 +394,7 @@
     min-height: calc(100%);
     position: relative;
     margin-top: -13%;
-    background: url(../img/foam!.png) no-repeat;
+    background: url(../img/foam_.png) no-repeat;
 }
 
 
@@ -430,7 +430,7 @@
 }
 
 .hoz-form textarea {
-    height: 100px;
+    height: 25vh;
     resize: none;
 }
 
@@ -444,75 +444,97 @@
 
 #bubble1 {
     bottom: 10%;
-    left: 15%;
-}
-#bubble2 {
-    bottom: 20%;
-    left: 10%;
+    left: 70%;
 }
 #bubble3 {
-    bottom: 30%;
-    left: 5%;
-}
-#bubble4 {
-    bottom: 60%;
-    left: 15%;
+    bottom: 70%;
+    left: 60%;
 }
 #bubble5 {
-    bottom: 30%;
-    left: 20%
+    bottom: 18%;
+    left: 60%
 }
-#bubble6 {
+#bubble8 {
     bottom: 20%;
-    left: 85%;
+    left: 17%;
 }
-#bubble7 {
-    bottom: 40%;
+#bubble9 {
+    bottom: 80%;
+    left: 2%;
+}
+#bubble10 {
+    bottom: 50%;
+    left: 7%;
+}
+#bubble11 {
+    bottom: 30%;
+    left: 1%;
+}
+#bubble13 {
+    bottom: 80%;
+    left: 93%;
+}
+#bubble-group {
+    bottom: 45%;
     left: 80%;
 }
-#bubble8 {
-    bottom: 55%;
-    left: 85%;
-}
 
-
-#bubbles img {
-    height: 50px;
-}
-#bubble4 img {
-    height: 70px;
-}
-#bubble3 img {
-    height: 60px;
-}
-#bubble2 img {
-    height: 90px;
-}
-
-
-#bubble8 img {
+#bubble1 img {
     height: 150px;
 }
+#bubble3 img {
+    height: 80px;
+}
+#bubble5 img {
+    height: 40px;
+}
+#bubble8 img {
+    height: 100px;
+}
+#bubble9 img {
+    height: 60px;
+}
+#bubble10 img {
+    height: 130px;
+}
+#bubble11 img {
+    height: 90px;
+}
+#bubble13 img {
+    height: 100px;
+}
+#bubble-group img {
+    height: 170px;
+}
 
-#bubble1 {
-    animation: move1 1s ease-in-out infinite;
+
+#bubble1, #bubble8, #bubble11 {
+    animation: move1 6s ease-in-out infinite;
 }
-#bubble3 {
-    animation: move2 2s ease-in-out infinite;
+#bubble3, #bubble9, #bubble13 {
+    animation: move2 4s ease-in-out infinite;
 }
-#bubble8 {
-    animation: move8 5s infinite;
+#bubble5, #bubble10 {
+    animation: move3 5s ease-in-out infinite;
 }
+#bubble-group {
+    animation: move-group 7s infinite;
+}
+
 @keyframes move1 {
-    0% { transform: translateY(0%); }
-    50% { transform: translateY(30%); }
+    0% { transform: translateY(0%) scale(1); }
+    50% { transform: translateY(5%) translateX(2%) scale(1.2); }
 }
 @keyframes move2 {
-    0% { transform: translateY(50%) translateX(50%); }
-    50% { transform: translateY(0%) translateX(0%); }
-    100% { transform: translateY(50%) translateX(50%); }
+    0% { transform: translateY(0%) scale(1); }
+    50% { transform: translateY(-5%) translateX(2%) scale(0.7); }
 }
-@keyframes move8 {
+@keyframes move3 {
+    0% { transform: translateY(-10%) translateX(3%) scale(0.9); }
+    50% { transform: translateY(0%) scale(1.1); }
+    100% { transform: translateY(-10%) translateX(3%) scale(0.9); }
+}
+@keyframes move-group {
     0% { transform: rotate(0deg) scale(1); }
     50% { transform: rotate(5deg) scale(1.2); }
 }
@@ -552,6 +574,10 @@
 
     .advantages img {
         height: 70px;
+    }
+
+    .stage-container {
+        overflow-x: hidden;
     }
 
     .stage-left div, .stage-right div {
@@ -618,6 +644,7 @@
 
     #carousel-mobile .carousel-indicators {
         bottom: 0;
+        margin-top: 5px;
     }
 
     .carousel-indicators li {
@@ -631,7 +658,7 @@
     }
 
     .hoz-caption-bigger {
-        margin-bottom: 15%;
+        margin-bottom: 15vh;
     }
 
     .hoz-caption-bigger h3 {
@@ -664,4 +691,7 @@
         max-width: 30%;
     }
 
+    #bubbles {
+        display: none;
+    }
 }
