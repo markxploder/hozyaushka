@@ -334,6 +334,10 @@ footer img {
         left: -100%;
     }
 
+    footer {
+        margin-top: 0;
+    }
+
     footer .nav-logo {
         visibility: visible;
     }
