@@ -83,7 +83,7 @@
 .callback {
     background: #09f;
     border-radius: 50% !important;
-    bottom: 40px;
+    bottom: 80px;
     cursor: move;
     height: 50px;
     position: fixed;
