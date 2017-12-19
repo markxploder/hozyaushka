@@ -34,7 +34,7 @@
 }
 
 #carpet-second-screen {
-  height: 150%;
+  height: 100%;
   background: url(../img/foam!.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -44,9 +44,8 @@
 }
 
 #carpet-second-screen h2 {
-  margin-top: 60px;
-  margin-bottom: 75px;
   font-size: 30px;
+  padding: 60px 0 60px 0;
 }
 
 .carpet-table {
@@ -55,15 +54,17 @@
   font-size: 24px;
   line-height: 25px;
   border: solid 4px #202f4a;
-  border-collapse: unset;
   border-radius: 10px;
-  padding: 1% 5% 1% 4%;
-  margin-bottom: 120px;
+  padding: 25px 5% 25px 4%;
+  margin: 0 0 150px 0;
 }
 
-.carpet-table td {
-  border-top: none;
+.carpet-table p {
   padding: 1%;
+}
+
+.second-table-col {
+  max-width: 23%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 480px) {

@@ -40,26 +40,27 @@
 }
 
 #furniture-second-screen h2 {
-  margin-top: 60px;
-  margin-bottom: 90px;
   font-size: 30px;
+  padding: 60px 0 60px 0;
 }
 
 .furniture-table {
   width: 70%;
-  text-align: left;
   font-size: 24px;
+  text-align: left;
   line-height: 25px;
   border: solid 4px #202f4a;
-  border-collapse: unset;
   border-radius: 10px;
-  padding: 1% 5% 1% 4%;
-  margin-bottom: 120px;
+  padding: 25px 5% 25px 4%;
+  margin: 50px 0 120px 0;
 }
 
-.furniture-table td {
-  border-top: none;
+.furniture-table p {
   padding: 1%;
+}
+
+.second-table-col {
+  max-width: 20%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
