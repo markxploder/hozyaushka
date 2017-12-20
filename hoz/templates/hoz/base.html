@@ -9,6 +9,12 @@
         {% block critical %}
         {% endblock %}
         <style>
+            @font-face {
+                font-family: 'Roboto';
+                src: url('../fonts/Roboto-Regular.ttf');
+                font-weight: normal;
+                font-style: normal;
+            }
             html, body {
                 height: 100%;
                 width: 100%;
@@ -105,6 +111,26 @@
                 width: 16px;
                 margin-right: 10px;
             }
+            footer {
+                overflow: hidden;
+                position: relative;
+                margin-top: -8%;
+            }
+
+            footer img {
+                height: 40px;
+                width: 40px;
+                margin: 5px;
+            }
+
+            .copyright {
+                font-size: 12px;
+            }
+            .copyright img {
+                width: auto;
+                height: 20px;
+                margin-bottom: 8px;
+            }
             @media only screen and (min-width : 320px) and (max-width : 480px) {
 
 
@@ -197,6 +223,18 @@
                 .logo img {
                     width: 179px;
                     height: 40px;
+                }
+                footer {
+                    margin-top: 0;
+                    background: #4EDCE8;
+                }
+
+                footer .nav-logo {
+                    visibility: visible;
+                }
+
+                .nav-links {
+                    display: block;
                 }
             }
         </style>
@@ -347,7 +385,6 @@
         </footer>
     </body>
 </html>
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 {% block stylesheet %}
 {% endblock %}
@@ -357,5 +394,57 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
-<script src="{% static 'js/main.js' %}"></script>
-<script src="{% static 'js/preload.js' %}"></script>
+<script>
+function popOut(x) {
+    x.classList.toggle("change");
+    document.getElementById('header-menu').classList.toggle("change");
+}
+$(document).ready(function() {
+    $(".carousel-inner").swipe( {
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            $(this).parent().carousel('next');
+        },
+        swipeRight: function() {
+            $(this).parent().carousel('prev');
+        },
+        threshold:0
+    });
+});
+var $circles = $(".circle"),
+    tl = new TimelineMax();
+
+TweenMax.set($circles, { scale: 0 });
+
+tl.insert(
+  TweenMax.staggerTo(
+    $circles.toArray(),
+    1,
+    {
+      opacity: 1,
+      scale: 1,
+      ease: Power1.easeIn
+    },
+    0.2
+  )
+);
+
+tl.insert(
+  TweenMax.staggerTo(
+    $circles.toArray(),
+    0.5,
+    {
+      scale: 1.2,
+      boxShadow: "0 25px 25px rgba(0, 0, 0, 0.4)",
+      repeat: -1,
+      yoyo: true,
+      ease: Power1.easeOut
+    },
+    0.2
+  ),
+  "-=0.4"
+);
+
+$(window).on( "load", function() {
+    $(".preloader").fadeOut(1500);
+});
+</script>
