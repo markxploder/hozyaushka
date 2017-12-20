@@ -26,7 +26,7 @@
   padding: 1%;
 }
 
-.price-table h3 {
+.price-table h2 {
   line-height: 50px;
   font-size: 32px;
 }
@@ -40,14 +40,14 @@
 .request {
     min-height: calc(100%);
     position: relative;
-    background: url(../img/foam!.png) no-repeat;
+    background: url(../img/foam_.png) no-repeat;
 }
 
 .hoz-caption-bigger {
     margin-bottom: 2%;
 }
 
-.hoz-caption-bigger h2 {
+.hoz-caption-bigger h3 {
   text-align: center;
   line-height: 3.2;
 }
@@ -209,5 +209,9 @@
 
   .hoz-form {
       width: 95%;
+  }
+
+  #bubbles {
+      display: none;
   }
 }
