@@ -111,26 +111,7 @@
                 width: 16px;
                 margin-right: 10px;
             }
-            footer {
-                overflow: hidden;
-                position: relative;
-                margin-top: -8%;
-            }
 
-            footer img {
-                height: 40px;
-                width: 40px;
-                margin: 5px;
-            }
-
-            .copyright {
-                font-size: 12px;
-            }
-            .copyright img {
-                width: auto;
-                height: 20px;
-                margin-bottom: 8px;
-            }
             @media only screen and (min-width : 320px) and (max-width : 480px) {
 
 
@@ -224,18 +205,7 @@
                     width: 179px;
                     height: 40px;
                 }
-                footer {
-                    margin-top: 0;
-                    background: #4EDCE8;
-                }
 
-                footer .nav-logo {
-                    visibility: visible;
-                }
-
-                .nav-links {
-                    display: block;
-                }
             }
         </style>
     </head>
@@ -385,6 +355,7 @@
         </footer>
     </body>
 </html>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 {% block stylesheet %}
 {% endblock %}
