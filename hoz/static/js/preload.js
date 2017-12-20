@@ -1,11 +1,6 @@
 var $circles = $(".circle"),
     tl = new TimelineMax();
 
-function getRandomNumber() {
-  return Math.floor(Math.random() * 10000);
-}
-
-
 TweenMax.set($circles, { scale: 0 });
 
 tl.insert(
@@ -39,5 +34,4 @@ tl.insert(
 
 $(window).on( "load", function() {
     $(".preloader").fadeOut(1500);
-    $("#wrapper").show();
 });
