@@ -2,10 +2,10 @@
 {% load staticfiles %}
 {% block content %}
 <section class="price">
-  <h1>Цены</h1>
+  <h1>Стоимость клининг услуг мягкой мебели, матрасов и ковров</h1>
   <div class="row justify-content-center">
     <div class="price-table">
-      <h3>Мягкая мебель</h3>
+      <h2>Чистка мягкой мебели</h2>
       <div class="row">
         <div class="col">
           <p>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</p>
@@ -102,7 +102,7 @@
           <p>400 грн</p>
         </div>
       </div>
-      <h3>Матрасы</h3>
+      <h2>Чистка матрасов</h2>
       <div class="row">
         <div class="col">
           <p>Матрас детский</p>
@@ -135,7 +135,7 @@
           <p>350 грн сторона</p>
         </div>
       </div>
-      <h3>Ковры</h3>
+      <h2>Чистка ковров и ковролина</h2>
       <div class="row">
         <div class="col">
           <p>Шелковый</p>
@@ -196,7 +196,9 @@
   </div>
 </section>
 <section class="request">
-    <div class="caption-dark hoz-caption-bigger"><h2>Оставьте заявку на химчистку</h2></div>
+    <div class="caption-dark hoz-caption-bigger">
+      <h3>Заполните заявку на химчистку</h3>
+    </div>
     <div class="container hoz-reqest-form">
         <div class="row justify-content-center">
             <form method="POST" class="post-form hoz-form">{% csrf_token %}

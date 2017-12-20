@@ -10,7 +10,7 @@
   font-size: 36px;
 }
 
-.mattress p {
+.mattress h2 {
   padding-top: 1.5%;
   font-size: 24px;
 }
@@ -39,9 +39,9 @@
   align-items: center;
 }
 
-#mattress-second-screen h2 {
+#mattress-second-screen h3 {
   font-size: 30px;
-  padding: 60px 0 60px 0;
+  padding: 40px 0 80px 0;
 }
 
 .mattress-table {
