@@ -1,40 +1,3 @@
-.price {
-    padding-top: 100px;
-    text-align: center;
-    font: #333333;
-    margin-bottom: -15px;
-}
-
-.price h1 {
-    margin-top: 3%;
-    margin-bottom: 2%;
-    font-size: 36px;
-}
-
-.price-table {
-  width: 70%;
-  text-align: left;
-  font-size: 24px;
-  line-height: 20px;
-  border: solid 4px #202f4a;
-  border-radius: 10px;
-  padding: 25px 5% 25px 4%;
-  margin-bottom: 20px;
-}
-
-.price-table p {
-  padding: 1%;
-}
-
-.price-table h2 {
-  line-height: 50px;
-  font-size: 32px;
-}
-
-.second-table-col {
-  max-width: 25%;
-}
-
 /* request */
 
 .request {
@@ -44,7 +7,7 @@
 }
 
 .hoz-caption-bigger {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .hoz-caption-bigger h3 {
@@ -90,109 +53,123 @@
 
 #bubble1 {
     bottom: 10%;
-    left: 15%;
-}
-
-#bubble2 {
-    bottom: 20%;
-    left: 10%;
+    left: 70%;
 }
 
 #bubble3 {
-    bottom: 30%;
-    left: 5%;
-}
-
-#bubble4 {
-    bottom: 60%;
-    left: 15%;
+    bottom: 70%;
+    left: 60%;
 }
 
 #bubble5 {
-    bottom: 30%;
-    left: 20%
+    bottom: 18%;
+    left: 60%
 }
 
-#bubble6 {
+#bubble8 {
     bottom: 20%;
-    left: 85%;
+    left: 17%;
 }
 
-#bubble7 {
-    bottom: 40%;
+#bubble9 {
+    bottom: 80%;
+    left: 2%;
+}
+
+#bubble10 {
+    bottom: 50%;
+    left: 7%;
+}
+
+#bubble11 {
+    bottom: 30%;
+    left: 1%;
+}
+
+#bubble13 {
+    bottom: 80%;
+    left: 93%;
+}
+
+#bubble-group {
+    bottom: 45%;
     left: 80%;
 }
 
-#bubble8 {
-    bottom: 55%;
-    left: 85%;
-}
-
-#bubbles img {
-    height: 50px;
-}
-
-#bubble4 img {
-    height: 70px;
-}
-
-#bubble3 img {
-    height: 60px;
-}
-
-#bubble2 img {
-    height: 90px;
-}
-
-#bubble8 img {
+#bubble1 img {
     height: 150px;
 }
 
-#bubble1 {
-    animation: move1 1s ease-in-out infinite;
+#bubble3 img {
+    height: 80px;
 }
 
-#bubble3 {
-    animation: move2 2s ease-in-out infinite;
+#bubble5 img {
+    height: 40px;
 }
 
-#bubble8 {
-    animation: move8 5s infinite;
+#bubble8 img {
+    height: 100px;
+}
+
+#bubble9 img {
+    height: 60px;
+}
+
+#bubble10 img {
+    height: 130px;
+}
+
+#bubble11 img {
+    height: 90px;
+}
+
+#bubble13 img {
+    height: 100px;
+}
+
+#bubble-group img {
+    height: 170px;
+}
+
+#bubble1, #bubble8, #bubble11 {
+    animation: move1 6s ease-in-out infinite;
+}
+
+#bubble3, #bubble9, #bubble13 {
+    animation: move2 4s ease-in-out infinite;
+}
+
+#bubble5, #bubble10 {
+    animation: move3 5s ease-in-out infinite;
+}
+
+#bubble-group {
+    animation: move-group 7s infinite;
 }
 
 @keyframes move1 {
-    0% { transform: translateY(0%); }
-    50% { transform: translateY(30%); }
+    0% { transform: translateY(0%) scale(1); }
+    50% { transform: translateY(5%) translateX(2%) scale(1.2); }
 }
 
 @keyframes move2 {
-    0% { transform: translateY(50%) translateX(50%); }
-    50% { transform: translateY(0%) translateX(0%); }
-    100% { transform: translateY(50%) translateX(50%); }
+    0% { transform: translateY(0%) scale(1); }
+    50% { transform: translateY(-5%) translateX(2%) scale(0.7); }
 }
 
-@keyframes move8 {
+@keyframes move3 {
+    0% { transform: translateY(-10%) translateX(3%) scale(0.9); }
+    50% { transform: translateY(0%) scale(1.1); }
+    100% { transform: translateY(-10%) translateX(3%) scale(0.9); }
+}
+
+@keyframes move-group {
     0% { transform: rotate(0deg) scale(1); }
     50% { transform: rotate(5deg) scale(1.2); }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
-  .price-table {
-    width: 85%;
-    line-height: 18px;
-    font-size: 15px;
-  }
-
-  .price-table h3 {
-    line-height: 21px;
-    font-size: 22px;
-    padding: 1.5%;
-  }
-
-  .second-table-col {
-    max-width: 35%;
-  }
-
+@media only screen and (min-width: 320px) and (max-width : 480px) {
   /* request */
 
   .hoz-caption-bigger h2 {
