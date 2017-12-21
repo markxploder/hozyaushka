@@ -20,7 +20,6 @@
             max-height: 678px;
             overflow: hidden;
         }
-
         #carouselMain img {
             pointer-events: none;
             -moz-user-select: none;
@@ -28,31 +27,25 @@
             -ms-user-select: none;
             user-select: none;
         }
-
         #carouselMain .carousel-indicators li {
             width: 20px;
             height: 20px;
             border-radius: 50%;
             margin: auto 15px;
         }
-
         #main-mobile {
             height: inherit;
             z-index: -1;
             overflow: hidden;
             display: none;
         }
-
-
         @media only screen and (min-width : 320px) and (max-width : 480px) {
             #carouselMain {
                 display: none;
             }
-
             #main-mobile {
                 display: block;
             }
-
             #main-mobile img {
                 height: 100vh;
                 width: auto;
@@ -510,15 +503,11 @@
             <a href="{% url 'reviews' %}">Посмотреть все</a>
         </div>
     </div>
-
-    <!-- Button trigger modal -->
     <div class="row justify-content-center">
         <button type="button" class="btn btn-primary hoz-btn" data-toggle="modal" data-target="#exampleModal">
             Оставить отзыв
         </button>
     </div>
-
-    <!-- Modal -->
     <form method="POST" class="post-form">{% csrf_token %}
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog hoz-modal-dialog" role="document">
