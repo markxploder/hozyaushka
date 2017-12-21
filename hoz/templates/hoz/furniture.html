@@ -1,10 +1,69 @@
 {% extends 'hoz/base.html' %}
 {% load staticfiles %}
 {% block title %}
-    <title>Хозяюшка</title>
+    <title>Профессиональная химчистка мягкой мебели на дому в Одессе</title>
 {% endblock %}
 {% block description %}
-    <meta name="description" content="LOREM">
+    <meta name="description" content="Одесская химчистка 'Хозяюшка'. Выездная химчистка на дому в Одессе. Чистка мягкой мебели, матрасов, подушек и кожаных диванов. Клиринговые услуги.">
+{% endblock %}
+{% block critical %}
+    <style>
+      .furniture {
+        padding-top: 100px;
+        text-align: center;
+        font: #333333;
+      }
+
+      .furniture h1 {
+        padding-top: 4.2%;
+        font-size: 36px;
+      }
+
+      .furniture h2 {
+        padding-top: 1.5%;
+        font-size: 24px;
+      }
+
+      .row-furniture {
+        margin-top: 2.6%;
+        margin-bottom: 2.1%;
+      }
+
+      .furniture-block {
+        height: 100%;
+        margin-left: 5.8%;
+        border: solid 2px #131313;
+        text-align: left;
+        padding-left: 2.9%;
+        padding-right: 4.3%;
+      }
+
+      @media only screen and (min-width : 320px) and (max-width : 480px) {
+          .furniture h1 {
+            padding: 4.2% 5% 2% 5%;
+          }
+
+          .furniture-block  {
+            width: 90%;
+          }
+
+          .block-img {
+            margin-top: 20px;
+            width: 306px;
+            height: 172px;
+          }
+
+          .row-furniture {
+            margin-top: 4%;
+            margin-bottom: 2%;
+          }
+
+          .furniture p {
+            padding-top: 1%;
+            font-size: 17px;
+          }
+      }
+    </style>
 {% endblock %}
 {% block content %}
 <section class="furniture">
