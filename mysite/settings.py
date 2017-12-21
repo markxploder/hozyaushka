@@ -55,7 +55,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 
-TELEGRAM_BOT_HANDLERS_CONF = "hoz.handlers"
+TELEGRAM_BOT_HANDLERS_CONF = 'hoz.handlers'
+
 
 TEMPLATES = [
     {
