@@ -1,48 +1,18 @@
-.furniture {
-  padding-top: 100px;
-  text-align: center;
-  font: #333333;
-  margin-bottom: -10px;
-}
-
-.furniture h1 {
-  padding-top: 4.2%;
-  font-size: 36px;
-}
-
-.furniture h2 {
-  padding-top: 1.5%;
-  font-size: 24px;
-}
-
-.row-furniture {
-  margin-top: 2.6%;
-  margin-bottom: 2.1%;
-}
-
-.furniture-block {
-  height: 100%;
-  margin-left: 5.8%;
-  border: solid 2px #131313;
-  text-align: left;
-  padding-left: 2.9%;
-  padding-right: 4.3%;
-}
-
 #furniture-second-screen {
   height: 100%;
   background: url(../img/foam_.png);
+  background-size: 100% 110%;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10%;
 }
 
 #furniture-second-screen h3 {
   font-size: 30px;
-  padding: 40px 0 80px 0;
+  padding: 40px 0 90px 0;
 }
 
 .furniture-table {
@@ -53,7 +23,6 @@
   border: solid 4px #202f4a;
   border-radius: 10px;
   padding: 17.5px 5% 17.5px 4%;
-  margin-bottom: 150px;
 }
 
 .furniture-table p {
@@ -65,31 +34,7 @@
   max-width: 20%;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width : 480px) {
-  .furniture h1 {
-    padding: 4.2% 5% 2% 5%;
-  }
-
-  .furniture-block  {
-    width: 90%;
-  }
-
-  .block-img {
-    margin-top: 20px;
-    width: 306px;
-    height: 172px;
-  }
-
-  .row-furniture {
-    margin-top: 4%;
-    margin-bottom: 2%;
-  }
-
-  .furniture p {
-    padding-top: 1%;
-    font-size: 17px;
-  }
-
+@media only screen and (min-width: 320px) and (max-width : 480px) {
   #furniture-second-screen h2 {
     margin-top: 65px;
     margin-bottom: 70px;
