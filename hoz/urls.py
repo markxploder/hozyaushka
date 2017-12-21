@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 from . import views
 from django.views.generic import RedirectView
 
+
 urlpatterns = [
     url(r'^$', views.main, name='main'),
     url(r'^furniture/', views.furniture, name='furniture'),

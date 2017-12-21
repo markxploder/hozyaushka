@@ -10,7 +10,7 @@
         <style>
             @font-face {
                 font-family: 'Roboto';
-                src: url('../fonts/Roboto-Regular.ttf');
+                src: url({% static 'fonts/Roboto-Regular.ttf' %});
                 font-weight: normal;
                 font-style: normal;
             }
@@ -25,7 +25,7 @@
             .circle2 {background-color: #11b2c3;width: 170px;height: 170px;margin-top: -85px;margin-left: -85px;}
             .circle3 {background-color: #57c8d5;width: 100px;height: 100px;margin-top: -50px;margin-left: -50px;}
             body {
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Roboto';
                 overflow-x: hidden;
             }
             section {
@@ -149,21 +149,25 @@
                     width: 100%;
                 }
                 .nav-item {
+                    position: relative;
                     visibility: hidden;
-                    background: rgba(211, 242, 250, 0.4);
-                    max-width: 0;
-                    height: 0;
+                    background: rgba(211, 242, 250, 0.7);
+                    /*max-width: 0;*/
+                    transform: translateY(-100%) scale(0);
+                    height: 10vh;
                     transition: 0.75s all;
-                    margin-left: 100vw;
+                    /*margin-left: 100vw;*/
                     opacity: 0;
                     line-height: 5vh;
+                    z-index: -2;
                 }
                 .change .nav-item {
                     visibility: visible;
-                    max-width: 100vw;
-                    height: 10vh;
-                    margin-left: 0;
+                    transform: translateY(0) scale(1);
+                    /*max-width: 100vw;*/
+                    /*margin-left: 0;*/
                     opacity: 1;
+                    z-index: 1;
                 }
                 .logo img {
                     width: 179px;
@@ -184,8 +188,8 @@
                     <div class="nav-phone-mobile">
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
-                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
+                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380683456626">+38(068)345-66-26</a></div>
+                                <div class="col phone"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380730660061">+38(073)066-00-61</a></div>
                             </div>
                         </div>
                     </div>

@@ -29,7 +29,9 @@ footer img {
     footer .nav-logo {
         visibility: visible;
     }
-
+    footer .nav-item {
+        height: 0;
+    }
     .nav-links {
         display: block;
     }
