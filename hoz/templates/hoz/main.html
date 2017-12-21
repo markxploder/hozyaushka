@@ -7,61 +7,61 @@
     <meta name="description" content="LOREM">
 {% endblock %}
 {% block critical %}
-<style>
-    .main .carousel-caption {
-        bottom: 20%;
-        width: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to bottom, rgba(211, 242, 250, 0.4), rgba(188, 223, 231, 0.9));
-    }
-    #carouselMain {
-        height: inherit;
-        max-height: 678px;
-        overflow: hidden;
-    }
-
-    #carouselMain img {
-        pointer-events: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    #carouselMain .carousel-indicators li {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        margin: auto 15px;
-    }
-
-    #main-mobile {
-        height: inherit;
-        z-index: -1;
-        overflow: hidden;
-        display: none;
-    }
-
-
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
+    <style>
+        .main .carousel-caption {
+            bottom: 20%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgba(211, 242, 250, 0.4), rgba(188, 223, 231, 0.9));
+        }
         #carouselMain {
-            display: none;
+            height: inherit;
+            max-height: 678px;
+            overflow: hidden;
+        }
+
+        #carouselMain img {
+            pointer-events: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #carouselMain .carousel-indicators li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: auto 15px;
         }
 
         #main-mobile {
-            display: block;
+            height: inherit;
+            z-index: -1;
+            overflow: hidden;
+            display: none;
         }
 
-        #main-mobile img {
-            height: 100vh;
-            width: auto;
-            position: relative;
-            z-index: -1;
-            left: -100%;
+
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+            #carouselMain {
+                display: none;
+            }
+
+            #main-mobile {
+                display: block;
+            }
+
+            #main-mobile img {
+                height: 100vh;
+                width: auto;
+                position: relative;
+                z-index: -1;
+                left: -100%;
+            }
         }
-    }
-</style>
+    </style>
 {% endblock %}
 {% block content %}
 <section class="main">
@@ -90,7 +90,7 @@
         <div class="row h-100">
                 <img class="" src="{% static 'img/slide0.png' %}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Химчистка ковров, мебели и матрасов на дому</h1>
+                    <h2>Химчистка ковров, мебели и матрасов на дому</h2>
                 </div>
         </div>
     </div>
