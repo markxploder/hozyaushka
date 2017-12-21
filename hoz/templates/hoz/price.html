@@ -250,5 +250,15 @@
 </section>
 {% endblock %}
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static 'css/price.css' %}">
+<noscript>
+    <link rel="stylesheet" href="{% static 'css/price.css' %}">
+</noscript>
+<script>
+    window.addEventListener('load', function() {
+        var link  = document.createElement('LINK');
+        link.rel = "stylesheet";
+        link.href = "{% static 'css/price.css' %}";
+        document.body.appendChild(link);
+    });
+</script>
 {% endblock %}

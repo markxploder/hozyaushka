@@ -101,7 +101,7 @@
             }
 
             .phone {
-                height: 35px;
+                height: 30px;
                 display: flex;
                 align-items: center;
             }
@@ -355,11 +355,31 @@
         </footer>
     </body>
 </html>
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<noscript>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/callback.css' %}">
+</noscript>
+<script>
+    window.addEventListener('load', function() {
+        var link1  = document.createElement('LINK');
+        link1.rel = "stylesheet";
+        link1.href = "{% static 'css/base.css' %}";
+        document.body.appendChild(link1);
+
+        var link2  = document.createElement('LINK');
+        link2.rel = "stylesheet";
+        link2.href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
+        document.body.appendChild(link2);
+
+        var link3  = document.createElement('LINK');
+        link3.rel = "stylesheet";
+        link3.href = "{% static 'css/callback.css' %}";
+        document.body.appendChild(link3);
+    });
+</script>
 {% block stylesheet %}
 {% endblock %}
-<link rel="stylesheet" href="{% static 'css/callback.css' %}">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>

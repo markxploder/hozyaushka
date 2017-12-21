@@ -7,6 +7,16 @@ from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm
 
 # @cache_page(900, cache='default', key_prefix='')
 def main(request):
+    """ @Name           main page
+        @About          rendering posts
+                        rendering and validation forms
+        @Params         reviews
+                        request
+                        callback
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     posts_reviews = ReviewPost.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     if request.method == "POST":
         form_reviews = ReviewPostForm(request.POST)
@@ -34,6 +44,13 @@ def main(request):
     return render(request, 'hoz/main.html', {'posts_reviews': posts_reviews[:3], 'form_reviews': form_reviews, 'form_request': form_request, 'form_callback': form_callback})
 
 def furniture(request):
+    """ @Name           furniture page
+        @About          rendering and validation forms
+        @Params         callback
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     if request.method == "POST":
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
@@ -46,6 +63,13 @@ def furniture(request):
     return render(request, 'hoz/furniture.html', {'form_callback': form_callback})
 
 def mattress(request):
+    """ @Name           furniture page
+        @About          rendering and validation forms
+        @Params         callback
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     if request.method == "POST":
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
@@ -58,6 +82,13 @@ def mattress(request):
     return render(request, 'hoz/mattress.html', {'form_callback': form_callback})
 
 def carpet(request):
+    """ @Name           furniture page
+        @About          rendering and validation forms
+        @Params         callback
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     if request.method == "POST":
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
@@ -70,6 +101,14 @@ def carpet(request):
     return render(request, 'hoz/carpet.html', {'form_callback': form_callback})
 
 def price(request):
+    """ @Name           furniture page
+        @About          rendering and validation forms
+        @Params         callback
+                        request
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     if request.method == "POST":
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
@@ -89,6 +128,14 @@ def price(request):
     return render(request, 'hoz/price.html', {'form_callback': form_callback, 'form_request': form_request,})
 
 def reviews(request):
+    """ @Name           furniture page
+        @About          rendering posts
+                        rendering and validation forms
+        @Params         callback
+        @Build          1.0
+        @Author         riff_spliff
+    """
+
     posts_reviews = ReviewPost.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     if request.method == "POST":
         form_callback = CallbackPostForm(request.POST)

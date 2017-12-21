@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hoz',
+    'rest_framework',
+    'telegrambot',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+
+TELEGRAM_BOT_HANDLERS_CONF = "app.handlers"
 
 TEMPLATES = [
     {

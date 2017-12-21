@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^carpet/', views.carpet, name='carpet'),
     url(r'^price/', views.price, name='price'),
     url(r'^reviews/', views.reviews, name='reviews'),
+    # url(r'^telegrambot/', include('telegrambot.urls', namespace="telegrambot")),
 ]
