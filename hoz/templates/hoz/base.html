@@ -101,17 +101,20 @@
                     cursor: pointer;
                 }
                 .sandwchLine1,
-                .sandwchLine2,
                 .sandwchLine3 {
                     width: 40px;
                     height: 4px;
                     background-color: #333333;
-                    margin: 5px 0;
+                    margin: 0;
                     transition: 0.5s;
                 }
+                .sandwchLine2 {
+                    text-align: center;
+                    font-size: 14px;
+                }
                 .change .sandwchLine1 {
-                    -webkit-transform: rotate(-40deg) translate(-6px, 6px) ;
-                    transform: rotate(-40deg) translate(-6px, 6px) ;
+                    -webkit-transform: rotate(-40deg) translate(-10px, 10px) ;
+                    transform: rotate(-40deg) translate(-10px, 10px) ;
                 }
                 .change .sandwchLine2 {
                     opacity: 0;
@@ -199,7 +202,7 @@
                         </a>
                         <div id="sandwichMenu" onclick="popOut(this)">
                             <div class="sandwchLine1"></div>
-                            <div class="sandwchLine2"></div>
+                            <div class="sandwchLine2">menu</div>
                             <div class="sandwchLine3"></div>
                         </div>
                     </li>

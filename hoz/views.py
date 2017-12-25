@@ -1,10 +1,12 @@
 from __future__ import unicode_literals
-from django.shortcuts import render, get_object_or_404, redirect, render_to_response
+from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views.decorators.cache import cache_page
 from django.utils import timezone
 from .models import ReviewPost, RequestPost, CallbackPost
 from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm
+import telepot
+bot = telepot.Bot('446407532:AAECo5m1NzzmGR-HE7LywBt2nlqTBsbOGt4')
 
 # @cache_page(900, cache='default', key_prefix='')
 def main(request):
@@ -14,7 +16,8 @@ def main(request):
         @Params         reviews
                         request
                         callback
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -31,12 +34,27 @@ def main(request):
             post_request = form_request.save(commit=False)
             post_request.published_date = timezone.now()
             post_request.save()
+
+            bot.sendMessage(
+                396709957, 'Новая заявка' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + post_request.name + '\n'
+                + 'Телефон: ' + post_request.phone + '\n'
+                + 'Комментарий: ' + post_request.text)
+
             return redirect('main')
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
     else:
         form_reviews = ReviewPostForm()
@@ -48,7 +66,8 @@ def furniture(request):
     """ @Name           furniture page
         @About          rendering and validation forms
         @Params         callback
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -58,6 +77,13 @@ def furniture(request):
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
     else:
         form_callback = CallbackPostForm()
@@ -67,7 +93,8 @@ def mattress(request):
     """ @Name           furniture page
         @About          rendering and validation forms
         @Params         callback
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -77,6 +104,13 @@ def mattress(request):
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
     else:
         form_callback = CallbackPostForm()
@@ -86,7 +120,8 @@ def carpet(request):
     """ @Name           furniture page
         @About          rendering and validation forms
         @Params         callback
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -96,6 +131,13 @@ def carpet(request):
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
     else:
         form_callback = CallbackPostForm()
@@ -106,7 +148,8 @@ def price(request):
         @About          rendering and validation forms
         @Params         callback
                         request
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -116,6 +159,13 @@ def price(request):
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
         form_request = RequestPostForm(request.POST)
         if form_request.is_valid():
@@ -133,7 +183,8 @@ def reviews(request):
         @About          rendering posts
                         rendering and validation forms
         @Params         callback
-        @Build          1.0
+                        bot
+        @Build          1.1
         @Author         riff_spliff
     """
 
@@ -144,6 +195,13 @@ def reviews(request):
             callback_post = form_callback.save(commit=False)
             callback_post.published_date = timezone.now()
             callback_post.save()
+
+            bot.sendMessage(
+                396709957, 'Перезвони мне!' + '\n'
+                + '______________' + '\n\n'
+                + 'Имя: ' + callback_post.name + '\n'
+                + 'Телефон: ' + callback_post.phone)
+
             return redirect('main')
     else:
         form_callback = CallbackPostForm()

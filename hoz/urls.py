@@ -1,7 +1,8 @@
-from django.conf.urls import url, include
+from django.conf.urls import url, include, handler404, handler500
 from . import views
 from django.views.generic import RedirectView
 
+handler404 = 'hoz.views.handler404'
 
 urlpatterns = [
     url(r'^$', views.main, name='main'),
