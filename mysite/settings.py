@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hoz',
     'rest_framework',
-    'telegrambot',
+    'telepot',
 ]
 
 MIDDLEWARE = [
