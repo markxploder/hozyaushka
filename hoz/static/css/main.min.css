@@ -138,7 +138,7 @@
 .reviews .hoz-card img{margin-bottom:1.25rem;}
 .hoz-caption-bigger{margin-bottom:15vh;}
 .hoz-caption-bigger h3{text-align:center;line-height:1.5;margin-bottom:2rem;}
-.request{background-position-y:15%;background-position-x:center;margin-top:-35%;}
+.request{background-position-y:15%;background-position-x:center;margin-top:-35%;background-size: inherit;}
 .hoz-form{width:95%;}
 .hoz-form-container .hoz-rating{margin-top:-10%;}
 .hoz-modal-dialog{max-width:100%;}
