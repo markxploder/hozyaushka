@@ -142,12 +142,9 @@
 }
 
 .vermin .container {
-    padding-bottom: 5%;
-}
-
-.vermin .row {
     background: rgba(47, 53, 62, 0.75);
     border-radius: 10px;
+    margin-bottom: 5%;
 }
 
 .vermin .hoz-card {
@@ -159,9 +156,22 @@
     color: #ffffff;
 }
 
+.vermin .row p {
+  color: #fefefe;
+}
+
 .vermin .hoz-card-text {
     padding-left: 28%;
     padding-bottom: 10%;
+}
+
+.vermin .caption-light h3 {
+    line-height: 1.3;
+    text-align: center;
+}
+
+.vermin .capton-light span {
+  text-transform: uppercase;
 }
 
 /* end vermin */
