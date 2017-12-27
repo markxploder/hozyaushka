@@ -207,3 +207,7 @@ def reviews(request):
     else:
         form_callback = CallbackPostForm()
     return render(request, 'hoz/reviews.html', {'posts_reviews': posts_reviews, 'form_callback': form_callback})
+
+def error_404(request):
+        data = {}
+        return render(request,'hoz/404.html', data)

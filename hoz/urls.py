@@ -1,4 +1,4 @@
-from django.conf.urls import url, include, handler404, handler500
+from django.conf.urls import url, include
 from . import views
 from django.views.generic import RedirectView
 from django.contrib.sitemaps.views import sitemap
@@ -8,7 +8,6 @@ from . import views
 
 # from hoz.sitemaps import ReviewPostSitemap, RequestPostSitemap, CallbackPostSitemap
 
-handler404 = 'hoz.views.handler404'
 
 sitemaps = {
     'static': StaticViewSitemap,
