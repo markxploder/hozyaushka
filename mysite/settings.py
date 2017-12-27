@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!f9wn2g=!4kr)q-kq+_9!=@g8(rlje#!er5w%%@q4gm7!=sj-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'hozyaushka.pythonanywhere.com']
 
@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'hoz',
-    'rest_framework',
-    'telegrambot',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +131,5 @@ WHITENOISE_MAX_AGE = 9999
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+SITE_ID = 1
