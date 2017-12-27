@@ -18,11 +18,13 @@
 .stage-left .hoz-card-title{left:0%;}
 .stage-right .hoz-card-title{right:0%;}
 .stages .hoz-card-text{}
-.vermin{background:url(../img/vermins.jpg) 100% 100%;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;}
+.vermin{background:url(../img/background-price-min.jpg) 100% 100%;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;padding-bottom:5%;}
+.vermin .caption-light h3{line-height: 2;text-align: center;}
+.vermin .caption-light span{text-transform: uppercase;}
 .vermin img{height:80px;width:80px;border-radius:50%;}
 .vermin .hoz-card-title{font-size:24px;line-height:6.33;letter-spacing:1px;text-align:left;color:#ffffff;z-index:auto;}
-.vermin .container{padding-bottom:5%;}
-.vermin .row{background:rgba(47, 53, 62, 0.75);border-radius:10px;}
+.vermin .container{background:rgba(47, 53, 62, 0.75);font-size: 24px;color: #fefefe;padding: 25px 5% 25px 4%;border-radius:10px;}
+.vermin h4 {line-height: 1.6;font-size: 32px;}
 .vermin .hoz-card{font-size:16px;line-height:1.5;letter-spacing:0.6px;text-align:left;color:#ffffff;}
 .vermin .hoz-card-text{padding-left:28%;padding-bottom:10%;}
 .portfolio div{padding:0;}
@@ -122,7 +124,10 @@
 .stage-right p, .stage-left p{font-size:16px;}
 .stage-right p{text-align:left;}
 .card-img-mobile{margin:0 auto;}
-.vermin{display:none;}
+.vermin{padding: 15px;}
+.vermin .caption-light h3 {font-size: 17px;line-height: 1.5;text-align: center;}
+.vermin h4 {padding-top: 2%;font-size: 20px;}
+.vermin .row {font-size: 14px;}
 .vermin .col{min-width:100%;}
 .vermin .hoz-card-title{text-align:center;}
 .vermin .hoz-card-text{padding-left:0;text-align:center;}
