@@ -23,8 +23,7 @@
       }
 
       .row-furniture {
-        margin-top: 2.6%;
-        margin-bottom: 2.1%;
+        margin: 2.6% 0 2.4% 0;
       }
 
       .furniture-block {
@@ -60,6 +59,20 @@
             padding-top: 1%;
             font-size: 17px;
           }
+      }
+
+      @media only screen and (min-width: 481px) and (max-width: 767px) {
+        .row-furniture {
+          padding: 5%;
+        }
+
+        .furniture-block {
+          margin-left: 3%;
+        }
+
+        .block-img {
+          padding-top: 2%;
+        }
       }
     </style>
 {% endblock %}
