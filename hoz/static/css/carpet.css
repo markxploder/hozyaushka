@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 120px;
 }
 
 #carpet-second-screen h3 {
@@ -21,27 +22,25 @@
   border: solid 4px #202f4a;
   border-radius: 10px;
   padding: 25px 5% 25px 4%;
-  margin: 0 0 150px 0;
 }
 
 .carpet-table p {
   padding: 1%;
 }
 
-.second-table-col {
-  max-width: 25%;
-}
-
 @media only screen and (min-width: 320px) and (max-width : 480px) {
-  #carpet-second-screen h2 {
-    margin-top: 60px;
-    margin-bottom: 75px;
-    font-size: 20px;
+  #carpet-second-screen {
+    padding-bottom: 70px;
   }
 
   .carpet-table {
     width: 95%;
     line-height: 18px;
     font-size: 15px;
+  }
+
+  #carpet-second-screen h3 {
+    font-size: 25px;
+    padding: 40px 0 60px 0;
   }
 }
