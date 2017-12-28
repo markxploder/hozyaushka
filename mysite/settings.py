@@ -25,7 +25,7 @@ SECRET_KEY = '!f9wn2g=!4kr)q-kq+_9!=@g8(rlje#!er5w%%@q4gm7!=sj-q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'hozyaushka.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'hozyaushka.pythonanywhere.com', 'hozyushka.od.ua']
 
 
 # Application definition
