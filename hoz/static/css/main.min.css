@@ -148,3 +148,47 @@
 .hoz-rating .col-2{max-width:30%;}
 #bubbles{display:none;}
 }
+@media only screen and (min-width: 481px) and (max-width: 767px){.caption-light h3, .caption-dark h3{font-size:26px;}
+.modl-header, .modal-footer{padding:0;}
+.modal-title h5{font-size:14px;}
+.hoz-modal-body-callback input:not([id^=id_rating]), .hoz-modal-body-callback textarea{width:90%;}
+.hoz-modal-footer-callback button{top:-60%;}
+.advantages-mobile, .card-img-mobile, .hoz-card h3, .reviews-row-mobile, .portfolio-mobile{display:block;}
+.advantages-desctop, .card-img-desctop, .hoz-card-title:not(h3), .reviews-row-desctop, .portfolio-desctop{display:none;}
+.vermin .row, .portfolio .row{margin:0;}
+.reviews{padding:15px;}
+.advantages .col{max-width:50%;}
+.hoz-card{font-size:14px;word-wrap: normal;}
+.advantages img{height:70px;}
+.stage-container{overflow-x:hidden;}
+.stage-left div, .stage-right div{left:5%;right:5%;}
+.stages .hoz-card-text{top:0;}
+.stage-right p, .stage-left p{font-size:16px;}
+.stage-right p{text-align:left;}
+.card-img-mobile{margin:0 auto;}
+.vermin{display:none;}
+.vermin .col{min-width:100%;}
+.vermin .hoz-card-title{text-align:center;}
+.vermin .hoz-card-text{padding-left:0;text-align:center;}
+.portfolio-mobile{display:block;}
+.reviews{min-height:700px;}
+.reviews .card-body{padding:0;}
+.reviews-row-mobile .carousel{height:320px;}
+.reviews-row-mobile .carousel-inner{height:100%;}
+.reviews-row{min-height:320px;}
+.hoz-btn{width:50%;}
+#carousel-mobile .carousel-indicators{bottom:0;margin-top:5px;}
+.carousel-indicators li{width:10px;height:10px;border-radius:50%;}
+.reviews .hoz-card img{margin-bottom:1.25rem;}
+.hoz-caption-bigger{margin-bottom:15vh;}
+.hoz-caption-bigger h3{text-align:center;line-height:1.5;margin-bottom:2rem;}
+.request{background-position-y:15%;background-position-x:center;margin-top:-20%;background-size: inherit;}
+.hoz-form{width:95%;}
+.hoz-form-container .hoz-rating{margin-top:-10%;}
+.hoz-modal-dialog{max-width:100%;}
+.hoz-modal-body textarea{height:25vh;}
+.hoz-modal-body input:not([id^=id_rating]), .hoz-modal-body textarea{width:80%;}
+.hoz-rating label{height:50px;}
+.hoz-rating .col-2{max-width:30%;}
+#bubbles{display:none;}
+}

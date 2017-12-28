@@ -52,6 +52,21 @@
                 left: -100%;
             }
         }
+        @media only screen and (min-width: 481px) and (max-width: 767px) {
+            #carouselMain {
+                display: none;
+            }
+            #main-mobile {
+                display: block;
+            }
+            #main-mobile img {
+                height: 100vh;
+                width: auto;
+                position: relative;
+                z-index: -1;
+                left: 2%;
+            }
+        }
     </style>
 {% endblock %}
 {% block content %}

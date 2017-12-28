@@ -37,3 +37,22 @@ footer img {
     }
 
 }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    footer {
+        margin-top: 0;
+        background: #4EDCE8;
+    }
+
+    footer .nav-logo {
+        visibility: visible;
+    }
+    footer .nav-item {
+        height: 0;
+    }
+    .nav-links {
+        display: block;
+    }
+
+}
