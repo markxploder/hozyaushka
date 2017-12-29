@@ -73,6 +73,23 @@
             .nav-phone-mobile {
                 display: none;
             }
+            .lang-switch-desctop {
+                position: relative;
+                left: 50px;
+                bottom: 5px;
+            }
+            div.lang-switch-mobile {
+                position: relative;
+                bottom: 10px;
+                display: none;
+            }
+            .lang-switch-opt img {
+                height: 20px;
+                transition: 0.2s;
+            }
+            .lang-switch-opt img:hover {
+                transform: scale(1.5);
+            }
             #sandwichMenu {
                 display: none;
             }
@@ -128,6 +145,12 @@
                     display: block;
                     font-size: 11px;
                     width: 100%;
+                }
+                .lang-switch-desctop {
+                    display: none;
+                }
+                .lang-switch-mobile {
+                    display: flex;
                 }
                 nav a {
                     letter-spacing: 0.7px;
@@ -212,6 +235,12 @@
                     display: block;
                     font-size: 11px;
                     width: 100%;
+                }
+                .lang-switch-desctop {
+                    display: none;
+                }
+                .lang-switch-mobile {
+                    display: flex;
                 }
                 nav a {
                     letter-spacing: 0.7px;
@@ -334,9 +363,13 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div class="col">
-                            <div class="row"><a href="/ru/{{ current_path }}">ru</a></div>
-                            <div class="row"><a href="/ua/{{ current_path }}">ua</a></div>
+                        <div class="col lang-switch-desctop">
+                            <div class="row lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="http://flags.fmcdn.net/data/flags/w580/ru.png" alt=""></a></div>
+                            <div class="row lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="http://flags.fmcdn.net/data/flags/w580/ua.png" alt=""></a></div>
+                        </div>
+                        <div class="row lang-switch-mobile">
+                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="http://flags.fmcdn.net/data/flags/w580/ru.png" alt=""></a></div>
+                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="http://flags.fmcdn.net/data/flags/w580/ua.png" alt=""></a></div>
                         </div>
                     </li>
                 </ul>

@@ -16,9 +16,9 @@ class ReviewPostForm(forms.ModelForm):
         model = ReviewPost
         fields = ['author', 'text', 'rating']
         widgets = {
-            'author': forms.TextInput(attrs={'placeholder': 'Имя', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
+            'author': forms.TextInput(attrs={'placeholder': 'Name', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
             'text': forms.Textarea(
-                attrs={'placeholder': 'Комментарий'}),
+                attrs={'placeholder': 'Comment'}),
         }
 
 
@@ -33,10 +33,10 @@ class RequestPostForm(forms.ModelForm):
         model = RequestPost
         fields = ['name', 'phone', 'text']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Имя', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
-            'phone': forms.TextInput(attrs={'placeholder': 'Телефон', 'pattern': '^[+0-9]+$'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Name', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
+            'phone': forms.TextInput(attrs={'placeholder': 'Phone', 'pattern': '^[+0-9]+$'}),
             'text': forms.Textarea(
-                attrs={'placeholder': 'Комментарий'}),
+                attrs={'placeholder': 'Comment'}),
         }
 
 
@@ -51,6 +51,6 @@ class CallbackPostForm(forms.ModelForm):
         model = CallbackPost
         fields = ['name', 'phone']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Имя', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
-            'phone': forms.TextInput(attrs={'placeholder': 'Телефон', 'pattern': '^[+0-9]+$'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Name', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
+            'phone': forms.TextInput(attrs={'placeholder': 'Phone', 'pattern': '^[+0-9]+$'}),
         }

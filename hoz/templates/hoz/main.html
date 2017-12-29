@@ -545,7 +545,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <a href="{% url 'reviews' %}">Посмотреть все</a>
+            <a href="{% url 'reviews_ru' %}">Посмотреть все</a>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -1114,11 +1114,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            {% if 'ru/' in request.path %}
-                <a href="{% url 'reviews_ru' %}">Посмотреть все</a>
-            {% elif 'ua/' in request.path %}
-                <a href="{% url 'reviews_ua' %}">Переглянути всi</a>
-             {% endif %}
+            <a href="{% url 'reviews_ua' %}">Переглянути всi</a>
         </div>
     </div>
     <div class="row justify-content-center">
