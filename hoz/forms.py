@@ -54,3 +54,6 @@ class CallbackPostForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'placeholder': 'Имя', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
             'phone': forms.TextInput(attrs={'placeholder': 'Телефон', 'pattern': '^[+0-9]+$'}),
         }
+
+class MyForm(forms.Form):
+    lang = forms.CharField(max_length=2)        

@@ -60,7 +60,7 @@ def main(request):
     else:
         form_reviews = ReviewPostForm()
         form_request = RequestPostForm()
-        form_callback = CallbackPostForm()
+        form_callback = CallbackPostForm()    
     return render(request, 'hoz/main.html', {'posts_reviews': posts_reviews[:3], 'form_reviews': form_reviews, 'form_request': form_request, 'form_callback': form_callback})
 
 def furniture(request):

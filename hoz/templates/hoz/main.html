@@ -69,7 +69,7 @@
         }
     </style>
 {% endblock %}
-{% block content %}
+{% block content_ru %}
 <section class="main">
     <div id="carouselMain" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -82,6 +82,575 @@
                 <img class="d-block w-100" src="{% static 'img/slide0.png' %}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Химчистка ковров, мебели и матрасов на дому</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/slide1.png' %}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/hozyaushka.png' %}" alt="Second slide">
+            </div>
+        </div>
+    </div>
+    <div id="main-mobile">
+        <div class="row h-100">
+                <img class="" src="{% static 'img/slide0.png' %}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Химчистка ковров, мебели и матрасов на дому</h2>
+                </div>
+        </div>
+    </div>
+</section>
+<section class="advantages">
+    <div class="caption-light"><h3>Наши преимущества</h3></div>
+    <div class="container advantages-desctop">
+        <div class="row">
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/rgb.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Обновление цвета материала</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/spot.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Выводим различные пятна</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/washing.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Тщательно полоскаем после химчистки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/perfume.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Свежий запах</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/cat.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Убираем шерсть животных</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/sales.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Разумная система скидок</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="advantages-mobile container">
+        <div class="row">
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/rgb.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Обновление цвета материала</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/spot.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Выводим различные пятна</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/washing.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Тщательно полоскаем после химчистки</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/flower.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Свежий запах</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/cat.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Убираем шерсть животных</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card hoz-card">
+                    <img class="card-img-top" src="{% static 'svg/sales.svg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Разумная система скидок</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="stages">
+    <div class="caption-dark"><h3>Этапы работы</h3></div>
+    <div class="container stage-container">
+        <div class="row justify-content-end">
+            <div class="card bg-dark text-white stage-left">
+                <img class="card-img" src="{% static 'img/stage1.png' %}" alt="Card image">
+                <div class="card-img-overlay">
+                    <span class="card-title hoz-card-title">1</span>
+                    <p class="card-text hoz-card-text">Обработка всей поверхности мягкой мебели при помощи профессионального
+                        оборудования со специальным химическим раствором, что максимально очистит вашу мебель
+                        и придаст ей новый идеальный вид, а так же избавит вашу мебель от неприятных запахов</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container stage-container">
+        <div class="row justify-content-start">
+            <div class="card bg-dark text-white stage-right">
+                <img class="card-img" src="{% static 'img/stage2.png' %}" alt="Card image">
+                <div class="card-img-overlay">
+                    <span class="card-title hoz-card-title">2</span>
+                    <p class="card-text hoz-card-text">Помимо нанесения химического раствора,
+                        который является безвредным как для вашей мебели, так и для вас,
+                        клинер обеспечит дополнительную очистку механическим способом</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container stage-container">
+        <div class="row justify-content-end">
+            <div class="card bg-dark text-white stage-left">
+                <img class="card-img" src="{% static 'img/stage3.png' %}" alt="Card image">
+                <div class="card-img-overlay">
+                    <span class="card-title hoz-card-title">3</span>
+                    <p class="card-text hoz-card-text">Так называемая «промывка», которая является завершающим
+                        этапом и полностью убирает с вашей мягкой мебели все загрязнения, пятна, пыль и неприятные
+                        запахи вместе с предварительно нанесенным химическим раствором</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="vermin">
+    <div class="caption-light">
+      <h3>Акции от Хозяюшки<br>
+        <span>каждому клиенту подарок!</span><br>
+        при заказе на сумму от 1000 грн скидка 10%</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-7">
+              <h4>Категории химчистки</h4>
+          </div>
+          <div class="col-5">
+              <h4>Цены</h4>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химическая чистка стульев (текстиль)</p>
+          </div>
+          <div class="col-5">
+              <p>от 50 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химическая чистка кресел</p>
+          </div>
+          <div class="col-5">
+              <p>от 150 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химическая чистка диванов</p>
+          </div>
+          <div class="col-5">
+              <p>от 400 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химическая чистка матрасов</p>
+          </div>
+          <div class="col-5">
+              <p>от 200 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Зимическая чистка стульев (кожи)</p>
+          </div>
+          <div class="col-5">
+              <p>от 100 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химчистка кресел (кожи)</p>
+          </div>
+          <div class="col-5">
+              <p>от 250 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химчистка диванов (кожи)</p>
+          </div>
+          <div class="col-5">
+              <p>от 500 грн</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-7">
+              <p>Химчистка ковров и ковролинов</p>
+          </div>
+          <div class="col-5">
+              <p>от 45 грн кв м</p>
+          </div>
+      </div>
+    </div>
+</section>
+<section class="portfolio">
+    <div class="caption-dark"><h3>Наши работы</h3></div>
+    <div class="container-fluid portfolio-desctop">
+        <div class="row">
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/1.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/2.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/3.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/4.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/5.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/6.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/7.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/8.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid portfolio-mobile">
+        <div class="row">
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/1.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/2.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/3.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/4.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/5.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/6.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/7.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">До</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white">
+                    <img class="card-img" src="{% static 'img/8.png' %}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">После</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="container reviews-container">
+        <div class="caption-dark"><h3>Отзывы</h3></div>
+        <div class="row reviews-row reviews-row-desctop">
+            {% for post in posts_reviews %}
+            <div class="col-4">
+                <div class="card hoz-card">
+                    <div class="col">
+                        {% if post.rating == 1 %}
+                        <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                        {% elif post.rating == 2 %}
+                        <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                        {% else %}
+                        <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                        {% endif %}
+                        <div class="card-body">
+                            <h4 class="card-title">{{ post.author }}</h4>
+                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row reviews-row reviews-row-mobile">
+            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="1"></li>
+                    <li data-target="#carousel-mobile" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    {% for post in posts_reviews %}
+                        {% if post == posts_reviews|first %}
+                        <div class="carousel-item active">
+                        {% else  %}
+                            <div class="carousel-item">
+                        {% endif %}
+                        <div class="col">
+                            <div class="card hoz-card">
+                                <div class="col">
+                                    {% if post.rating == 1 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                                    {% elif post.rating == 2 %}
+                                    <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                                    {% else %}
+                                    <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{ post.author }}</h4>
+                                        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <a href="{% url 'reviews' %}">Посмотреть все</a>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary hoz-btn" data-toggle="modal" data-target="#exampleModal">
+            Оставить отзыв
+        </button>
+    </div>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog hoz-modal-dialog" role="document">
+                <div class="modal-content hoz-modal-content">
+                    <div class="modal-header hoz-modal-header">
+                        <button type="button" class="close hoz-close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body hoz-modal-body">
+                        <h5 class="modal-title hoz-modal-title" id="exampleModalLabel">Нам важно Ваше мнение!</h5>
+                        <div class="container hoz-form-container">
+                            <div class="row justify-content-center">
+                                {{ form_reviews.author }}
+                            </div>
+                            <div class="row justify-content-center">
+                                {{ form_reviews.text }}
+                            </div>
+                            <div class="row justify-content-center hoz-rating">
+                                {% for rate in form_reviews.rating %}
+                                <div class="col-2 {{ rate.id_for_label }}">
+                                    {{ rate.tag }}
+                                    <label for="{{ rate.id_for_label }}"></label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer hoz-modal-footer row justify-content-center">
+                        <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<section class="request">
+    <div class="caption-dark hoz-caption-bigger"><h3>Оставьте заявку на химчистку</h3></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <form method="POST" class="post-form hoz-form">{% csrf_token %}
+                <div class="form-group">
+                    {{ form_request.name }}
+                </div>
+                <div class="form-group">
+                    {{ form_request.phone }}
+                </div>
+                <div class="form-group">
+                    {{ form_request.text }}
+                </div>
+                <button type="submit" class="btn btn-primary hoz-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <div id="bubbles">
+        <div id="bubble1">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble3">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble5">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble8">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble9">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble10">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble11">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble13">
+            <img src="{% static 'svg/bubble.svg' %}" alt="">
+        </div>
+        <div id="bubble-group">
+            <img src="{% static 'svg/bubbles.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content_ua %}
+<section class="main">
+    <div id="carouselMain" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselMain" data-slide-to="1"></li>
+            <li data-target="#carouselMain" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'img/slide0.png' %}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Хiмчистка ковров, мебели и матрасов на дому</h1>
                 </div>
             </div>
             <div class="carousel-item">

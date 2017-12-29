@@ -358,8 +358,13 @@
                 </div>
             </div>
         </form>
-        {% block content %}
-        {% endblock %}
+        {% if request.get_full_path == "/ru/" %}
+            {% block content_ru %}
+            {% endblock %}
+        {% elif request.get_full_path == "/ua/" %}
+            {% block content_ua %}
+            {% endblock %}
+        {% endif %}
         <footer>
             <nav>
                 <ul class="nav nav-pills nav-fill">
