@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin
+Sitemap: http://hozyushka.od.ua/sitemap.xml
+Host: hozyushka.od.ua

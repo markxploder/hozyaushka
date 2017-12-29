@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^ua/carpet/', views.carpet, name='carpet_ua'),
     url(r'^ua/price/', views.price, name='price_ua'),
     url(r'^ua/reviews/', views.reviews, name='reviews_ua'),
+    url(r'^robots\.txt$', views.robots, name='robots'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'),
 ]

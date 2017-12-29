@@ -211,3 +211,6 @@ def reviews(request):
 def error_404(request):
         data = {}
         return render(request,'hoz/404.html', data)
+
+def robots(request):
+    return render(request, 'hoz/robots.txt')    
