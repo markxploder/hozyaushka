@@ -1,22 +1,30 @@
 {% extends 'hoz/base.html' %}
 {% load staticfiles %}
-{% block title %}
-    <title>Хозяюшка</title>
-{% endblock %}
-{% block description %}
-    <meta name="description" content="LOREM">
+{% block meta %}
+    <title>Хозяюшка | Химчистка мягкой мебели в Одессе | Отзывы о компании</title>
+    <meta name="description" content="Одесская химчистка 'Хозяюшка' представляет услуги с выездом специалиста по всей Одессе. Чистка мягкой мебели,матрасов,ковров и ковролинов. Отзывы о нас. #чисткамебели">
 {% endblock %}
 {% block content_ru %}
 <section class="reviews">
     <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h3>О нас</h3></div>
     <div class="container reviews-container">
         <div class="row">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>Компания ХОЗЯЮШКА предоставляет услуги чистки мягкой мебели и ковров на домув Одессе. У нас
+              доступные цены которые приятно удивят вас. Также существует система скидок. Наши сотрудники обучены
+              и полностью знают структуру тканей, умеют работать с химией. При чистке ковров используем горячий пар,
+              что дает поразительный результат. Есть возможность безналичного</p>
+        </div>
+        <div class="row">
+            <p>У нас профессиональное немецкое оборудование Karcher, что очень важно для химчистки матраса на дому.
+              При чистке матрасов удаляются и выводятся пятна, разводы, запахи. Чистящие средства не разрушают
+              структуру ткани, и восстанавливают цвет. Большой опыт позволяет добиться отличного результата.
+              Используем только фирменные сертифицированные безопасные чистящие средства, которые абсолютно
+              безвредны для вас, детей и питомцев. Время на химчистку от 1 до 2 часов, в зависимости от степени
+              загрязнения. Вы получаете чистоту, свежесть, безопасность.</p>
         </div>
     </div>
     <div class="container reviews-container">
-        <div class="caption-dark"><h3>Отзывы</h3></div>
+        <div class="caption-dark"><h3>Отзывы наших клиентов</h3></div>
         <div class="row reviews-row reviews-row-desctop">
             {% for post in posts_reviews %}
             <div class="col-4">
@@ -72,15 +80,27 @@
 {% endblock %}
 {% block content_ua %}
 <section class="reviews">
-    <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h3>О нас</h3></div>
+    <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h3>Про нас</h3></div>
     <div class="container reviews-container">
         <div class="row">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>Компанія ХОЗЯЮШКА надає послуги чищення м'яких меблів і килимів на дому в Одессе. У нас доступні ціни
+              які приємно здивують вас. Також існує система знижок, ще маленький подарунок сподіваємося порадувати вас.
+              Наші співробітники навчені повністю знають структуру тканин, вміють працювати з хімією. При чищенні килимів
+              використовуємо гарячий пар що дає вражаючий результат. Сучасне хімію, устаткування фірми Karcher є
+              можливість безготівкового розрахунку, зручно для юридичних ліц. Наша робота починається з моменту
+              вашого дзвінка закінчується тільки тоді, коли ви залишаєтеся задоволені результатом праці.</p>
+        </div>
+        <div class="row">
+            <p>У нас професійне німецьке обладнання Karcher, що дуже важливо для хімчистки матраца на дому.
+              При чищенні матраців видаляються і виводяться плями, розводи, запахи. Чистячі засоби не руйнують
+              структуру тканини, і відновлюють колір. Великий досвід дозволяє добитися відмінного результату.
+              Використовуємо тільки фірмові сертифіковані безпечні засоби для чищення, які абсолютно нешкідливі для
+              вас, дітей та вихованців. Час на хімчистку від 1 до 2 годин, залежно від ступеня забруднення.
+              Ви отримуєте чистоту, свіжість, безпеку.</p>
         </div>
     </div>
     <div class="container reviews-container">
-        <div class="caption-dark"><h3>Отзывы</h3></div>
+        <div class="caption-dark"><h3>Відгуки наших клієнтів</h3></div>
         <div class="row reviews-row reviews-row-desctop">
             {% for post in posts_reviews %}
             <div class="col-4">
