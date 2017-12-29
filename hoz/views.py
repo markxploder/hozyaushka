@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.views.decorators.cache import cache_page
 from django.utils import timezone
 from .models import ReviewPost, RequestPost, CallbackPost
-from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm
+from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm, LangSwitchForm
 import telepot
 
 bot = telepot.Bot('446407532:AAECo5m1NzzmGR-HE7LywBt2nlqTBsbOGt4')
@@ -60,8 +60,8 @@ def main(request):
     else:
         form_reviews = ReviewPostForm()
         form_request = RequestPostForm()
-        form_callback = CallbackPostForm()    
-    return render(request, 'hoz/main.html', {'posts_reviews': posts_reviews[:3], 'form_reviews': form_reviews, 'form_request': form_request, 'form_callback': form_callback})
+        form_callback = CallbackPostForm()
+    return render(request, 'hoz/main.html', {'posts_reviews': posts_reviews[:3], 'form_reviews': form_reviews, 'form_request': form_request, 'form_callback': form_callback,})
 
 def furniture(request):
     """ @Name           furniture page

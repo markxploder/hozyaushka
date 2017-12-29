@@ -282,7 +282,7 @@
                         </div>
                     </div>
                     <li class="nav-logo justify-content-around">
-                        <a class="navbar-brand logo" href="{% url 'main' %}">
+                        <a class="navbar-brand logo" href="{% url 'main_ru' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                         <div id="sandwichMenu" onclick="popOut(this)">
@@ -292,27 +292,51 @@
                         </div>
                     </li>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'main' %}">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'furniture' %}">Мягкая мебель</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'mattress' %}">Матрасы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'carpet' %}">Ковры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'reviews' %}">О нас</a>
-                    </li>
+                    {% if 'ru/' in request.path %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main_ru' %}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'furniture_ru' %}">Мягкая мебель</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'mattress_ru' %}">Матрасы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'carpet_ru' %}">Ковры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'reviews' %}">О нас</a>
+                        </li>
+                    {% elif 'ua/' in request.path %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main_ua' %}">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'furniture_ua' %}">М'які меблі</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'mattress_ua' %}">Матраци</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'carpet_ua' %}">Коври</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'reviews' %}">Про нас</a>
+                        </li>
+                    {% endif %}
                     <li class="nav-phone">
                         <div class="container">
                             <div class="col">
                                 <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
                                 <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="col">
+                            <div class="row"><a href="/ru/{{ current_path }}">ru</a></div>
+                            <div class="row"><a href="/ua/{{ current_path }}">ua</a></div>
                         </div>
                     </li>
                 </ul>
@@ -358,10 +382,10 @@
                 </div>
             </div>
         </form>
-        {% if request.get_full_path == "/ru/" %}
+        {% if 'ru/' in request.path %}
             {% block content_ru %}
             {% endblock %}
-        {% elif request.get_full_path == "/ua/" %}
+        {% elif 'ua/' in request.path %}
             {% block content_ua %}
             {% endblock %}
         {% endif %}
@@ -369,22 +393,22 @@
             <nav>
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <a class="navbar-brand logo" href="{% url 'main' %}">
+                        <a class="navbar-brand logo" href="{% url 'main_ru' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'main' %}">Главная</a>
+                        <a class="nav-link" href="{% url 'main_ru' %}">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'furniture' %}">Мягкая мебель</a>
+                        <a class="nav-link" href="{% url 'furniture_ru' %}">Мягкая мебель</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'mattress' %}">Матрасы</a>
+                        <a class="nav-link" href="{% url 'mattress_ru' %}">Матрасы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'carpet' %}">Ковры</a>
+                        <a class="nav-link" href="{% url 'carpet_ru' %}">Ковры</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'reviews' %}">О нас</a>

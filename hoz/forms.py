@@ -2,6 +2,7 @@ from django import forms
 from .models import ReviewPost, RequestPost, CallbackPost
 from django.forms import widgets
 from hoz.choices import *
+from hoz.lang_switch import *
 
 
 class ReviewPostForm(forms.ModelForm):
@@ -54,6 +55,3 @@ class CallbackPostForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'placeholder': 'Имя', 'pattern': '^[a-zA-ZА-Яа-яЁё\s]+$'}),
             'phone': forms.TextInput(attrs={'placeholder': 'Телефон', 'pattern': '^[+0-9]+$'}),
         }
-
-class MyForm(forms.Form):
-    lang = forms.CharField(max_length=2)        
