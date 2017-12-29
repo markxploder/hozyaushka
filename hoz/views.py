@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.views.decorators.cache import cache_page
 from django.utils import timezone
 from .models import ReviewPost, RequestPost, CallbackPost
-from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm, LangSwitchForm
+from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm
 import telepot
 
 bot = telepot.Bot('446407532:AAECo5m1NzzmGR-HE7LywBt2nlqTBsbOGt4')

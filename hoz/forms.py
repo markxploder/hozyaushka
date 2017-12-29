@@ -2,7 +2,6 @@ from django import forms
 from .models import ReviewPost, RequestPost, CallbackPost
 from django.forms import widgets
 from hoz.choices import *
-from hoz.lang_switch import *
 
 
 class ReviewPostForm(forms.ModelForm):
