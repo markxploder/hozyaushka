@@ -306,7 +306,7 @@
                             <a class="nav-link" href="{% url 'carpet_ru' %}">Ковры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'reviews' %}">О нас</a>
+                            <a class="nav-link" href="{% url 'reviews_ru' %}">О нас</a>
                         </li>
                     {% elif 'ua/' in request.path %}
                         <li class="nav-item">
@@ -322,7 +322,7 @@
                             <a class="nav-link" href="{% url 'carpet_ua' %}">Коври</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'reviews' %}">Про нас</a>
+                            <a class="nav-link" href="{% url 'reviews_ua' %}">Про нас</a>
                         </li>
                     {% endif %}
                     <li class="nav-phone">
@@ -398,21 +398,39 @@
                         </a>
                     </li>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'main_ru' %}">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'furniture_ru' %}">Мягкая мебель</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'mattress_ru' %}">Матрасы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'carpet_ru' %}">Ковры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'reviews' %}">О нас</a>
-                    </li>
+                    {% if 'ru/' in request.path %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main_ru' %}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'furniture_ru' %}">Мягкая мебель</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'mattress_ru' %}">Матрасы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'carpet_ru' %}">Ковры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'reviews_ru' %}">О нас</a>
+                        </li>
+                    {% elif 'ua/' in request.path %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'main_ua' %}">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'furniture_ua' %}">М'які меблі</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'mattress_ua' %}">Матраци</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'carpet_ua' %}">Коври</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'reviews_ua' %}">Про нас</a>
+                        </li>
+                    {% endif %}
                     <div class="nav-phone-mobile">
                         <div class="container">
                             <div class="row">
