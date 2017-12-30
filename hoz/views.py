@@ -37,7 +37,7 @@ def main(request):
             post_request.save()
 
             bot.sendMessage(
-                396709957, 'Новая заявка' + '\n'
+                367977203, 'Новая заявка' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + post_request.name + '\n'
                 + 'Телефон: ' + post_request.phone + '\n'
@@ -51,7 +51,7 @@ def main(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
@@ -80,7 +80,7 @@ def furniture(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
@@ -107,7 +107,7 @@ def mattress(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
@@ -134,7 +134,7 @@ def carpet(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
@@ -162,7 +162,7 @@ def price(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
@@ -198,7 +198,7 @@ def reviews(request):
             callback_post.save()
 
             bot.sendMessage(
-                396709957, 'Перезвони мне!' + '\n'
+                367977203, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
