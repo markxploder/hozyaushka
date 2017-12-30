@@ -29,7 +29,7 @@ def main(request):
             posts_reviews = form_reviews.save(commit=False)
             posts_reviews.published_date = timezone.now()
             posts_reviews.save()
-            return redirect('main')
+            return redirect('main_ru')
         form_request = RequestPostForm(request.POST)
         if form_request.is_valid():
             post_request = form_request.save(commit=False)
@@ -37,13 +37,13 @@ def main(request):
             post_request.save()
 
             bot.sendMessage(
-                367977203, 'Новая заявка' + '\n'
+                396709957, 'Новая заявка' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + post_request.name + '\n'
                 + 'Телефон: ' + post_request.phone + '\n'
                 + 'Комментарий: ' + post_request.text)
 
-            return redirect('main')
+            return redirect('main_ru')
         form_callback = CallbackPostForm(request.POST)
         if form_callback.is_valid():
             callback_post = form_callback.save(commit=False)
@@ -51,12 +51,12 @@ def main(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_reviews = ReviewPostForm()
         form_request = RequestPostForm()
@@ -80,12 +80,12 @@ def furniture(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_callback = CallbackPostForm()
     return render(request, 'hoz/furniture.html', {'form_callback': form_callback})
@@ -107,12 +107,12 @@ def mattress(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_callback = CallbackPostForm()
     return render(request, 'hoz/mattress.html', {'form_callback': form_callback})
@@ -134,12 +134,12 @@ def carpet(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_callback = CallbackPostForm()
     return render(request, 'hoz/carpet.html', {'form_callback': form_callback})
@@ -162,18 +162,18 @@ def price(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
         form_request = RequestPostForm(request.POST)
         if form_request.is_valid():
             post_request = form_request.save(commit=False)
             post_request.published_date = timezone.now()
             post_request.save()
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_callback = CallbackPostForm()
         form_request = RequestPostForm()
@@ -198,12 +198,12 @@ def reviews(request):
             callback_post.save()
 
             bot.sendMessage(
-                367977203, 'Перезвони мне!' + '\n'
+                396709957, 'Перезвони мне!' + '\n'
                 + '______________' + '\n\n'
                 + 'Имя: ' + callback_post.name + '\n'
                 + 'Телефон: ' + callback_post.phone)
 
-            return redirect('main')
+            return redirect('main_ru')
     else:
         form_callback = CallbackPostForm()
     return render(request, 'hoz/reviews.html', {'posts_reviews': posts_reviews, 'form_callback': form_callback})
