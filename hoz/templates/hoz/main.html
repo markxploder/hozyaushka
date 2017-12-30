@@ -306,7 +306,7 @@
       </div>
       <div class="row">
           <div class="col-7">
-              <p>Зимическая чистка стульев (кожи)</p>
+              <p>Химическая чистка стульев (кожи)</p>
           </div>
           <div class="col-5">
               <p>от 100 грн</p>
@@ -1059,18 +1059,18 @@
         <div class="caption-dark"><h3>Відгуки</h3></div>
         <div class="row reviews-row reviews-row-desctop">
             {% for post in posts_reviews %}
-            <div class="col-4" itemscope itemtype="http://schema.org/Review">
+            <div class="col-4" itemprop="review" itemscope itemtype="http://schema.org/Review">
                 <div class="card hoz-card">
                     <div class="col">
                         {% if post.rating == 1 %}
-                        <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating" itemprop="reviewRating">
+                        <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         {% elif post.rating == 2 %}
-                        <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating" itemprop="reviewRating">
+                        <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         {% else %}
-                        <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating" itemprop="reviewRating">
+                        <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         {% endif %}
                         <div class="card-body">
-                            <h4 class="card-title" itemprop="name">{{ post.author }}</h4>
+                            <h4 class="card-title" itemprop="author">{{ post.author }}</h4>
                             <p class="card-text" itemprop="reviewBody">{{ post.text|linebreaksbr }}</p>
                         </div>
                     </div>
