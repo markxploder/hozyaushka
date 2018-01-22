@@ -209,8 +209,9 @@ def reviews(request):
     return render(request, 'hoz/reviews.html', {'posts_reviews': posts_reviews, 'form_callback': form_callback})
 
 def error_404(request):
-        data = {}
-        return render(request,'hoz/404.html', data)
+        response = render(request,'hoz/404.html')
+        response.status_code = 404
+        return response
 
 def robots(request):
     return render(request, 'hoz/robots.txt')
