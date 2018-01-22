@@ -313,8 +313,8 @@
                     <div class="nav-phone-mobile">
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380683456626">+38(068)3456626</a></div>
-                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}"al=""><a href="tel:+380730660061">+38(073)0660061</a></div>
+                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}" alt="Phone"><a href="tel:+380683456626">+38(068)3456626</a></div>
+                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}" alt="Phone"><a href="tel:+380730660061">+38(073)0660061</a></div>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,6 @@
                             <div class="sandwchLine2">menu</div>
                             <div class="sandwchLine3"></div>
                         </div>
-                    </li>
                     </li>
                     {% if 'ru/' in request.path %}
                         <li class="nav-item">
@@ -440,7 +439,6 @@
                         <a class="navbar-brand logo" href="{% url 'main_ru' %}">
                             <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
-                    </li>
                     </li>
                     {% if 'ru/' in request.path %}
                         <li class="nav-item">
