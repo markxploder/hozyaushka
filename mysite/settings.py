@@ -132,8 +132,8 @@ WHITENOISE_MAX_AGE = 9999
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = [
-    (".well-known/acme-challenge", "/home/hozyaushka/letsencrypt/wellknown"),
-]
+# STATICFILES_DIRS = [
+#     (".well-known/acme-challenge", "/home/hozyaushka/letsencrypt/wellknown"),
+# ]
 
 SITE_ID = 1
