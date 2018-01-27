@@ -1,5 +1,5 @@
 {% extends 'hoz/base.html' %}
-{% load staticfiles %}
+
 {% block meta %}
     <title>Стоимость химчистки мягкой мебели, матрасов и ковров в Одессе</title>
     <meta name="description" content="Сколько стоит химчистка в Одессе? Цена на химчистку мягкой мебели, матрасов, ковров и занавесок. Одесская клининг компания 'Хозяюшка'. Прайс лист. ">
@@ -276,31 +276,31 @@
     </div>
     <div id="bubbles">
         <div id="bubble1">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble3">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble5">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble8">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble9">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble10">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble11">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble13">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble-group">
-            <img src="{% static 'svg/bubbles.svg' %}" alt="">
+            <img src="/static/svg/bubbles.svg" alt="">
         </div>
     </div>
 </section>
@@ -519,44 +519,44 @@
     </div>
     <div id="bubbles">
         <div id="bubble1">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble3">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble5">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble8">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble9">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble10">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble11">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble13">
-            <img src="{% static 'svg/bubble.svg' %}" alt="">
+            <img src="/static/svg/bubble.svg" alt="">
         </div>
         <div id="bubble-group">
-            <img src="{% static 'svg/bubbles.svg' %}" alt="">
+            <img src="/static/svg/bubbles.svg" alt="">
         </div>
     </div>
 </section>
 {% endblock %}
 {% block stylesheet %}
 <noscript>
-    <link rel="stylesheet" href="{% static 'css/price.css' %}">
+    <link rel="stylesheet" href="/static/css/price.css">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link  = document.createElement('LINK');
         link.rel = "stylesheet";
-        link.href = "{% static 'css/price.css' %}";
+        link.href = "/static/css/price.css";
         document.body.appendChild(link);
     });
 </script>

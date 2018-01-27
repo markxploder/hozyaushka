@@ -1,5 +1,5 @@
 {% extends 'hoz/base.html' %}
-{% load staticfiles %}
+
 {% block meta %}
     <title>Профессиональная химчистка матрасов на дому в Одессе</title>
     <meta name="description" content="Одесская химчистка 'Хозяюшка'.Выездная химчистка на дому в Одессе.Чистка матрасов, выведение пятен и запахов.Звоните нам (073) 066-00-61 #чисткаматрасов">
@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="col">
-      <img class="rounded block-img" src="{% static 'img/mattress.png' %}" alt="Mattress">
+      <img class="rounded block-img" src="/static/img/mattress.png" alt="Mattress">
     </div>
   </div>
   <div id="mattress-second-screen">
@@ -168,7 +168,7 @@
       </div>
     </div>
     <div class="col">
-      <img class="rounded block-img" src="{% static 'img/mattress.png' %}" alt="Mattress">
+      <img class="rounded block-img" src="/static/img/mattress.png" alt="Mattress">
     </div>
   </div>
   <div id="mattress-second-screen">
@@ -217,13 +217,13 @@
 {% endblock %}
 {% block stylesheet %}
 <noscript>
-    <link rel="stylesheet" href="{% static 'css/mattress.css' %}">
+    <link rel="stylesheet" href="/static/css/mattress.css">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link  = document.createElement('LINK');
         link.rel = "stylesheet";
-        link.href = "{% static 'css/mattress.css' %}";
+        link.href = "/static/css/mattress.css";
         document.body.appendChild(link);
     });
 </script>

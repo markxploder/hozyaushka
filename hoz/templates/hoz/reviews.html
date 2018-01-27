@@ -1,12 +1,12 @@
 {% extends 'hoz/base.html' %}
-{% load staticfiles %}
+
 {% block meta %}
     <title>Хозяюшка | Химчистка мягкой мебели в Одессе | Отзывы о компании</title>
     <meta name="description" content="Одесская химчистка 'Хозяюшка' представляет услуги с выездом специалиста по всей Одессе. Чистка мягкой мебели,матрасов,ковров и ковролинов. Отзывы о нас. #чисткамебели">
 {% endblock %}
 {% block content_ru %}
 <section class="reviews">
-    <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h3>О НАС</h3></div>
+    <div class="caption-dark"><img src="/static/svg/sponge.svg" alt=""><h3>О НАС</h3></div>
     <div class="container reviews-container">
         <div class="row">
             <p>Компания «Хозяюшка» специализируется на чистке мягкой мебели, матрасов
@@ -52,11 +52,11 @@
                     <div class="col">
                         <div class="row justify-content-center">
                             {% if post.rating == 1 %}
-                            <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/confused.png" alt="Rating">
                             {% elif post.rating == 2 %}
-                            <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/sad.png" alt="Rating">
                             {% else %}
-                            <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/happy.png" alt="Rating">
                             {% endif %}
                         </div>
                         <div class="card-body">
@@ -79,11 +79,11 @@
                     <div class="col">
                         <div class="row justify-content-center">
                             {% if post.rating == 1 %}
-                            <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/confused.png" alt="Rating">
                             {% elif post.rating == 2 %}
-                            <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/sad.png" alt="Rating">
                             {% else %}
-                            <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/happy.png" alt="Rating">
                             {% endif %}
                         </div>
                         <div class="card-body">
@@ -100,7 +100,7 @@
 {% endblock %}
 {% block content_ua %}
 <section class="reviews">
-    <div class="caption-dark"><img src="{% static 'svg/sponge.svg' %}" alt=""><h3>ПРО НАС</h3></div>
+    <div class="caption-dark"><img src="/static/svg/sponge.svg" alt=""><h3>ПРО НАС</h3></div>
     <div class="container reviews-container">
         <div class="row">
             <p>Компанія «Хозяюшка» спеціалізується на чистці м’яких меблів,
@@ -146,11 +146,11 @@
                     <div class="col">
                         <div class="row justify-content-center">
                             {% if post.rating == 1 %}
-                            <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/confused.png" alt="Rating">
                             {% elif post.rating == 2 %}
-                            <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/sad.png" alt="Rating">
                             {% else %}
-                            <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/happy.png" alt="Rating">
                             {% endif %}
                         </div>
                         <div class="card-body">
@@ -173,11 +173,11 @@
                     <div class="col">
                         <div class="row justify-content-center">
                             {% if post.rating == 1 %}
-                            <img class="card-img-top" src="{% static 'img/rating/confused.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/confused.png" alt="Rating">
                             {% elif post.rating == 2 %}
-                            <img class="card-img-top" src="{% static 'img/rating/sad.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/sad.png" alt="Rating">
                             {% else %}
-                            <img class="card-img-top" src="{% static 'img/rating/happy.png' %}" alt="Rating">
+                            <img class="card-img-top" src="/static/img/rating/happy.png" alt="Rating">
                             {% endif %}
                         </div>
                         <div class="card-body">
@@ -194,13 +194,13 @@
 {% endblock %}
 {% block stylesheet %}
 <noscript>
-    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+    <link rel="stylesheet" href="/static/css/reviews.css">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link  = document.createElement('LINK');
         link.rel = "stylesheet";
-        link.href = "{% static 'css/reviews.css' %}";
+        link.href = "/static/css/reviews.css";
         document.body.appendChild(link);
     });
 </script>
