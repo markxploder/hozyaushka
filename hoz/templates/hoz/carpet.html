@@ -1,5 +1,5 @@
 {% extends 'hoz/base.html' %}
-
+{% load staticfiles %}
 {% block meta %}
     <title>Профессиональная химчистка ковров и ковролина на дому в Одессе</title>
     <meta name="description" content="Одесская химчистка 'Хозяюшка'. Выездная химчистка на дому в Одессе.Чистка горячим паром ковров,ковролина и ковровых покрытий.Звоните нам (073) 066-00-61 #чисткаковров">
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="col">
-        <img class="rounded block-img" src="/static/img/carpet.png" alt="carpet">
+        <img class="rounded block-img" src="{% static 'img/carpet.png' %}" alt="carpet">
       </div>
     </div>
     <div id="carpet-second-screen">
@@ -202,7 +202,7 @@
         </div>
       </div>
       <div class="col">
-        <img class="rounded block-img" src="/static/img/carpet.png" alt="carpet">
+        <img class="rounded block-img" src="{% static 'img/carpet.png' %}" alt="carpet">
       </div>
     </div>
     <div id="carpet-second-screen">
@@ -275,13 +275,13 @@
 {% endblock %}
 {% block stylesheet %}
 <noscript>
-    <link rel="stylesheet" href="/static/css/carpet.css">
+    <link rel="stylesheet" href="{% static 'css/carpet.css' %}">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link  = document.createElement('LINK');
         link.rel = "stylesheet";
-        link.href = "/static/css/carpet.css";
+        link.href = "{% static 'css/carpet.css' %}";
         document.body.appendChild(link);
     });
 </script>

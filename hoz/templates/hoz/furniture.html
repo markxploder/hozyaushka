@@ -1,5 +1,5 @@
 {% extends 'hoz/base.html' %}
-
+{% load staticfiles %}
 {% block meta %}
     <title>Профессиональная химчистка мягкой мебели на дому в Одессе</title>
     <meta name="description" content="Одесская химчистка 'Хозяюшка'. Выездная химчистка на дому в Одессе.Чистка мягкой мебели, матрасов,кожаных диванов и кресел.Звоните нам (073) 066-00-61 #чисткамягкоймебели">
@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="col">
-        <img class="rounded block-img" src="/static/img/furniture.png" alt="Furniture">
+        <img class="rounded block-img" src="{% static 'img/furniture.png' %}" alt="Furniture">
       </div>
     </div>
     <div id="furniture-second-screen">
@@ -231,7 +231,7 @@
       </div>
     </div>
     <div class="col">
-      <img class="rounded block-img" src="/static/img/furniture.png" alt="Furniture">
+      <img class="rounded block-img" src="{% static 'img/furniture.png' %}" alt="Furniture">
     </div>
   </div>
   <div id="furniture-second-screen">
@@ -344,13 +344,13 @@
 {% endblock %}
 {% block stylesheet %}
 <noscript>
-    <link rel="stylesheet" href="/static/css/furniture.css">
+    <link rel="stylesheet" href="{% static 'css/furniture.css' %}">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link  = document.createElement('LINK');
         link.rel = "stylesheet";
-        link.href = "/static/css/furniture.css";
+        link.href = "{% static 'css/furniture.css' %}";
         document.body.appendChild(link);
     });
 </script>

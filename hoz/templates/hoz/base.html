@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
     <head>
         <meta name="google-site-verification" content="xQ2xA3dZz9joyG4O2sc8bZacitrvsVQ5an9f6wxoGzE" />
@@ -6,14 +7,14 @@
         {% block meta %}
         {% endblock %}
         <link rel="canonical" href="http://hozyushka.od.ua{{ request.path }}"/>
-        <link rel="shortcut icon" href="/static/svg/bubbles.svg"/>
+        <link rel="shortcut icon" href="{% static 'svg/bubbles.svg' %}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         {% block critical %}
         {% endblock %}
         <style>
             @font-face {
                 font-family: 'Roboto';
-                src: url(/static/fonts/Roboto-Regular.ttf);
+                src: url({% static 'fonts/Roboto-Regular.ttf' %});
                 font-weight: normal;
                 font-style: normal;
             }
@@ -312,14 +313,14 @@
                     <div class="nav-phone-mobile">
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col phone justify-content-center"><img src="/static/svg/phone-receiver.svg" alt="Phone"><a href="tel:+380683456626">+38(068)3456626</a></div>
-                                <div class="col phone justify-content-center"><img src="/static/svg/phone-receiver.svg" alt="Phone"><a href="tel:+380730660061">+38(073)0660061</a></div>
+                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}" alt="Phone"><a href="tel:+380683456626">+38(068)3456626</a></div>
+                                <div class="col phone justify-content-center"><img src="{% static 'svg/phone-receiver.svg' %}" alt="Phone"><a href="tel:+380730660061">+38(073)0660061</a></div>
                             </div>
                         </div>
                     </div>
                     <li class="nav-logo justify-content-around">
                         <a class="navbar-brand logo" href="{% url 'main_ru' %}">
-                            <img src="/static/img/logo.png" alt="My image"/>
+                            <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                         <div id="sandwichMenu" onclick="popOut(this)">
                             <div class="sandwchLine1"></div>
@@ -363,19 +364,19 @@
                     <li class="nav-phone">
                         <div class="container">
                             <div class="col">
-                                <div class="row phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
-                                <div class="row phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
+                                <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
+                                <div class="row phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="col lang-switch-desctop">
-                            <div class="row lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="/static/img/ru.png" alt=""></a></div>
-                            <div class="row lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="/static/img/ua.png" alt=""></a></div>
+                            <div class="row lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="{% static 'img/ru.png' %}" alt=""></a></div>
+                            <div class="row lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="{% static 'img/ua.png' %}" alt=""></a></div>
                         </div>
                         <div class="row lang-switch-mobile">
-                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="/static/img/ru.png" alt=""></a></div>
-                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="/static/img/ua.png" alt=""></a></div>
+                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ru/{{ current_path }}"><img src="{% static 'img/ru.png' %}" alt=""></a></div>
+                            <div class="col-6 align-self-center lang-switch-opt"><a href="/ua/{{ current_path }}"><img src="{% static 'img/ua.png' %}" alt=""></a></div>
                         </div>
                     </li>
                 </ul>
@@ -405,8 +406,8 @@
                                 <h5 class="modal-title hoz-modal-title-callback" id="exampleModalLabel">Залишіть номер телефону і ми Вам зателефонуємо!</h5>
                             {% endif %}
                              <div class="col justify-content-center">
-                                 <div class="row justify-content-center phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
-                                 <div class="row justify-content-center phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
+                                 <div class="row justify-content-center phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380683456626">+38 (068) 345-66-26</a></div>
+                                 <div class="row justify-content-center phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380730660061">+38 (073) 066-00-61</a></div>
                              </div>
                             <div class="container hoz-form-container-callback">
                                 <div class="row justify-content-center">
@@ -436,7 +437,7 @@
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
                         <a class="navbar-brand logo" href="{% url 'main_ru' %}">
-                            <img src="/static/img/logo.png" alt="My image"/>
+                            <img src="{% static 'img/logo.png' %}" alt="My image"/>
                         </a>
                     </li>
                     {% if 'ru/' in request.path %}
@@ -475,37 +476,37 @@
                     <div class="nav-phone-mobile">
                         <div class="container">
                             <div class="row">
-                                <div class="col justify-content-center phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380683456626">+38(068)3456626</a></div>
-                                <div class="col justify-content-center phone"><img src="/static/svg/phone-receiver.svg" alt=""><a href="tel:+380730660061">+38(073)0660061</a></div>
+                                <div class="col justify-content-center phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380683456626">+38(068)3456626</a></div>
+                                <div class="col justify-content-center phone"><img src="{% static 'svg/phone-receiver.svg' %}" alt=""><a href="tel:+380730660061">+38(073)0660061</a></div>
                             </div>
                         </div>
                     </div>
                     <li class="nav-item nav-links">
                         <div class="container">
                             <div class="row justify-content-end">
-                                    <a href=""><img src="/static/svg/facebook.svg" alt=""></a>
-                                    <a href=""><img src="/static/svg/instagram.svg" alt=""></a>
+                                    <a href=""><img src="{% static 'svg/facebook.svg' %}" alt=""></a>
+                                    <a href=""><img src="{% static 'svg/instagram.svg' %}" alt=""></a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </nav>
             <div class="row justify-content-center align-items-center copyright">
-                Created by <a href="//quarnuts.com"><img src="/static/svg/qn.svg" alt="Quarnuts"></a>
+                Created by <a href="//quarnuts.com"><img src="{% static 'svg/qn.svg' %}" alt="Quarnuts"></a>
             </div>
         </footer>
     </body>
 </html>
 <noscript>
-    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/callback.css">
+    <link rel="stylesheet" href="{% static 'css/callback.css' %}">
 </noscript>
 <script>
     window.addEventListener('load', function() {
         var link1  = document.createElement('LINK');
         link1.rel = "stylesheet";
-        link1.href = "/static/css/base.css";
+        link1.href = "{% static 'css/base.css' %}";
         document.body.appendChild(link1);
 
         var link2  = document.createElement('LINK');
@@ -515,7 +516,7 @@
 
         var link3  = document.createElement('LINK');
         link3.rel = "stylesheet";
-        link3.href = "/static/css/callback.css";
+        link3.href = "{% static 'css/callback.css' %}";
         document.body.appendChild(link3);
     });
 </script>
@@ -525,7 +526,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="/static/js/jquery.touchSwipe.min.js"></script>
+<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
 <script>
 function popOut(x) {
     x.classList.toggle("change");
