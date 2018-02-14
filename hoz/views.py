@@ -6,10 +6,11 @@ from django.utils import timezone
 from .models import ReviewPost, RequestPost, CallbackPost
 from .forms import ReviewPostForm, RequestPostForm, CallbackPostForm
 import telepot
+from htmlmin.decorators import minified_response
 
 bot = telepot.Bot('446407532:AAECo5m1NzzmGR-HE7LywBt2nlqTBsbOGt4')
 
-# @cache_page(900, cache='default', key_prefix='')
+@minified_response
 def main(request):
     """ @Name           main page
         @About          rendering posts
@@ -63,6 +64,7 @@ def main(request):
         form_callback = CallbackPostForm()
     return render(request, 'hoz/main.html', {'posts_reviews': posts_reviews[:3], 'form_reviews': form_reviews, 'form_request': form_request, 'form_callback': form_callback,})
 
+@minified_response
 def furniture(request):
     """ @Name           furniture page
         @About          rendering and validation forms
@@ -90,6 +92,7 @@ def furniture(request):
         form_callback = CallbackPostForm()
     return render(request, 'hoz/furniture.html', {'form_callback': form_callback})
 
+@minified_response
 def mattress(request):
     """ @Name           furniture page
         @About          rendering and validation forms
@@ -117,6 +120,7 @@ def mattress(request):
         form_callback = CallbackPostForm()
     return render(request, 'hoz/mattress.html', {'form_callback': form_callback})
 
+@minified_response
 def carpet(request):
     """ @Name           furniture page
         @About          rendering and validation forms
@@ -144,6 +148,7 @@ def carpet(request):
         form_callback = CallbackPostForm()
     return render(request, 'hoz/carpet.html', {'form_callback': form_callback})
 
+@minified_response
 def price(request):
     """ @Name           furniture page
         @About          rendering and validation forms
@@ -179,6 +184,7 @@ def price(request):
         form_request = RequestPostForm()
     return render(request, 'hoz/price.html', {'form_callback': form_callback, 'form_request': form_request,})
 
+@minified_response
 def reviews(request):
     """ @Name           furniture page
         @About          rendering posts
