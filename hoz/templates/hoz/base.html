@@ -28,7 +28,7 @@
                 width: 100%;
             }
             body {padding: 0;margin: 0;background-color: #3e3c41;}
-            .preloader {width: 100%;height: 100%;background-color: #3e3c41;z-index: 20;position: fixed;overflow: hidden;}
+            #preloader {width: 100%;height: 100%;background-color: #3e3c41;z-index: 20;position: fixed;overflow: hidden;}
             .circle {border-radius: 190px;-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);position: fixed;z-index: 21;top: 50%;left: 50%;opacity: 0;}
             .circle1 {background-color: #00859c;width: 240px;height: 240px;margin-top: -120px;margin-left: -120px;}
             .circle2 {background-color: #11b2c3;width: 170px;height: 170px;margin-top: -85px;margin-left: -85px;}
@@ -307,7 +307,7 @@
         </style>
     </head>
     <body onselectstart="return false">
-        <div class="preloader">
+        <div id="preloader">
           <div class="circle circle1"></div>
           <div class="circle circle2"></div>
           <div class="circle circle3"></div>
@@ -582,9 +582,25 @@ tl.insert(
   "-=0.4"
 );
 
-$(window).on( "load", function() {
-    $(".preloader").fadeOut(1500);
-});
+var preloader;
+
+function preload(opacity) {
+    if(opacity <= 0) {
+        showContent();
+    } else {
+        preloader.style.opacity = opacity;
+        window.setTimeout(function() { preload(opacity - 0.005) }, 1);
+    }
+}
+
+function showContent() {
+    preloader.style.display = 'none';
+}
+
+window.onload = function() {
+    preloader = document.getElementById('preloader');
+    preload(1);
+};
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698286-1"></script>
 <script>
