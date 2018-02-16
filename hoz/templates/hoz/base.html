@@ -8,7 +8,10 @@
         {% block meta %}
         {% endblock %}
         {% endspaceless %}
-        <link rel="canonical" href="http://hozyushka.od.ua{{ request.path }}"/>
+        <link rel="canonical" href="https://hozyushka.od.ua{{ request.path }}"/>
+        <link rel="alternate" hreflang="uk-ua" href="https://hozyushka.od.ua/ua{{ request.path }}"/>
+        <link rel="alternate" hreflang="ru-ua" href="https://hozyushka.od.ua/ru{{ request.path }}"/>
+        <link rel="alternate" hreflang="x-default" href="https://hozyushka.od.ua/ru{{ request.path }}"/>
         <link rel="shortcut icon" href="{% static 'svg/bubbles.svg' %}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         {% block critical %}
@@ -582,6 +585,13 @@ tl.insert(
 $(window).on( "load", function() {
     $(".preloader").fadeOut(1500);
 });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698286-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-111698286-1');
 </script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC2HBXP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
