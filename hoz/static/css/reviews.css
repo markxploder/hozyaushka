@@ -176,7 +176,7 @@
     align-items: center;
 }
 
-.caption-light h3, .caption-dark h3 {
+.caption-dark h1, .caption-dark h2 {
     font-size: 36px;
     font-weight: 500;
     line-height: 4.20;
