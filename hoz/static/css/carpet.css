@@ -60,7 +60,21 @@
 }
 
 @media only screen and (min-width : 481px) and (max-width : 767px) {
+  #carpet-second-screen {
+    padding-bottom: 0;
+  }
+
   #carpet-second-screen h3 {
     padding: 60px 0 60px 0;
+  }
+
+  .caption-light h4 {
+    font-size: 25px;
+    padding: 0 0 2% 0;
+  }
+
+  .carpet-table {
+    width: 90%;
+    margin-bottom: 20px;
   }
 }

@@ -53,3 +53,19 @@
     margin-bottom: 30px;
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #mattress-second-screen h3 {
+    padding: 25px 0 75px 0;
+  }
+
+  .caption-light h4 {
+    font-size: 25px;
+    padding: 0 0 2% 0;
+  }
+
+  .mattress-table {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

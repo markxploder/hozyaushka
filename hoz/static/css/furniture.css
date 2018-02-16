@@ -57,6 +57,16 @@
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   #furniture-second-screen h3 {
-    padding: 50px 0 100px 0;
+    padding: 25px 0 75px 0;
+  }
+
+
+  .caption-light h4 {
+    font-size: 25px;
+    padding: 10% 0 2% 0;
+  }
+
+  .furniture-table {
+    width: 90%;
   }
 }
