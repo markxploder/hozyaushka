@@ -80,125 +80,198 @@
           height: 45vw;
         }
       }
+
+  /* second section css */
+    .furniture-second-screen {
+      background: url({% static 'img/foam_.png' %});
+      background-size: auto 110%;
+      background-position: top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 10%;
+    }
+
+    .furniture-second-screen h3 {
+      font-size: 30px;
+      padding: 40px 0 90px 0;
+    }
+
+    .caption-light h4 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 1.5px;
+        padding: 2% 0 2% 0;
+    }
+
+    .furniture-table {
+      width: 70%;
+      font-size: 24px;
+      text-align: left;
+      line-height: 25px;
+      border: solid 4px #202f4a;
+      border-radius: 10px;
+      padding: 17.5px 5% 17.5px 4%;
+    }
+
+    .furniture-table p {
+      padding: 0.5%;
+      margin-bottom: 5px;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width : 480px) {
+      .caption-light h4 {
+        font-size: 20px;
+      }
+
+      .furniture-table {
+        width: 95%;
+        line-height: 18px;
+        font-size: 15px;
+      }
+
+      .furniture-second-screen h3 {
+        font-size: 25px;
+      }
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+      .furniture-second-screen h3 {
+        padding: 25px 0 75px 0;
+      }
+
+
+      .caption-light h4 {
+        font-size: 25px;
+        padding: 10% 0 2% 0;
+      }
+
+      .furniture-table {
+        width: 90%;
+      }
+    }
     </style>
 {% endblock %}
 {% block content_ru %}
 <section class="furniture">
-    <h1>ХИМЧИСТКА ДИВАНОВ У ВАС НА ДОМУ</h1>
-    <h2>Чистка диванов, кресел и кожаных изделий</h2>
-    <div class="row row-furniture">
-      <div class="col furniture-block">
-        <p>Самый эффективный и качественный способ восстановления цвета и удаления грязи - это глубокая, влажная химическая чистка. Работаем и даем гарантию. Наш опыт позволяет дать 99% положительного результата, полное исчезновение неприятных запахов. При необходимости специалисты обработают и любую иную обивку. Удаляем все пятна и разводы от пролитого. Закажите нашу услугу и мы очистим Вашу мягкую мебель до магазинного состояния. Мы выгодно отличаемся от всех наших конкурентов - не завышаем цену в процессе труда. Цена посчитана и озвучена при оформлении. Мастер приезжает со всем необходимым оборудованием в назначенный день и выполняет заказ на месте. Время работы зависит от количества и степени загрязнения. Высыхание происходит от 2 до 5 часов в проветриваемом помещении. АКТУАЛЬНО ТОЛЬКО ДЛЯ ЖИТЕЛЕЙ ГОРОДА ОДЕССА И ЕГО ОКРЕСТНОСТЕЙ.</p>
-      </div>
-      <div class="col">
-        <img class="rounded block-img" src="{% static 'img/furniture.png' %}" alt="Furniture">
-      </div>
+  <h1>ХИМЧИСТКА ДИВАНОВ У ВАС НА ДОМУ</h1>
+  <h2>Чистка диванов, кресел и кожаных изделий</h2>
+  <div class="row row-furniture">
+    <div class="col furniture-block">
+      <p>Самый эффективный и качественный способ восстановления цвета и удаления грязи - это глубокая, влажная химическая чистка. Работаем и даем гарантию. Наш опыт позволяет дать 99% положительного результата, полное исчезновение неприятных запахов. При необходимости специалисты обработают и любую иную обивку. Удаляем все пятна и разводы от пролитого. Закажите нашу услугу и мы очистим Вашу мягкую мебель до магазинного состояния. Мы выгодно отличаемся от всех наших конкурентов - не завышаем цену в процессе труда. Цена посчитана и озвучена при оформлении. Мастер приезжает со всем необходимым оборудованием в назначенный день и выполняет заказ на месте. Время работы зависит от количества и степени загрязнения. Высыхание происходит от 2 до 5 часов в проветриваемом помещении. АКТУАЛЬНО ТОЛЬКО ДЛЯ ЖИТЕЛЕЙ ГОРОДА ОДЕССА И ЕГО ОКРЕСТНОСТЕЙ.</p>
     </div>
-    <div id="furniture-second-screen">
-      <h3>Стоимость услуг мягкой мебели на дому</h3>
-      <div class="caption-light">
-        <h4>Акции от Хозяюшки<br>
-          <span>каждому клиенту подарок!</span><br>
-          При заказе на сумму от 1000 грн скидка 10%</h4>
-      </div>
-        <div class="furniture-table">
-          <div class="row">
-            <div class="col-9">
-              <p>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</p>
-            </div>
-            <div class="col">
-              <p>1250 грн</p>
-            </div>
+    <div class="col">
+      <img class="rounded block-img" src="{% static 'img/furniture.png' %}" alt="Furniture">
+    </div>
+  </div>
+</section>
+<section class="furniture-second-screen">
+    <h3>Стоимость услуг мягкой мебели на дому</h3>
+    <div class="caption-light">
+      <h4>Акции от Хозяюшки<br>
+        <span>каждому клиенту подарок!</span><br>
+        При заказе на сумму от 1000 грн скидка 10%</h4>
+    </div>
+      <div class="furniture-table">
+        <div class="row">
+          <div class="col-9">
+            <p>Кожаный диван угловой большой с подлокотниками<br/> (+ посадочное место - 200 грн)</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кожаный диван угловой небольшой</p>
-            </div>
-            <div class="col">
-              <p>1000 грн</p>
-            </div>
+          <div class="col">
+            <p>1250 грн</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кожаное кресло</p>
-            </div>
-            <div class="col">
-              <p>250 грн</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кожаный диван угловой небольшой</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кресло нераскладное</p>
-            </div>
-            <div class="col">
-              <p>150 грн</p>
-            </div>
+          <div class="col">
+            <p>1000 грн</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кресло раскладное</p>
-            </div>
-            <div class="col">
-              <p>250 грн</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кожаное кресло</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кресло двухместное  </p>
-            </div>
-            <div class="col">
-              <p>350 грн</p>
-            </div>
+          <div class="col">
+            <p>250 грн</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Стул компьютерный</p>
-            </div>
-            <div class="col">
-              <p>50 грн</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кресло нераскладное</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Кресло в кинотеатре</p>
-            </div>
-            <div class="col">
-              <p>50 грн</p>
-            </div>
+          <div class="col">
+            <p>150 грн</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Диван стандартный, угловой, пятиместный</p>
-            </div>
-            <div class="col">
-              <p>850 грн</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кресло раскладное</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Диван угловой, большой</p>
-            </div>
-            <div class="col">
-              <p>1000 грн</p>
-            </div>
+          <div class="col">
+            <p>250 грн</p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Еврокнижка, выдвижной</p>
-            </div>
-            <div class="col">
-              <p>500 грн</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кресло двухместное  </p>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <p>Еврокнижка, нераскладной</p>
-            </div>
-            <div class="col">
-              <p>400 грн</p>
-            </div>
+          <div class="col">
+            <p>350 грн</p>
           </div>
-      </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Стул компьютерный</p>
+          </div>
+          <div class="col">
+            <p>50 грн</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Кресло в кинотеатре</p>
+          </div>
+          <div class="col">
+            <p>50 грн</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Диван стандартный, угловой, пятиместный</p>
+          </div>
+          <div class="col">
+            <p>850 грн</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Диван угловой, большой</p>
+          </div>
+          <div class="col">
+            <p>1000 грн</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Еврокнижка, выдвижной</p>
+          </div>
+          <div class="col">
+            <p>500 грн</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p>Еврокнижка, нераскладной</p>
+          </div>
+          <div class="col">
+            <p>400 грн</p>
+          </div>
+        </div>
     </div>
 </section>
 {% endblock %}
@@ -226,124 +299,111 @@
       <img class="rounded block-img" src="{% static 'img/furniture.png' %}" alt="Furniture">
     </div>
   </div>
-  <div id="furniture-second-screen">
-    <h3>Вартість послуг м'яких меблів на дому</h3>
-    <div class="caption-light">
-      <h4>Акціі від Хозяюшки<br>
-        <span>кожному кліенту подарунок!</span><br>
-        При заказі на суму від 1000 грн знижка 10%</h4>
-    </div>
-      <div class="furniture-table">
-        <div class="row">
-          <div class="col">
-            <p>Кожаний диван угловий великий з підлокітниками<br/> (+ посадочне місце - 200 грн)</p>
-          </div>
-          <div class="col second-table-col">
-            <p>1250 грн</p>
-          </div>
+</section>
+<section class="furniture-second-screen">
+  <h3>Вартість послуг м'яких меблів на дому</h3>
+  <div class="caption-light">
+    <h4>Акціі від Хозяюшки<br>
+      <span>кожному кліенту подарунок!</span><br>
+      При заказі на суму від 1000 грн знижка 10%</h4>
+  </div>
+    <div class="furniture-table">
+      <div class="row">
+        <div class="col-9">
+          <p>Кожаний диван угловий великий з підлокітниками<br/> (+ посадочне місце - 200 грн)</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Кожаний диван угловий невеликий</p>
-          </div>
-          <div class="col second-table-col">
-            <p>1000 грн</p>
-          </div>
+        <div class="col">
+          <p>1250 грн</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Кожане крісло</p>
-          </div>
-          <div class="col second-table-col">
-            <p>250 грн</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Кожаний диван угловий невеликий</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Крісло нерозкладне</p>
-          </div>
-          <div class="col second-table-col">
-            <p>150 грн</p>
-          </div>
+        <div class="col">
+          <p>1000 грн</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Крісло розкладне</p>
-          </div>
-          <div class="col second-table-col">
-            <p>250 грн</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Кожане крісло</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Крісло двомісне</p>
-          </div>
-          <div class="col second-table-col">
-            <p>350 грн</p>
-          </div>
+        <div class="col">
+          <p>250 грн</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Стілець комп'ютерний</p>
-          </div>
-          <div class="col second-table-col">
-            <p>50 грн</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Крісло нерозкладне</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Крісло в кінотеатрі</p>
-          </div>
-          <div class="col second-table-col">
-            <p>50 грн</p>
-          </div>
+        <div class="col">
+          <p>150 грн</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Диван стандартний, угловий, п'ятимісний</p>
-          </div>
-          <div class="col second-table-col">
-            <p>850 грн</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Крісло розкладне</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Диван угловий, великий</p>
-          </div>
-          <div class="col second-table-col">
-            <p>1000 грн</p>
-          </div>
+        <div class="col">
+          <p>250 грн</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Єврокнижка, видвіжний</p>
-          </div>
-          <div class="col second-table-col">
-            <p>500 грн</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Крісло двомісне</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>Єврокнижка, нерозкладний</p>
-          </div>
-          <div class="col second-table-col">
-            <p>400 грн</p>
-          </div>
+        <div class="col">
+          <p>350 грн</p>
         </div>
-    </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Стілець комп'ютерний</p>
+        </div>
+        <div class="col">
+          <p>50 грн</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Крісло в кінотеатрі</p>
+        </div>
+        <div class="col">
+          <p>50 грн</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Диван стандартний, угловий, п'ятимісний</p>
+        </div>
+        <div class="col">
+          <p>850 грн</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Диван угловий, великий</p>
+        </div>
+        <div class="col">
+          <p>1000 грн</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Єврокнижка, видвіжний</p>
+        </div>
+        <div class="col">
+          <p>500 грн</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p>Єврокнижка, нерозкладний</p>
+        </div>
+        <div class="col">
+          <p>400 грн</p>
+        </div>
+      </div>
   </div>
 </section>
-{% endblock %}
-{% block stylesheet %}
-<noscript>
-    <link rel="stylesheet" href="{% static 'css/furniture.css' %}">
-</noscript>
-<script>
-    window.addEventListener('load', function() {
-        var link  = document.createElement('LINK');
-        link.rel = "stylesheet";
-        link.href = "{% static 'css/furniture.css' %}";
-        document.body.appendChild(link);
-    });
-</script>
 {% endblock %}
