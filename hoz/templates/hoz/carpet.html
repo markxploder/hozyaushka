@@ -86,6 +86,90 @@
         height: 45vw;
       }
     }
+
+/* -------------from carpet.css------------- */
+
+    #carpet-second-screen {
+      height: 100%;
+      background: url(../img/foam_.png);
+      background-size: auto 110%;
+      background-position: top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 120px;
+    }
+
+    #carpet-second-screen h3 {
+      font-size: 30px;
+      padding: 40px 0 80px 0;
+    }
+
+    .carpet-table {
+      width: 70%;
+      text-align: left;
+      font-size: 24px;
+      line-height: 25px;
+      border: solid 4px #202f4a;
+      border-radius: 10px;
+      padding: 25px 5% 25px 4%;
+    }
+
+    .carpet-table p {
+      padding: 1%;
+    }
+
+    .caption-light h4 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 1.5px;
+        padding: 2% 0 2% 0;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width : 480px) {
+      #carpet-second-screen {
+        padding-bottom: 70px;
+      }
+
+      .caption-light h4 {
+        font-size: 20px;
+      }
+
+      .carpet-table {
+        width: 95%;
+        line-height: 18px;
+        font-size: 15px;
+      }
+
+      #carpet-second-screen h3 {
+        font-size: 25px;
+        padding: 40px 0 60px 0;
+      }
+    }
+
+    @media only screen and (min-width : 481px) and (max-width : 767px) {
+      #carpet-second-screen {
+        padding-bottom: 0;
+      }
+
+      #carpet-second-screen h3 {
+        padding: 60px 0 60px 0;
+      }
+
+      .caption-light h4 {
+        font-size: 25px;
+        padding: 0 0 2% 0;
+      }
+
+      .carpet-table {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+
   </style>
 {% endblock %}
 {% block content_ru %}
