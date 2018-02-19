@@ -91,7 +91,7 @@
 
     #carpet-second-screen {
       height: 100%;
-      background: url(../img/foam_.png);
+      background: url({% static '/img/foam_.png' %});
       background-size: auto 110%;
       background-position: top;
       background-repeat: no-repeat;
@@ -344,17 +344,4 @@
       </div>
     </div>
 </section>
-{% endblock %}
-{% block stylesheet %}
-<noscript>
-    <link rel="stylesheet" href="{% static 'css/carpet.css' %}">
-</noscript>
-<script>
-    window.addEventListener('load', function() {
-        var link  = document.createElement('LINK');
-        link.rel = "stylesheet";
-        link.href = "{% static 'css/carpet.css' %}";
-        document.body.appendChild(link);
-    });
-</script>
 {% endblock %}
