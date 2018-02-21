@@ -572,6 +572,11 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/callback.css' %}">
+    <style>
+        #preloader {
+            display: none;
+        }
+    </style>
 </noscript>
 <script>
     window.addEventListener('load', function() {
@@ -593,7 +598,7 @@
 </script>
 {% block stylesheet %}
 {% endblock %}
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script defer src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
@@ -602,19 +607,6 @@ function popOut(x) {
     x.classList.toggle("change");
     document.getElementById('header-menu').classList.toggle("change");
 }
-
-$(document).ready(function() {
-    $(".carousel-inner").swipe( {
-        swipeLeft:function(event, direction, distance, duration, fingerCount) {
-            $(this).parent().carousel('next');
-        },
-        swipeRight: function() {
-            $(this).parent().carousel('prev');
-        },
-        threshold:0
-    });
-});
-
 
 var preloader;
 
@@ -635,6 +627,18 @@ window.onload = function() {
     preloader = document.getElementById('preloader');
     preload(1);
 };
+
+$(document).ready(function() {
+    $(".carousel-inner").swipe( {
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            $(this).parent().carousel('next');
+        },
+        swipeRight: function() {
+            $(this).parent().carousel('prev');
+        },
+        threshold:0
+    });
+});
 
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698286-1"></script>
