@@ -23,6 +23,10 @@
                 font-weight: normal;
                 font-style: normal;
             }
+            * {
+              -webkit-user-select: none;
+              user-select: none;
+            }
             html, body {
                 height: 100%;
                 width: 100%;
@@ -374,7 +378,7 @@
             }
         </style>
     </head>
-    <body onselectstart="return false">
+    <body>
         <div id="preloader">
             <div id="loader"></div>
         </div>
@@ -566,92 +570,92 @@
                 Created by <a href="//quarnuts.com"><img src="{% static 'svg/qn.svg' %}" alt="Quarnuts"></a>
             </div>
         </footer>
+        <noscript>
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/callback.css' %}">
+            <style>
+                #preloader {
+                    display: none;
+                }
+            </style>
+        </noscript>
+        <script>
+            window.addEventListener('load', function() {
+                var link1  = document.createElement('LINK');
+                link1.rel = "stylesheet";
+                link1.href = "{% static 'css/base.css' %}";
+                document.body.appendChild(link1);
+
+                var link2  = document.createElement('LINK');
+                link2.rel = "stylesheet";
+                link2.href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
+                document.body.appendChild(link2);
+
+                var link3  = document.createElement('LINK');
+                link3.rel = "stylesheet";
+                link3.href = "{% static 'css/callback.css' %}";
+                document.body.appendChild(link3);
+            });
+        </script>
+        {% block stylesheet %}
+        {% endblock %}
+        <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script defer src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+        <script>
+        function popOut(x) {
+            x.classList.toggle("change");
+            document.getElementById('header-menu').classList.toggle("change");
+        }
+
+        var preloader;
+
+        function preload(opacity) {
+            if(opacity <= 0) {
+                showContent();
+            } else {
+                preloader.style.opacity = opacity;
+                window.setTimeout(function() { preload(opacity - 0.005) }, 1);
+            }
+        }
+
+        function showContent() {
+            preloader.style.display = 'none';
+        }
+
+        window.onload = function() {
+            preloader = document.getElementById('preloader');
+            preload(1);
+        };
+
+        $(document).ready(function() {
+            $(".carousel-inner").swipe( {
+                swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                    $(this).parent().carousel('next');
+                },
+                swipeRight: function() {
+                    $(this).parent().carousel('prev');
+                },
+                threshold:0
+            });
+        });
+
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698286-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-111698286-1');
+        </script>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC2HBXP"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WC2HBXP');</script>
     </body>
 </html>
-<noscript>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/callback.css' %}">
-    <style>
-        #preloader {
-            display: none;
-        }
-    </style>
-</noscript>
-<script>
-    window.addEventListener('load', function() {
-        var link1  = document.createElement('LINK');
-        link1.rel = "stylesheet";
-        link1.href = "{% static 'css/base.css' %}";
-        document.body.appendChild(link1);
-
-        var link2  = document.createElement('LINK');
-        link2.rel = "stylesheet";
-        link2.href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
-        document.body.appendChild(link2);
-
-        var link3  = document.createElement('LINK');
-        link3.rel = "stylesheet";
-        link3.href = "{% static 'css/callback.css' %}";
-        document.body.appendChild(link3);
-    });
-</script>
-{% block stylesheet %}
-{% endblock %}
-<script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script defer src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
-<script>
-function popOut(x) {
-    x.classList.toggle("change");
-    document.getElementById('header-menu').classList.toggle("change");
-}
-
-var preloader;
-
-function preload(opacity) {
-    if(opacity <= 0) {
-        showContent();
-    } else {
-        preloader.style.opacity = opacity;
-        window.setTimeout(function() { preload(opacity - 0.005) }, 1);
-    }
-}
-
-function showContent() {
-    preloader.style.display = 'none';
-}
-
-window.onload = function() {
-    preloader = document.getElementById('preloader');
-    preload(1);
-};
-
-$(document).ready(function() {
-    $(".carousel-inner").swipe( {
-        swipeLeft:function(event, direction, distance, duration, fingerCount) {
-            $(this).parent().carousel('next');
-        },
-        swipeRight: function() {
-            $(this).parent().carousel('prev');
-        },
-        threshold:0
-    });
-});
-
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698286-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-111698286-1');
-</script>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC2HBXP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WC2HBXP');</script>
