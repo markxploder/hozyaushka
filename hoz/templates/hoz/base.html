@@ -14,8 +14,6 @@
         <link rel="alternate" hreflang="x-default" href="https://hozyushka.od.ua/ru{{ request.path }}"/>
         <link rel="shortcut icon" href="{% static 'svg/bubbles.svg' %}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-        {% block critical %}
-        {% endblock %}
         <style>
             @font-face {
                 font-family: 'Roboto';
@@ -377,6 +375,8 @@
                 }
             }
         </style>
+        {% block critical %}
+        {% endblock %}
     </head>
     <body>
         <div id="preloader">
